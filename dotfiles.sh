@@ -3,14 +3,14 @@
 syncMyDotFiles() {
   rsync \
     --exclude ".DS_Store" \
+    --exclude ".gitignore" \
     --exclude "README.md" \
     --exclude "LICENSE" \
+    --exclude "logs/" \
     --exclude ".git/" \
-    --exclude "ohmyzsh.sh"
+    --exclude "ohmyzsh.sh" \
     --exclude "brew.sh" \
     --exclude "dotfiles.sh" \
-    --exclude "brew_install.log" \
-    --exclude "brew_install_error.log" \
     -avh . ~
 }
 
