@@ -4,7 +4,7 @@ syncMyDotFiles() {
   rsync \
     --exclude ".git/" \
     --exclude ".DS_Store" \
-    --exclude "install.sh" \
+    --exclude "dotfiles.sh" \
     --exclude "README.md" \
     --exclude "LICENSE" \
     --exclude "brew.sh" \
