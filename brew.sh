@@ -14,7 +14,7 @@ installFormula() {
   brew list $formula 1> /dev/null 2> /dev/null
   [[ $? -eq 0 ]] && echo "$formula is already installed. Skip the installation." && return 1
   echo "$formula is not yet installed. Performing the installation now."
-  brew install $formula
+  brew install $formula 1>> brew_install.log 2>> brew_install_error.log
 }
 
 echo ""
@@ -41,4 +41,3 @@ installFormula scala
 installFormula tmux
 installFormula tree
 installFormula zsh-syntax-highlighting
-

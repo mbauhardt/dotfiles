@@ -7,6 +7,9 @@ syncMyDotFiles() {
     --exclude "install.sh" \
     --exclude "README.md" \
     --exclude "LICENSE" \
+    --exclude "brew.sh" \
+    --exclude "brew_install.log" \
+    --exclude "brew_install_error.log" \
     -avh . ~
 }
 
