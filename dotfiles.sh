@@ -1,10 +1,8 @@
 #!/usr/bin/env sh
 
-syncMyDotFiles() {
-  echo ""
-  read -p "This may overwrite existing dotfiles in your home directory. Are you sure? (y/n) " -n 1;
-  echo ""
-  [[ $REPLY =~ ^[Yy]$ ]] && echo "Start to sync dotfiles." && rsync \
+_syncMyDotFiles() {
+  echo "Start to sync dotfiles."
+  rsync \
     --exclude ".DS_Store" \
     --exclude ".gitignore" \
     --exclude "README.md" \
@@ -14,14 +12,12 @@ syncMyDotFiles() {
     --exclude "ohmyzsh.sh" \
     --exclude "brew.sh" \
     --exclude "dotfiles.sh" \
+    --exclude "install.sh" \
     -avh . ~
 }
 
-updateDotFiles() {
-  echo "Update dotfiles to latest version"
+_updateDotFiles() {
+  echo "Update dotfiles to latest version."
   git pull origin master
 }
-
-updateDotFiles
-syncMyDotFiles
 
