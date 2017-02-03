@@ -22,3 +22,5 @@ function removeFromPath() {
 setjdk 1.8
 export PATH=$HOME/bin:$PATH
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
