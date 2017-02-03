@@ -11,6 +11,7 @@ _syncMyDotFiles() {
     --exclude ".git/" \
     --exclude "ohmyzsh.sh" \
     --exclude "brew.sh" \
+    --exclude "tools.sh" \
     --exclude "dotfiles.sh" \
     --exclude "install.sh" \
     -avh . ~
