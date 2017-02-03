@@ -24,3 +24,4 @@ export PATH=$HOME/bin:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=7
