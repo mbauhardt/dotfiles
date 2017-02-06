@@ -35,4 +35,5 @@ _installFormulas() {
   _installFormula tmux
   _installFormula tree
   _installFormula zsh-syntax-highlighting
+  _installFormula yubikey-personalization
 }
