@@ -25,3 +25,10 @@ export PATH=$HOME/bin:$PATH
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=7
+
+unset SSH_AGENT_PID
+export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
+
+
+#export NVM_DIR="/Users/marko/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
