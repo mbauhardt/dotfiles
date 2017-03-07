@@ -31,5 +31,7 @@ export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
 
 export ANT_OPTS="-Xmx2048m -XX:MaxPermSize=512m"
 
+alias setupIdeaForDM='./gradlew clean createPluginXml compileIntegTest pluginZipCopy jobJar'
+
 #export NVM_DIR="/Users/marko/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
