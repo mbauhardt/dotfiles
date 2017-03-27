@@ -7,3 +7,6 @@
   gpgsign = true
 [gpg]
   program = gpg2
+[core]
+  autocrlf = input
+
