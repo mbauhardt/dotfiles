@@ -36,5 +36,6 @@ _installFormulas() {
   _installFormula tree
   _installFormula zsh-syntax-highlighting
   _installFormula yubikey-personalization
+  _installFormula buku
 #  _installFormula gpg2
 }
