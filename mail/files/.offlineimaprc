@@ -1,0 +1,32 @@
+[general]
+accounts = Mailbox
+maxsyncaccounts = 1
+socktimeout = 60
+pythonfile = ~/.offlineimap/passwd.sh
+
+
+
+[Account Mailbox]
+localrepository = Mailbox-Local
+remoterepository = Mailbox-Remote
+autorefresh = 2
+quick = 10
+synclabels = no
+postsynchook = notmuch new
+
+
+
+[Repository Mailbox-Local]
+type = Maildir
+localfolders = ~/Mail/marko.bauhardt_at_mailbox.org
+
+
+
+[Repository Mailbox-Remote]
+type = IMAP
+sslcacertfile = /usr/local/etc/openssl/cert.pem
+remotehost = imap.mailbox.org
+remoteuser = marko.bauhardt@mailbox.org
+remotepasseval = get_pass()
+auth_mechanisms = LOGIN
+folderfilter = lambda foldername: foldername in ['INBOX', 'Drafts']

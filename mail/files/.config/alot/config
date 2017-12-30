@@ -1,0 +1,28 @@
+theme = tomorrow
+#theme = mutt
+
+initial_command = bufferlist; taglist; search tag:unread; search tag:inbox; search tag:gtd; search tag:finance; search tag:shopping; search tag:food; search tag:social; search tag:mailinglist; search date:today; search tag:sent; search tag:replied; search tag:flagged; search tag:deleted; search '*'; buffer 0
+
+auto_remove_unread = False
+
+[bindings]
+  
+  [[thread]]
+    | = pipeto urlview
+  
+  [[search]]
+    D = toggletags deleted
+
+
+[accounts]
+  [[mailbox]]
+    realname = Marko Bauhardt
+    address = marko.bauhardt@mailbox.org
+    gpg_key = 53192101
+    sendmail_command = /usr/local/bin/msmtp --account mailbox -t
+    draft_box = maildir:///Users/marko/Mail/marko.bauhardt_at_mailbox.org/Drafts  
+      [[[abook]]]
+        type = shellcommand
+        command = 'notmuch-address-cache query'
+	regexp = '\[?{"name": "(?P<name>.*)", "address": "(?P<email>.+)", "name-addr": ".*"}[,\]]?'
+        shellcommand_external_filtering = False
