@@ -1,3 +1,5 @@
+source lib/brew.sh
+
 _installBrew() {
   echo "\033[0;33mCheck if brew is installed.\033[0m"
   brew info 2> /dev/null
@@ -7,3 +9,5 @@ _installBrew() {
 }
 
 _installBrew
+_installFormula git
+_installFormula gpg2
