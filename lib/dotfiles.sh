@@ -3,7 +3,7 @@
 _syncMyDotFiles() {
   [[ "$#" != 1 ]] && return 1
   local from=`echo $(cd $1; pwd)`
-  local to=$1
+  local to=~
   echo "Start to sync dotfiles from $from to $to in 3 sec."
   sleep 3
   rsync -avh $from/ $to
