@@ -11,4 +11,8 @@ _installFormula notmuch
 
 _syncMyDotFiles mail/files
 
+echo "Decrypt notmuch post hook to tag emails"
+keybase decrypt -i ~/Mail/.notmuch/hooks/post-new.keybase -o ~/Mail/.notmuch/hooks/post-new 
+
+echo "Import new emails"
 notmuch new
