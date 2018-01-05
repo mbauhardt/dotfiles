@@ -1,0 +1,29 @@
+theme = mutt2
+
+initial_command = bufferlist; taglist; call hooks.searchByTag(); buffer 0
+
+auto_remove_unread = False
+
+
+[bindings]
+
+  [[thread]]
+    | = pipeto urlview
+  
+  [[search]]
+    D = toggletags deleted
+
+
+[accounts]
+  [[work]]
+    realname = Marko Bauhardt
+    address = mb@datameer.com
+    gpg_key = 618EC563
+    sendmail_command = /usr/local/bin/msmtp --account datameer -t
+    signature = ~/.alot/signature.txt
+    draft_box = maildir:///Users/mb/Mail/mb_at_datameer.com/drafts
+      [[[abook]]]
+        type = shellcommand
+        command = 'notmuch-address-cache query'
+        regexp = '\[?{"name": "(?P<name>.*)", "address": "(?P<email>.+)", "name-addr": ".*"}[,\]]?'
+        shellcommand_external_filtering = False
