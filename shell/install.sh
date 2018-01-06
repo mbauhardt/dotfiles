@@ -10,7 +10,7 @@ _installOhMyZsh() {
 _patchZshrc() {
   echo "Patch ~/.zshrc to include specific ohmyzsh plugins."
   cp $HOME/.zshrc $HOME/.zshrc.sed
-  sed -E 's/^plugins=.*/plugins=(git gradle zsh-autosuggestions z pass mbauhardt) /g' $HOME/.zshrc.sed > $HOME/.zshrc
+  sed -E 's/^plugins=.*/plugins=(git gradle zsh-autosuggestions z pass mbauhardt taskwarrior) /g' $HOME/.zshrc.sed > $HOME/.zshrc
   rm $HOME/.zshrc.sed
 }
 

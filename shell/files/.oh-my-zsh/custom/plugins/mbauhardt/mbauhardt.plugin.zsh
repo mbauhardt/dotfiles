@@ -36,5 +36,24 @@ alias setupIdeaForDM='./gradlew clean createPluginXml compileIntegTest pluginZip
 
 export EDITOR="vim"
 
-#export NVM_DIR="/Users/marko/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="~/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+export TERM=screen-256color
+export LC_ALL=en_US.UTF-8
+
+if [ -z "$TMUX" ]; then
+  if tmux has-session 2>/dev/null; then
+    tmux attach
+  else
+    tmux new-session -d -s WORK
+    tmux new-window -t WORK -n MAIL
+    tmux new-window -t WORK -n SLACK
+    tmux new-window -t WORK -n BOOKMARKS
+    tmux new-window -t WORK -n WIKI
+    tmux new-window -t WORK -n DAEMONS
+    tmux a -t WORK
+  fi
+fi
+
