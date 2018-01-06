@@ -1,4 +1,5 @@
 source lib/brew.sh
+source lib/dotfiles.sh
 
 _installOhMyZsh() {
   echo ""
@@ -34,4 +35,6 @@ _installFormula s3cmd
 _installFormula tmux
 _installFormula tree
 _installFormula zsh-syntax-highlighting
+
+_syncMyDotFiles shell/files
 
