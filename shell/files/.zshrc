@@ -1,4 +1,11 @@
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$PATH"
+
+export ZSH=/Users/mb/.oh-my-zsh
 ZSH_THEME="mbauhardt"
+plugins=(git gradle zsh-autosuggestions z pass taskwarrior zsh-interactive-cd fz) 
+
+source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -21,11 +28,10 @@ function removeFromPath() {
 }
 
 #setjdk 1.8
-export PATH=$HOME/bin:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=7
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=8
 
 unset SSH_AGENT_PID
 export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
@@ -67,3 +73,4 @@ tm() {
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
