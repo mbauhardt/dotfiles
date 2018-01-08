@@ -20,7 +20,7 @@ function removeFromPath() {
   export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
 }
 
-setjdk 1.8
+#setjdk 1.8
 export PATH=$HOME/bin:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -46,15 +46,22 @@ export LC_ALL=en_US.UTF-8
 
 if [ -z "$TMUX" ]; then
   if tmux has-session 2>/dev/null; then
-    tmux attach
+    echo "There are tmux sessions attached..."
   else
-    tmux new-session -d -s WORK
-    tmux new-window -t WORK -n MAIL
-    tmux new-window -t WORK -n SLACK
-    tmux new-window -t WORK -n BOOKMARKS
-    tmux new-window -t WORK -n WIKI
-    tmux new-window -t WORK -n DAEMONS
-    tmux a -t WORK
+    tmux new-session -d -s MAIN
+    tmux new-session -d -s KNOWLEDGE
+    tmux new-window -t MAIN -n SLACK
+    tmux new-window -t MAIN -n MAIL
+    tmux new-window -t KNOWLEDGE -n BOOKMARKS
+    tmux new-window -t KNOWLEDGE -n WIKI
   fi
 fi
+
+tm() {
+  [[ -n "$TMUX" ]] && change="switch-client" || change="attach-session"
+  if [ $1 ]; then
+    tmux $change -t "$1" 2>/dev/null || (tmux new-session -d -s $1 && tmux $change -t "$1"); return
+  fi
+  session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --exit-0) &&  tmux $change -t "$session" || echo "No sessions found."
+}
 
