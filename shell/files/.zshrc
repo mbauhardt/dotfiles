@@ -1,7 +1,7 @@
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$PATH"
 
-export ZSH=/Users/mb/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="mbauhardt"
 plugins=(git gradle zsh-autosuggestions z pass taskwarrior zsh-interactive-cd fz) 
 

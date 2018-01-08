@@ -5,14 +5,14 @@ _installInteractiveCd() {
   echo ""
   [[ -d $HOME/.oh-my-zsh/custom/plugins/zsh-interactive-cd ]] && echo "\033[0;33mYou already have zsh-interactive-cd installed. Skip the installation.\033[0m" && return 1
   echo "zsh-interactive-cd is not yet installed. Performing the the installation now."
-  sh -c "$(g clone git@github.com:changyuheng/zsh-interactive-cd.git $ZSH_CUSTOM/plugins)"
+  git clone git@github.com:changyuheng/zsh-interactive-cd.git $HOME/.oh-my-zsh/custom/plugins/zsh-interactive-cd
 }
 
 _installFz() {
   echo ""
   [[ -d $HOME/.oh-my-zsh/custom/plugins/fz ]] && echo "\033[0;33mYou already have fz installed. Skip the installation.\033[0m" && return 1
   echo "fz is not yet installed. Performing the the installation now."
-  sh -c "$(g clone git@github.com:changyuheng/fz.git $ZSH_CUSTOM/plugins)"
+  git clone git@github.com:changyuheng/fz.git $HOME/.oh-my-zsh/custom/plugins/fz
 }
 
 _installOhMyZsh() {
