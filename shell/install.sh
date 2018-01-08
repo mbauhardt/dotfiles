@@ -1,6 +1,20 @@
 source lib/brew.sh
 source lib/dotfiles.sh
 
+_installInteractiveCd() {
+  echo ""
+  [[ -d $HOME/.oh-my-zsh/custom/plugins/zsh-interactive-cd ]] && echo "\033[0;33mYou already have zsh-interactive-cd installed. Skip the installation.\033[0m" && return 1
+  echo "zsh-interactive-cd is not yet installed. Performing the the installation now."
+  sh -c "$(g clone git@github.com:changyuheng/zsh-interactive-cd.git $ZSH_CUSTOM/plugins)"
+}
+
+_installFz() {
+  echo ""
+  [[ -d $HOME/.oh-my-zsh/custom/plugins/fz ]] && echo "\033[0;33mYou already have fz installed. Skip the installation.\033[0m" && return 1
+  echo "fz is not yet installed. Performing the the installation now."
+  sh -c "$(g clone git@github.com:changyuheng/fz.git $ZSH_CUSTOM/plugins)"
+}
+
 _installOhMyZsh() {
   echo ""
   [[ -d $HOME/.oh-my-zsh ]] && echo "\033[0;33mYou already have Oh My Zsh installed. Skip the installation.\033[0m" && return 1
@@ -11,7 +25,7 @@ _installOhMyZsh() {
 _patchZshrc() {
   echo "Patch ~/.zshrc to include specific ohmyzsh plugins."
   cp $HOME/.zshrc $HOME/.zshrc.sed
-  sed -E 's/^plugins=.*/plugins=(git gradle zsh-autosuggestions z pass mbauhardt taskwarrior) /g' $HOME/.zshrc.sed > $HOME/.zshrc
+  sed -E 's/^plugins=.*/plugins=(git gradle zsh-autosuggestions z pass mbauhardt taskwarrior zsh-interactive-cd fz) /g' $HOME/.zshrc.sed > $HOME/.zshrc
   rm $HOME/.zshrc.sed
 }
 
@@ -22,8 +36,11 @@ _installTmuxThemepack() {
 }
 
 _installOhMyZsh
-_patchZshrc
+_installInteractiveCd
+_installFz
 _installTmuxThemepack
+
+_patchZshrc
 
 _installFormula csshx
 _installFormula zsh-autosuggestions
@@ -35,6 +52,7 @@ _installFormula s3cmd
 _installFormula tmux
 _installFormula tree
 _installFormula zsh-syntax-highlighting
+_installFormula the_silver_searcher
 
 _syncMyDotFiles shell/files
 
