@@ -35,10 +35,17 @@ _installTmuxThemepack() {
   git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
 }
 
+_installBase16Colors() {
+  [[ -d ~/.config/base16-shell ]] && echo "\033[0;33mYou already have base16-shell installed. Skip the installation.\033[0m" && return 1
+  echo "~/.config/base16-shell is not yet installed. Performing the the installation now."
+  git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+}
+
 _installOhMyZsh
 _installInteractiveCd
 _installFz
 _installTmuxThemepack
+_installBase16Colors
 
 _patchZshrc
 
