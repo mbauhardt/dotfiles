@@ -9,26 +9,6 @@ source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-alias java_ls='/usr/libexec/java_home -V 2>&1 | grep -E "\d.\d.\d[,_]" | cut -d , -f 1 | colrm 1 4 | grep -v Home'
-function setjdk() {
-  if [ $# -ne 0 ]; then
-    removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
-    if [ -n "${JAVA_HOME+x}" ]; then
-      removeFromPath $JAVA_HOME
-    fi
-    export JAVA_HOME=`/usr/libexec/java_home -v $@`
-    export PATH=$JAVA_HOME/bin:$PATH
-  fi
-  echo JAVA_HOME set to $JAVA_HOME
-  java -version
- }
-
-function removeFromPath() {
-  export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
-}
-
-#setjdk 1.8
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=8
@@ -73,4 +53,8 @@ tm() {
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
