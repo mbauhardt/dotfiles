@@ -18,13 +18,11 @@ export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent.ssh
 
 export ANT_OPTS="-Xmx2048m -XX:MaxPermSize=512m"
 
-alias setupIdeaForDM='./gradlew clean createPluginXml compileIntegTest pluginZipCopy jobJar'
-
 export EDITOR="nvim"
 alias e="nvim"
 
 export NVM_DIR="~/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 
 export TERM=screen-256color
@@ -58,3 +56,13 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
+function setupIdeaForDM() {
+  echo "Setup Hadoop..."
+  ./gradlew setupHadoop $@ || return;
+  echo ""
+  echo "Compile Integration Tests..."
+  ./gradlew compileIntegTest $@ || return;
+  echo""
+  echo "Generate Idea Project Files..."
+  ./gradlew idea $@ || return;
+}

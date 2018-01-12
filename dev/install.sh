@@ -25,3 +25,5 @@ jenv enable-plugin ant
 jenv enable-plugin gradle
 jenv enable-plugin export
 
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+
