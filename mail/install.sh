@@ -8,6 +8,8 @@ _installFormula w3m
 _installFormula urlview
 _installFormula notmuch
 
+brew tap mbauhardt/software
+_installFormula notmuch-address-cache
 
 _syncMyDotFiles mail/files
 

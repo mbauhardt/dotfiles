@@ -8,8 +8,10 @@ _installFormula w3m
 _installFormula urlview
 _installFormula notmuch
 
-
 _syncMyDotFiles mail-work/files
+
+brew tap mbauhardt/software
+_installFormula notmuch-address-cache
 
 echo "Decrypt notmuch post hook to tag emails"
 keybase decrypt -i ~/Mail/.notmuch/hooks/post-new.keybase -o ~/Mail/.notmuch/hooks/post-new 
