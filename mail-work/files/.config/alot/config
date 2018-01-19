@@ -8,7 +8,7 @@ auto_remove_unread = False
 [bindings]
 
   [[thread]]
-    | = pipeto urlview
+    | = pipeto urlscan
   
   [[search]]
     D = toggletags deleted
