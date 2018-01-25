@@ -57,6 +57,8 @@ export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
 function setupIdeaForDM() {
+  echo "Clean Workspace"
+  ./gradlew clean $@ || return;
   echo "Setup Hadoop..."
   ./gradlew setupHadoop $@ || return;
   echo ""

@@ -1,4 +1,4 @@
 source lib/brew.sh
 
-_installFormula weechat
+_installFormula weechat --with-python --with-perl
 
