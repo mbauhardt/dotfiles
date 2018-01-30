@@ -12,4 +12,4 @@ def searchByTag():
 def pre_global_refresh(**kwargs):
   logging.info('Syncing mail with offlineimap')
   ui.notify("fetchinig email..")  
-  subprocess.call("offlineimap -o".split(),stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+  #subprocess.call("offlineimap -o".split(),stdout=subprocess.PIPE,stderr=subprocess.PIPE)
