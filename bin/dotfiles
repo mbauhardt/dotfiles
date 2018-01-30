@@ -1,14 +1,38 @@
 #!/bin/zsh -f
 
 
-(( ! $# )) && echo "help" && exit 0
+function _help() {
+  printf "Help\n"
+}
+
+function _installDotfiles() {
+  printf "Install Dotfiles\n"
+  source ${DOTFILESDIR:-$HOME/dotfiles}/lib/install_dotfiles.zsh
+}
+
+function _cleanDotfiles() {
+  printf "Clean Dotfiles\n"
+}
+
+function _installSoftware() {
+  printf "Install Software\n"
+}
+
+function _cleanSoftware() {
+  printf "Clean Software\n"
+}
+
+
+(( ! $# )) && _help && exit 0
 
 zmodload -i zsh/zutil
-zparseopts  -- -install-dotfiles=ind -clean-dotfiles=cld
+zparseopts  -- -install-dotfiles=ind -clean-dotfiles=cld -install-software=ins -clean-software=cls -help=h
 
 
+[[ -n $ind ]] && _installDotfiles
+[[ -n $cld ]] && _cleanDotfiles
+[[ -n $ins ]] && _installSoftware
+[[ -n $cls ]] && _cleanSoftware
+[[ -n $h ]] && _help
 
-
-echo $ind
-echo $cld
 
