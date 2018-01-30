@@ -11,6 +11,7 @@ for dot in "$dots[@]";do
     local gitFile=${f:a}
     [[ -a $lnk ]] && printf "[%s] File '%s' already exist.\n" "${dot}" "${lnk}" && continue
     printf "[%s] Create symbolic link '%s' => '%s'.\n" "${dot}" "${lnk}" "${gitFile}"
+    mkdir -p ${lnk:h}
     ln -s ${gitFile} $lnk 
   ;done
   popd > /dev/null
