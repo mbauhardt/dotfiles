@@ -15,6 +15,8 @@ for dot in "$dots[@]";do
     mkdir -p ${lnk:h}
     ln -s ${gitFile} $lnk 
   ;done
+  [[ ! -a ${DOTFILESDIR:-$HOME/dotfiles}/modules/$dot/post-install-dotfiles.zsh ]] && continue
+  printf "[%s] Source post-install-dotfiles script.\n" "${dot}" && source ${DOTFILESDIR:-$HOME/dotfiles}/modules/$dot/post-install-dotfiles.zsh
   popd > /dev/null
 
 ;done
