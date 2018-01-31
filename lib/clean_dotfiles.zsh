@@ -1,5 +1,3 @@
-zstyle ":dotfiles:load" dmodules 'bookmarks' 'chat' 'dev' 'gtd' 'mail-work' 'neovim' 'privacy' 'shell' 'system'
-
 zstyle -a ":dotfiles:load" dmodules dots
 printf "Delete all symblic links from the given modules '%s'\n" "${dots}"
 

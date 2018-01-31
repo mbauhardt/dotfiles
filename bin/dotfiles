@@ -1,6 +1,10 @@
 #!/bin/zsh -f
 
 
+if [[ -s "${ZDOTDIR:-$HOME}/.dotfilesrc" ]]; then
+  source "${ZDOTDIR:-$HOME}/.dotfilesrc"
+fi
+
 function _help() {
   printf "Help\n"
 }
