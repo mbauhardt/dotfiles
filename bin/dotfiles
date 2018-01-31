@@ -12,6 +12,7 @@ function _installDotfiles() {
 
 function _cleanDotfiles() {
   printf "Clean Dotfiles\n"
+  source ${DOTFILESDIR:-$HOME/dotfiles}/lib/clean_dotfiles.zsh
 }
 
 function _installSoftware() {
