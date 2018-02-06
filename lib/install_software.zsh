@@ -2,22 +2,24 @@ function _installFormula() {
   local formula=$@
   brew list $formula 1> /dev/null 2> /dev/null
   [[ $? -eq 0 ]] &&  return 2
-  brew install $formula 1>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/brew_install.log 2>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/brew_install_error.log
+  brew install $formula 1>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/install.log 2>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/install_error.log
   return $?
 }
 
 function _downloadUrl() {
   local from=$1
   local to=$2
-  [[ -a $to ]] && echo "\033[0;33m$to already exist. Skip the download.\033[0m" && return 1
-  curl -fLo ${to} --create-dirs ${from} 
+  [[ -a $to ]] && return 2
+  curl -fLo ${to} --create-dirs ${from} 1>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/install.log 2>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/install_error.log
+  return $?
 }
 
 function _gitCheckout() {
   local from=$1
   local to=$2
-  [[ -d $to ]] && echo "\033[0;33m$to already exist. Skip the git checkout.\033[0m" && return 1
-  git clone --recursive $from $to
+  [[ -d $to ]] && return 2
+  git clone --recursive $from $to 1>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/install.log 2>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/install_error.log
+  return $?
 }
 
 zstyle -a ":dotfiles:load" dmodules dots
@@ -41,16 +43,20 @@ for dot in "$dots[@]";do
   typeset -A urls
   zstyle -a ":dotfiles:modules:${dot}:software" curl urls
   for k v in ${(kv)urls};do
-    printf "[%s] Download file '%s' to '%s'.\n" "${dot}" "${k}" "${v}"
+    printf "[%s] Download file '%s' to '%s'." "${dot}" "${k}" "${v}"
     _downloadUrl $k $v
+    local ret=$?
+    ([[ $ret -eq 0 ]] && printf "[\033[0;32mOK\033[0m]\n") || ([[ $ret -eq 1 ]] && printf "[\033[0;31mERROR\033[0m]\n") || ([[ $ret -eq 2 ]] && printf "[\033[0;33mSKIP\033[0m]\n")
   ;done
 
   # install via git
   typeset -A repos
   zstyle -a ":dotfiles:modules:${dot}:software" git repos
   for k v in ${(kv)repos};do
-    printf "[%s] Git checkout repo '%s' to '%s'.\n" "${dot}" "${k}" "${v}"
+    printf "[%s] Git checkout repo '%s' to '%s'." "${dot}" "${k}" "${v}"
     _gitCheckout $k $v
+    local ret=$?
+    ([[ $ret -eq 0 ]] && printf "[\033[0;32mOK\033[0m]\n") || ([[ $ret -eq 1 ]] && printf "[\033[0;31mERROR\033[0m]\n") || ([[ $ret -eq 2 ]] && printf "[\033[0;33mSKIP\033[0m]\n")
   ;done
 
   # call post install script
