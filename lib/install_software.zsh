@@ -1,9 +1,9 @@
 function _installFormula() {
   local formula=$@
   brew list $formula 1> /dev/null 2> /dev/null
-  [[ $? -eq 0 ]] && echo "\033[0;33m$formula is already installed. Skip the installation.\033[0m" && return 1
-  echo "$formula is not yet installed. Performing the installation now."
+  [[ $? -eq 0 ]] &&  return 2
   brew install $formula 1>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/brew_install.log 2>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/brew_install_error.log
+  return $?
 }
 
 function _downloadUrl() {
@@ -31,8 +31,10 @@ for dot in "$dots[@]";do
   # install via homebrew
   zstyle -a ":dotfiles:modules:${dot}:software" brew formulae
   for f in $formulae[@];do
-    printf "[%s] Install brew formula '%s'.\n" "${dot}" "${f}"
+    printf "[%s] Install brew formula '%s'." "${dot}" "${f}"
     _installFormula $f
+    local ret=$?
+    ([[ $ret -eq 0 ]] && printf "[\033[0;32mOK\033[0m]\n") || ([[ $ret -eq 1 ]] && printf "[\033[0;31mERROR\033[0m]\n") || ([[ $ret -eq 2 ]] && printf "[\033[0;33mSKIP\033[0m]\n")
   ;done
 
   # install via curl
