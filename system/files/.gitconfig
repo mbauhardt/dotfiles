@@ -1,9 +1,0 @@
-[user]
-  name = Marko Bauhardt
-  email = marko.bauhardt@mailbox.org
-  editor = nvim
-  signingkey = 8E4E2613
-[commit]
-  gpgsign = true
-[gpg]
-  program = gpg
