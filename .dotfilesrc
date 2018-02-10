@@ -1,4 +1,2 @@
-export DOTFILESDIR=${ZDOTDIR:-$HOME}/dotfiles
-
 zstyle ":dotfiles:load" dmodules 'bookmarks' 'chat' 'dev' 'gtd' 'mail-work' 'neovim' 'privacy' 'shell' 'system'
 

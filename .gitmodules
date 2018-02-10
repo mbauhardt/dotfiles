@@ -1,0 +1,3 @@
+[submodule "modules/shell/externals/prezto"]
+	path = modules/shell/externals/prezto
+	url = git@github.com:mbauhardt/prezto.git
