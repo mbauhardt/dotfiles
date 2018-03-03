@@ -1,6 +1,6 @@
 _deleteDotfiles() {
   local lnk=$1
-  #[[ ! -h $lnk ]] &&  return 2;
+  [[ ! -h $lnk ]] &&  return 2;
   rm $lnk
   return $?
 }

@@ -1,5 +1,5 @@
-theme = tomorrow
-#theme = mutt
+#theme = tomorrow
+theme = mutt
 
 initial_command = bufferlist; taglist; search tag:unread; search tag:inbox; search tag:gtd; search tag:finance; search tag:shopping; search tag:food; search tag:social; search tag:mailinglist; search date:today; search tag:sent; search tag:replied; search tag:flagged; search tag:deleted; search '*'; buffer 0
 

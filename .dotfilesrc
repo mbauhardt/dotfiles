@@ -1,2 +1,2 @@
-zstyle ":dotfiles:load" dmodules 'bookmarks' 'chat' 'dev' 'gtd' 'mail-work' 'neovim' 'privacy' 'shell' 'system'
+zstyle ":dotfiles:load" dmodules 'bookmarks' 'chat' 'dev' 'gtd' 'mail' 'neovim' 'privacy' 'shell' 'system'
 
