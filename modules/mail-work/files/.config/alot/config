@@ -1,4 +1,4 @@
-theme = mutt2
+#theme = mutt2
 
 initial_command = bufferlist; taglist; call hooks.searchByTag(); buffer 0
 
