@@ -47,7 +47,7 @@ primary_email=mb@datameer.com
 #		in the mail store.
 #
 [new]
-tags=all;new;inbox;
+tags=new;inbox;
 ignore=
 
 # Search configuration

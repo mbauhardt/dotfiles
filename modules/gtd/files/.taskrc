@@ -39,4 +39,3 @@ report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +P
 default.project=INBOX
 urgency.user.tag.someday.coefficient=-100.0
 context.sprint=+DUE or +OVERDUE or +next
-context=sprint
