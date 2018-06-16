@@ -36,6 +36,10 @@ report._reviewed.columns=uuid
 report._reviewed.sort=reviewed+,modified+
 report._reviewed.filter=( reviewed.none: or reviewed.before:now-6days ) and ( +PENDING or +WAITING )
 
-default.project=INBOX
+default.project=inbox
 urgency.user.tag.someday.coefficient=-100.0
 context.sprint=+DUE or +OVERDUE or +next
+urgency.user.project.icebox.coefficient=-4.0
+urgency.user.project.backlog.coefficient=-2.0
+urgency.user.project.inbox.coefficient=7.0
+report.ready.columns=id,start.age,entry.age,depends.indicator,priority,project,tags,recur.indicator,scheduled.countdown,due.relative,until.remaining,description,urgency
