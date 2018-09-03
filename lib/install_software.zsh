@@ -6,6 +6,14 @@ function _installFormula() {
   return $?
 }
 
+function _installCask() {
+  local formula=$@
+  brew cask list $formula 1> /dev/null 2> /dev/null
+  [[ $? -eq 0 ]] &&  return 2
+  brew cask install $formula 1>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/install.log 2>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/install_error.log
+  return $?
+}
+
 function _downloadUrl() {
   local from=$1
   local to=$2
@@ -35,6 +43,15 @@ for dot in "$dots[@]";do
   for f in $formulae[@];do
     printf "[%s] Install brew formula '%s'." "${dot}" "${f}"
     _installFormula $f
+    local ret=$?
+    ([[ $ret -eq 0 ]] && printf "[\033[0;32mOK\033[0m]\n") || ([[ $ret -eq 1 ]] && printf "[\033[0;31mERROR\033[0m]\n") || ([[ $ret -eq 2 ]] && printf "[\033[0;33mSKIP\033[0m]\n")
+  ;done
+
+  # install via homebrew cask
+  zstyle -a ":dotfiles:modules:${dot}:software" cask formulae
+  for f in $formulae[@];do
+    printf "[%s] Install cask '%s'." "${dot}" "${f}"
+    _installCask $f
     local ret=$?
     ([[ $ret -eq 0 ]] && printf "[\033[0;32mOK\033[0m]\n") || ([[ $ret -eq 1 ]] && printf "[\033[0;31mERROR\033[0m]\n") || ([[ $ret -eq 2 ]] && printf "[\033[0;33mSKIP\033[0m]\n")
   ;done
