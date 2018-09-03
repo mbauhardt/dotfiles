@@ -1,1 +1,1 @@
-zstyle ":dotfiles:modules:chat:software" cask 'flux' 'hocus-focus'
+zstyle ":dotfiles:modules:chat:software" cask 'flux' 'hocus-focus' 'caffeine'
