@@ -8,7 +8,9 @@ function _symbolicLink() {
 }
 
 zstyle -a ":dotfiles:load" dmodules dots
-printf "Link all files from the given modules '%s'\n" "${dots}"
+printf "Link all files from the given modules '%s' defined via context '%s'\n" "${dots}" "$DOTFILES_CONTEXT"
+read "con?Do you want to continue? (y/n)"
+[[ "$con" =~ ^[Yy]$ ]] || exit 1
 
 for dot in "$dots[@]";do 
   

@@ -31,7 +31,9 @@ function _gitCheckout() {
 }
 
 zstyle -a ":dotfiles:load" dmodules dots
-printf "Install software from the given modules '%s'\n" "${dots}"
+printf "Install software from the given modules '%s' defined via context '%s'\n" "${dots}" "$DOTFILES_CONTEXT"
+read "con?Do you want to continue? (y/n)"
+[[ "$con" =~ ^[Yy]$ ]] || exit 1
 
 for dot in "$dots[@]";do 
   

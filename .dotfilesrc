@@ -1,2 +1,8 @@
-zstyle ":dotfiles:load" dmodules 'bookmarks' 'chat' 'dev' 'gtd' 'mail-work' 'neovim' 'privacy' 'shell' 'system' 'desktop' 'internet'
+if [[ $DOTFILES_CONTEXT == 'home' ]]; then
+  zstyle ":dotfiles:load" dmodules 'bookmarks' 'chat' 'gtd' 'mail' 'neovim' 'privacy' 'shell' 'system' 'desktop' 'internet'
+elif [[ $DOTFILES_CONTEXT == 'work' ]]; then
+  zstyle ":dotfiles:load" dmodules 'bookmarks' 'chat' 'dev' 'gtd' 'mail-work' 'neovim' 'privacy' 'shell' 'system' 'desktop' 'internet'
+else
+  zstyle ":dotfiles:load" dmodules
+fi
 
