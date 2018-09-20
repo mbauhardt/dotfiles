@@ -21,7 +21,7 @@ auto_remove_unread = False
     gpg_key = 618EC563
     sendmail_command = /usr/local/bin/msmtp --account datameer -t
     signature = ~/.config/alot/signature
-    draft_box = maildir:///Users/mb/Mail/mb_at_datameer.com/drafts
+    draft_box = maildir:///Users/mb/z/documents/mail/mb_at_datameer.com/drafts
       [[[abook]]]
         type = shellcommand
         command = 'notmuch-address-cache query'

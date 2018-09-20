@@ -16,7 +16,7 @@ postsynchook = notmuch new
 
 [Repository Datameer-Local]
 type = GmailMaildir
-localfolders = ~/Mail/mb_at_datameer.com
+localfolders = ~/z/documents/mail/mb_at_datameer.com
 sync_deletes = yes
 nametrans = lambda folder: {'drafts':   '[Gmail]/Drafts',
                             'trash':    '[Gmail]/Trash',

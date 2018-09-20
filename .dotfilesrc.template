@@ -1,0 +1,9 @@
+# example at home modules
+# zstyle ":dotfiles:load" dmodules 'system' 'privacy' 'bookmarks' 'chat' 'gtd' 'mail' 'neovim' 'shell' 'desktop' 'internet'
+
+# or modules needed for work
+# zstyle ":dotfiles:load" dmodules 'system' 'privacy' 'bookmarks' 'chat' 'dev' 'gtd' 'mail-work' 'neovim' 'shell' 'desktop' 'internet'
+
+# default empty definition
+zstyle ":dotfiles:load" dmodules
+
