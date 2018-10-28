@@ -1,2 +1,2 @@
 zstyle ":dotfiles:modules:system:software" brew 'git'
-zstyle ":dotfiles:modules:system:software" cask 'carbon-copy-cloner' 'openzfs'
+zstyle ":dotfiles:modules:system:software" cask 'carbon-copy-cloner' 'openzfs' 'java8'
