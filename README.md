@@ -1,6 +1,7 @@
 # dotfiles
 My personal dotfiles
 
+## Setup
 Install brew
 
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -40,4 +41,18 @@ copy the file `.dotfilesrc.template` to `~/.dotfilesrc` and define the set of mo
 
 Attention `privacy` must be the first module because there are some sensitive data which are encrypted with `keybase`. those files will be decrypted within the installation process.
 `system` should be the second one. because the installer uses also `git` to install software. 
- 
+
+## Usage
+
+To install dotfiles execute
+
+    bin/dotfiles --install-dotfiles
+
+To remove all dotfiles
+
+    bin/dotfiles --clean-dotfiles
+
+To install software execute
+
+    bin/dotfiles --install-software
+
