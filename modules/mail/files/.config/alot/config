@@ -20,7 +20,7 @@ auto_remove_unread = False
     address = marko.bauhardt@mailbox.org
     gpg_key = 53192101
     sendmail_command = /usr/local/bin/msmtp --account mailbox -t
-    draft_box = maildir:///Users/marko/Mail/marko.bauhardt_at_mailbox.org/Drafts  
+    draft_box = maildir:///Users/marko/z/documents/mail/marko.bauhardt_at_mailbox.org/Drafts  
       [[[abook]]]
         type = shellcommand
         command = 'notmuch-address-cache query'
