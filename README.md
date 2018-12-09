@@ -1,6 +1,10 @@
 # dotfiles
 My personal dotfiles
 
+## Installation
+
+    git clone --recursive git@github.com:mbauhardt/dotfiles.git "${ZDOTDIR:-$HOME}/z/src/dotfiles/master"
+
 ## Setup
 Install brew
 
