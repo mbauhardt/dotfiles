@@ -3,6 +3,12 @@ My personal dotfiles
 
 ## Installation
 
+export DOTFILESDIR if `dotfiles` are cloned into another directoty than `~/dotfiles`
+
+    export DOTFILESDIR=${ZDOTDIR:-$HOME}/z/src/dotfiles/master
+
+checkout dotfiles project
+
     git clone --recursive git@github.com:mbauhardt/dotfiles.git "${DOTFILESDIR:-$HOME}/z/src/dotfiles/master"
 
 ## Setup
