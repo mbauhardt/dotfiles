@@ -10,6 +10,7 @@ echo 'zshrc'
 #       FILESYTEM       #
 #########################
 
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -22,6 +23,7 @@ alias ll='ls -lhA'       # Lists human readable sizes, hidden files
 
 alias g='git'
 alias gst='git status'
+alias gws='git status --short'
 alias gco='git checkout'
 alias gia='git add'
 alias gb='git branch'
