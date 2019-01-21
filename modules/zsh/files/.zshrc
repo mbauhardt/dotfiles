@@ -67,6 +67,8 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt share_history
 
+export MYSQL_HISTFILE=~/z/documents/histories/mysql_history
+
 
 #########################
 #      ZSH-USERS        #
