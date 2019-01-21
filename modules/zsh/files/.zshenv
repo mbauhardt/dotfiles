@@ -15,6 +15,7 @@ fpath=(
   $fpath
 )
 
-export LANG='en_US.UTF-8'
 export DOTFILESDIR=${ZDOTDIR:-$HOME}/z/src/dotfiles/master
-
+export LANG='en_US.UTF-8'
+unset SSH_AGENT_PID
+export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
