@@ -7,9 +7,17 @@
 echo 'zshrc'
 
 #########################
-#       FILESYTEM       #
+#       EDITOR          #
 #########################
 
+export EDITOR='nvim'
+export VISUAL='nvim'
+export PAGER='less'
+
+
+#########################
+#       FILESYTEM       #
+#########################
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -87,4 +95,5 @@ ZSH_HIGHLIGHT_STYLES[cursor]='bg=blue'
 #########################
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 
