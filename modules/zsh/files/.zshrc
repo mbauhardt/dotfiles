@@ -66,4 +66,14 @@ setopt hist_ignore_space
 setopt share_history
 
 
+#########################
+#    AUTOSUGGESTIONS    #
+#########################
+source $DOTFILESDIR/modules/zsh/submodules/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
+
+#########################
+#        FZF            #
+#########################
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
