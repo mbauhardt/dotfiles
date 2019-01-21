@@ -15,7 +15,28 @@ fpath=(
   $fpath
 )
 
+######################
+#      DOTFILES      #
+######################
+
 export DOTFILESDIR=${ZDOTDIR:-$HOME}/z/src/dotfiles/master
-export LANG='en_US.UTF-8'
+export HOMEBREW_CASK_OPTS="--appdir=/opt"
+
+
+#####################
+#     GPG/SSH       #
+#####################
+
 unset SSH_AGENT_PID
 export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+
+
+#####################
+#     PASSWORDS     #
+#####################
+
+export PASSWORD_STORE_DIR=~/z/documents/passwords
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+
+
+export LANG='en_US.UTF-8'
