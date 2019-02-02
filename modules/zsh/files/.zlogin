@@ -8,3 +8,17 @@
 echo 'zlogin'
 
 export TERM=xterm-256color
+
+#################
+#      FASD     #
+#################
+
+# - '#q' is an explicit glob qualifier that makes globbing work within zsh's [[ ]] construct.
+# - 'N' makes the glob pattern evaluate to nothing when it doesn't match (rather than throw a globbing error)
+# 'mh+24' matches files (or directories or whatever) that are older than 24 hours.
+if [[ ! -r ${fasd_cache} || -n ${fasd_cache}(#qN.mh+24) ]]; then
+  echo 'Initialize fasd...'
+  fasd --init auto > "$fasd_cache"
+  source "$fasd_cache"
+fi;
+

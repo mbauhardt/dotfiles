@@ -1,4 +1,4 @@
-zstyle ":dotfiles:modules:shell:software" brew 'csshx' 'fzf' 'midnight-commander' 'ranger' 'p7zip' 's3cmd' 'tmux' 'tree' 'the_silver_searcher' 'htop' 'glances' 'pdfgrep'
+zstyle ":dotfiles:modules:shell:software" brew 'csshx' 'fzf' 'midnight-commander' 'ranger' 'p7zip' 's3cmd' 'tmux' 'tree' 'the_silver_searcher' 'htop' 'glances' 'pdfgrep' 'fasd'
 zstyle ":dotfiles:modules:shell:software" cask 'iterm2'
 
 #zstyle ":dotfiles:modules:shell:software" git \

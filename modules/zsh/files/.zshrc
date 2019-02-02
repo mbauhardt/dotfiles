@@ -20,6 +20,8 @@ alias e='$EDITOR'
 #       FILESYTEM       #
 #########################
 
+setopt EXTENDEDGLOB #if the EXTENDEDGLOB option is set, some new features are activated e.g. file(#qN.mh+24)
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -100,9 +102,10 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='bg=red,fg=white,bold'
 HISTORY_SUBSTRING_SEARCH_GLOBBING_FLAGS='i'
 
 #########################
-#        FZF            #
+#       FZF & FASD      #
 #########################
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
+fasd_cache="$HOME/.fasd-cache"
+[ -r ${fasd_cache} ] && source $fasd_cache
