@@ -6,6 +6,18 @@
 
 echo 'zshrc'
 
+
+#########################
+#       BASIC           #
+#########################
+
+setopt no_beep
+setopt auto_cd
+setopt complete_in_word
+#setopt correct
+setopt rm_star_wait
+eval `gdircolors`
+
 #########################
 #       EDITOR          #
 #########################
@@ -25,8 +37,13 @@ setopt EXTENDEDGLOB #if the EXTENDEDGLOB option is set, some new features are ac
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias ls='gls --color=auto'
 alias l='ls -lh'         # Lists human readable sizes
 alias ll='ls -lhA'       # Lists human readable sizes, hidden files
+alias ls_big='ls -Slh | head'
+alias ls_small='ls -Slhr | head'
+alias ls_new='ls -tlh | head'
+alias ls_old='ls -tlh | tail'
 
 #########################
 #        GIT            #
