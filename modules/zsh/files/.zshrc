@@ -18,6 +18,27 @@ setopt complete_in_word
 setopt rm_star_wait
 eval `gdircolors`
 
+
+#########################
+#       COMPLETION      #
+#########################
+
+zmodload -i zsh/complist
+zstyle ':completion:*' verbose yes       # show comments for options if available
+zstyle ':completion:*' group-name ''     # group completion hits by category
+zstyle ':completion:*:descriptions' format '%S%d%s'     # show description of category in reverse video color
+zstyle ':completion:*:corrections' format '%S%d%s'
+zstyle ':completion:*:messages' format '%S%d%s'
+zstyle ':completion:*:warnings' format '%S%d%s'
+zstyle ':completion:*' menu select=2     # activate menu completion if zsh found more than 2 hits
+zstyle ':completion:*:default' select-prompt '%SMatch %M %P%s'     # show status bar for a lot of hits
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}     # show files and folders in different colors
+zstyle ':completion:*' completer _complete _correct _approximate     # enable approximation e.g.: ld_sma[TAB] will be completed to my alias ls_small
+zstyle ':completion:*:approximate:*' max-errors 2
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'     # ignore case
+
+
+
 #########################
 #       EDITOR          #
 #########################
