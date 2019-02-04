@@ -2,8 +2,6 @@
 # It should contain commands to set the command search path, plus other important environment variables.
 # It should not contain commands that produce output or assume the shell is attached to a tty.
 
-echo 'zshenv'
-
 path=(
   /usr/local/{bin,sbin}
   $HOME/bin

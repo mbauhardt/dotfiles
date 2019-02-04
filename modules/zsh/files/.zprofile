@@ -3,6 +3,3 @@
 
 # login, interactive: .zshenv -> .zprofile -> .zshrc -> .zlogin
 
-echo 'zprofile'
-
-

@@ -5,8 +5,6 @@
 
 # login, interactive:  .zshenv -> .zprofile -> .zshrc -> .zlogin
 
-echo 'zlogin'
-
 export TERM=xterm-256color
 
 #################

@@ -4,8 +4,6 @@
 # login, interactive: .zshenv -> .zprofile -> .zshrc -> .zlogin
 # non-login, interactive: .zshenv -> .zshrc
 
-echo 'zshrc'
-
 
 #########################
 #       BASIC           #
