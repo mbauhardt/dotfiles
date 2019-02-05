@@ -121,7 +121,7 @@ export MYSQL_HISTFILE=~/z/documents/histories/mysql_history
 #      ZSH-USERS        #
 #########################
 source $DOTFILESDIR/modules/zsh/submodules/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
 source $DOTFILESDIR/modules/zsh/submodules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main cursor line)
@@ -156,4 +156,12 @@ fasd_cache="$HOME/.fasd-cache"
 # or switch to suckless terminal where I can compile the color into
 BASE16_SHELL=$DOTFILESDIR/modules/zsh/submodules/base16-shell
 [ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ] && eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+
+#########################
+#       PROMPT          #
+#########################
+
+autoload -Uz promptinit && promptinit
+prompt pure
 
