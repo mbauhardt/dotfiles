@@ -146,3 +146,14 @@ HISTORY_SUBSTRING_SEARCH_FUZZY='f'
 
 fasd_cache="$HOME/.fasd-cache"
 [ -r ${fasd_cache} ] && source $fasd_cache
+
+
+#########################
+#      BASE 16 SHELL    #
+#########################
+
+# FIXME: base16 colors slows down the statup. think about to use colors via iTerm 
+# or switch to suckless terminal where I can compile the color into
+BASE16_SHELL=$DOTFILESDIR/modules/zsh/submodules/base16-shell
+[ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ] && eval "$("$BASE16_SHELL/profile_helper.sh")"
+
