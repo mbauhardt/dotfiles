@@ -18,6 +18,14 @@ eval `gdircolors`
 
 
 #########################
+#         ZLE           #
+#########################
+
+bindkey -v    # vim mode
+export KEYTIMEOUT=1    # delay after hit ESC
+
+
+#########################
 #       COMPLETION      #
 #########################
 
