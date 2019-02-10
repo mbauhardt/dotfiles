@@ -25,14 +25,6 @@ Special Homebrew Taps e.g. Versions
     brew tap caskroom/cask
     brew tap caskroom/versions
 
-Install openzfs via brew 
-
-    brew cask install openzfs
-
-mount all available zfs datasets
-
-    sudo zfs mount -l -a
-
 Install keybase via brew and provision your device
 
     brew cask install keybase
@@ -47,7 +39,9 @@ export DOTFILESDIR if `dotfiles` are cloned into another directoty than `~/dotfi
 
 copy the file `.dotfilesrc.template` to `~/.dotfilesrc` and define the set of modules you want to load 
 
-    zstyle ":dotfiles:load" dmodules 'privacy' 'system' 'bookmarks' 'chat' 'dev' 'gtd' 'mail-work' 'neovim' 'shell' 'desktop' 'internet' 
+    zstyle ":dotfiles:load" dmodules 'privacy' 'bookmarks' 'chat' 'dev' 'gtd' 'mail-work' 'neovim' 'zsh' 'shell-utils' 'desktop' 'internet' 
+    # or the minimum version
+    zstyle ":dotfiles:load" dmodules 'privacy' 'zsh' 'shell-utils'
 
 Attention `privacy` must be the first module because there are some sensitive data which are encrypted with `keybase`. those files will be decrypted within the installation process.
 `system` should be the second one. because the installer uses also `git` to install software. 
