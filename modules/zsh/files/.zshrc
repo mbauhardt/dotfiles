@@ -121,6 +121,7 @@ setopt hist_reduce_blanks
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt share_history
+setopt auto_name_dirs
 
 export MYSQL_HISTFILE=~/z/documents/histories/mysql_history
 
@@ -172,4 +173,17 @@ BASE16_SHELL=$DOTFILESDIR/modules/zsh/submodules/base16-shell
 
 autoload -Uz promptinit && promptinit
 prompt pure
+MY_DOTS=$DOTFILESDIR
+DAP_MASTER=$HOME/z/src/dap/master
+DAP_V74=$HOME/z/src/dap/v7.4
+DAP_V72=$HOME/z/src/dap/v7.2
+PROMPT='%(?.%F{white}%* %% .%F{red}%? %F{white}%* %%%f '
+
+function zle-line-init zle-keymap-select {
+    RPROMPT="%F{yellow}${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}%f"
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
 
