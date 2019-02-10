@@ -4,6 +4,12 @@
 # login, interactive: .zshenv -> .zprofile -> .zshrc -> .zlogin
 # non-login, interactive: .zshenv -> .zshrc
 
+#########################
+#       FUNCTIONS       #
+#########################
+
+autoload -Uz tm     # list tmux sessions
+
 
 #########################
 #       BASIC           #

@@ -36,3 +36,20 @@ else
   compinit -C -d "$compinit_dump"
 fi;
 
+
+#################
+#     TMUX      #
+#################
+
+if [[ -z "$TMUX" ]]; then
+  tmux has-session 2>/dev/null
+  if [[ "$?" -eq 1 ]]; then
+    echo "Attach new tmux sessions..."
+    tmux new-session -d -s dev -c "$HOME/z/src/dap/master" -n topics
+    tmux new-session -d -s etc
+    tmux new-window -c "$HOME/z/src/dap/master" -t dev:1 -n master
+    tmux new-window -c "$HOME/z/src/dap/v7.4" -t dev:2 -n v7.4
+    tmux new-window -c "$HOME/z/src/dap/v7.2" -t dev:3 -n v7.2
+    tmux select-window -t dev:1
+  fi
+fi
