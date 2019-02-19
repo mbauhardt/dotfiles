@@ -9,6 +9,7 @@
 #########################
 
 autoload -Uz tm     # list tmux sessions
+autoload -Uz nvm     # lazy load nvm
 
 
 #########################
@@ -113,6 +114,7 @@ alias beeline_1_1="HADOOP_HOME=\"/opt/hadoop-2.6.0\" HADOOP_USER_CLASSPATH_FIRST
 alias ktutil=/usr/local/Cellar/krb5/1.16.1/bin/ktutil
 alias gw='./gradlew'
 alias gwf='./gradlew validate findbugsMain'
+alias nvm_setup_datameer_version='nvm use --delete-prefix datameer'   # expect alias 'datameer' e.g.: nvm alias datameer node
 
 #########################
 #       HISTORY         #

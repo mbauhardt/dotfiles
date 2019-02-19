@@ -1,0 +1,8 @@
+# Remove this function, subsequent calls will execute 'nvm' directly
+unfunction "$0"
+if [[ -d '/usr/local/opt/nvm' ]]; then
+  export NVM_DIR="/usr/local/opt/nvm"
+  source "${NVM_DIR}/nvm.sh"
+  # execute `nvm` directly
+  nvm "$@"
+fi
