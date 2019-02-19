@@ -17,7 +17,7 @@ for dot in "$dots[@]";do
   [[ ! -d ${DOTFILESDIR:-$HOME/dotfiles}/modules/$dot/files ]] && continue
   pushd ${DOTFILESDIR:-$HOME/dotfiles}/modules/$dot/files > /dev/null
   
-  for f in **/*(D.);do 
+  for f in **/*(D.,@);do 
     local lnk=$HOME/$f
     local gitFile=${f:a}
     printf "[%s] Create symbolic link '%s' => '%s'." "${dot}" "${lnk}" "${gitFile}"

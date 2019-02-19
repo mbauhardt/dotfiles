@@ -1,1 +1,1 @@
-zstyle ":dotfiles:modules:desktop:software" cask 'flux' 'hocus-focus' 'caffeine'
+zstyle ":dotfiles:modules:desktop:software" cask 'carbon-copy-cloner' 'flux' 'hocus-focus' 'caffeine'

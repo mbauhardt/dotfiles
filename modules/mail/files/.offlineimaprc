@@ -18,7 +18,7 @@ postsynchook = notmuch new
 
 [Repository Mailbox-Local]
 type = Maildir
-localfolders = ~/Mail/marko.bauhardt_at_mailbox.org
+localfolders = ~/z/documents/mail/marko.bauhardt_at_mailbox.org
 
 
 
