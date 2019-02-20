@@ -1,8 +1,8 @@
 # `.zshrc' is sourced in interactive shells. It should contain commands to set up aliases, functions, options, key bindings, etc.
 
-
 # login, interactive: .zshenv -> .zprofile -> .zshrc -> .zlogin
 # non-login, interactive: .zshenv -> .zshrc
+
 
 #########################
 #       FUNCTIONS       #
@@ -22,6 +22,20 @@ setopt complete_in_word
 #setopt correct
 setopt rm_star_wait
 eval `gdircolors`
+
+
+#########################
+#     NAMED DIRS        #
+#########################
+
+#setopt auto_name_dirs
+hash -d MY_DOTS=$DOTFILESDIR
+hash -d DAP_MASTER=$HOME/z/src/dap/master
+hash -d DAP_V74=$HOME/z/src/dap/v7.4
+hash -d DAP_V72=$HOME/z/src/dap/v7.2
+hash -d HADOOP=/opt/hadoop-2.6.0
+hash -d HIVE_11=/opt/hive-1.1.0
+hash -d HIVE_12=/opt/hive-1.2.1
 
 
 #########################
@@ -51,7 +65,6 @@ zstyle ':completion:*:approximate:*' max-errors 2
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'     # ignore case
 
 
-
 #########################
 #       EDITOR          #
 #########################
@@ -61,6 +74,7 @@ export VISUAL='nvim'
 export PAGER='less'
 
 alias e='$EDITOR'
+
 
 #########################
 #       FILESYTEM       #
@@ -78,6 +92,7 @@ alias ls_big='ls -Slh | head'
 alias ls_small='ls -Slhr | head'
 alias ls_new='ls -tlh | head'
 alias ls_old='ls -tlh | tail'
+
 
 #########################
 #        GIT            #
@@ -104,6 +119,7 @@ alias glol="git log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cg
 
 alias t='task'
 
+
 #########################
 #     DEVELOPMENT       #
 #########################
@@ -115,6 +131,7 @@ alias ktutil=/usr/local/Cellar/krb5/1.16.1/bin/ktutil
 alias gw='./gradlew'
 alias gwf='./gradlew validate findbugsMain'
 alias nvm_setup_datameer_version='nvm use --delete-prefix datameer'   # expect alias 'datameer' e.g.: nvm alias datameer node
+
 
 #########################
 #       HISTORY         #
@@ -129,7 +146,6 @@ setopt hist_reduce_blanks
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt share_history
-setopt auto_name_dirs
 
 export MYSQL_HISTFILE=~/z/documents/histories/mysql_history
 
@@ -154,6 +170,7 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=magenta,fg=white,bold'
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='bg=red,fg=white,bold'
 HISTORY_SUBSTRING_SEARCH_GLOBBING_FLAGS='i'
 HISTORY_SUBSTRING_SEARCH_FUZZY='f'
+
 
 #########################
 #       FZF & FASD      #
@@ -181,10 +198,6 @@ BASE16_SHELL=$DOTFILESDIR/modules/zsh/submodules/base16-shell
 
 autoload -Uz promptinit && promptinit
 prompt pure
-MY_DOTS=$DOTFILESDIR
-DAP_MASTER=$HOME/z/src/dap/master
-DAP_V74=$HOME/z/src/dap/v7.4
-DAP_V72=$HOME/z/src/dap/v7.2
 PROMPT='%(?.%F{white}%* %% .%F{red}%? %F{white}%* %%%f '
 
 function zle-line-init zle-keymap-select {
