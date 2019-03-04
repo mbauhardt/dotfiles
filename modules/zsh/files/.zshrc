@@ -36,6 +36,7 @@ hash -d DAP_V72=$HOME/z/src/dap/v7.2
 hash -d HADOOP=/opt/hadoop-2.6.0
 hash -d HIVE_11=/opt/hive-1.1.0
 hash -d HIVE_12=/opt/hive-1.2.1
+hash -d PASSWORDS=$HOME/z/documents/passwords
 
 
 #########################
