@@ -37,4 +37,6 @@ export PASSWORD_STORE_DIR=~/z/documents/passwords
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 
 
+# needed for alot
 export LANG='en_US.UTF-8'
+export LC_ALL=en_US.UTF-8
