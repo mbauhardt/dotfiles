@@ -10,6 +10,7 @@
 
 autoload -Uz tm     # list tmux sessions
 autoload -Uz nvm     # lazy load nvm
+autoload -Uz backup_personal_files     # backup my personal files
 
 
 #########################
