@@ -1,7 +1,7 @@
 #theme = tomorrow
 theme = mutt
 
-initial_command = bufferlist; taglist; search tag:unread; search tag:inbox; search tag:gtd; search tag:finance; search tag:shopping; search tag:food; search tag:social; search tag:mailinglist; search date:today; search tag:sent; search tag:replied; search tag:flagged; search tag:deleted; search '*'; buffer 0
+initial_command = bufferlist; taglist; search tag:unread; search tag:inbox; search tag:notemail; search tag:gtd; search tag:finance; search tag:shopping; search tag:food; search tag:social; search tag:mailinglist; search date:today; search tag:sent; search tag:replied; search tag:flagged; search tag:deleted; search '*'; buffer 0
 
 auto_remove_unread = False
 
