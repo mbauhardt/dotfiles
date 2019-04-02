@@ -2,16 +2,6 @@
 # It should contain commands to set the command search path, plus other important environment variables.
 # It should not contain commands that produce output or assume the shell is attached to a tty.
 
-path=(
-  /usr/local/{bin,sbin}
-  $HOME/bin
-  $path
-)
-
-fpath=(
-  $HOME/.zsh/functions
-  $fpath
-)
 
 ######################
 #      DOTFILES      #
@@ -40,3 +30,19 @@ export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 # needed for alot
 export LANG='en_US.UTF-8'
 export LC_ALL=en_US.UTF-8
+
+# dev
+export GOPATH=$HOME/z/src/go
+
+# export path and fpath
+path=(
+  /usr/local/{bin,sbin}
+  $HOME/bin
+  $GOPATH/bin
+  $path
+)
+
+fpath=(
+  $HOME/.zsh/functions
+  $fpath
+)
