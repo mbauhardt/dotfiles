@@ -9,6 +9,8 @@ auto_remove_unread = False
 
   [[thread]]
     | = pipeto urlscan
+  [[envelope]]
+    e = "call hooks.enc('mbauhardt')"
   
   [[search]]
     D = toggletags deleted
