@@ -20,7 +20,7 @@ auto_remove_unread = False
   [[work]]
     realname = Marko Bauhardt
     address = mb@datameer.com
-    gpg_key = 53192101
+    gpg_key = 618EC563
     sendmail_command = /usr/local/bin/msmtp --account datameer -t
     signature = ~/.config/alot/signature
     draft_box = maildir:///Users/mb/z/documents/mail/mb_at_datameer.com/drafts
