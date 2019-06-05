@@ -1,2 +1,2 @@
-chmod 700 ~/.gnupg
+chmod 700 $GNUPGHOME
 
