@@ -27,6 +27,7 @@ set tabstop=2
 set softtabstop=4
 set shiftwidth=8
 set number
+set backspace=indent,eol,start
 
 set rtp+=/usr/local/opt/fzf " search files via fzf
 
