@@ -16,7 +16,7 @@ cp buku-$(date +'%Y%m%d').tar /Volumes/marko/Documents/Backups/Buku/
 
 scp -r marko@firewall:/home/marko/dav/user/calendars/calendar .
 cd calendar
-gP
+git push
 
 cd ~PASSWORDS
-gP
+git push
