@@ -10,11 +10,6 @@ path = ~/.calendars/user/calendars/calendar
 type = calendar
 color = yellow
 
-[[fussball]]
-path = ~/.calendars/fussball
-color = dark green
-readonly = true
-
 [locale]
 timeformat = %H:%M
 #dateformat = %Y-%m-%d

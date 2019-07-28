@@ -1,13 +1,6 @@
 [general]
 status_path = "~/.local/share/vdirsyncer/status/"
 
-[pair fussball_to_local]
-a = "fussball_remote"
-b = "fussball_local"
-conflict_resolution = "a wins"
-collections = null
-partial_sync = "ignore"
-
 [pair familie_to_local]
 a = "familie_remote"
 b = "familie_local"
@@ -19,24 +12,7 @@ type = "filesystem"
 path = "~/.calendars/user/calendars/calendar"
 fileext = ".ics"
 
-[storage familie_radicale]
-verify = false
-verify_fingerprint = "E8:70:2C:F5:70:45:B6:3C:0B:51:35:53:E0:6F:74:D4:35:F2:8A:4F"
-type = "caldav"
-url = "https://192.168.200.254:5232/familie/c0452e8a-dead-8371-82be-9f7da2c251e8/"
-
 [storage familie_remote]
 type = "caldav"
 url = "http://192.168.200.254:8080/user/calendars/calendar"
-
-[storage fussball_remote]
-type = "http"
-#read_only = true
-url = "https://www.spielerplus.de/events/ics?t=1Kr3nHDV1t&u=x3upqWuYsU"
-
-
-[storage fussball_local]
-type = "filesystem"
-path = "~/.calendars/fussball/"
-fileext = ".ics"
 
