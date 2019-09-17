@@ -52,7 +52,7 @@ if [[ -z "$TMUX" ]]; then
     tmux new-window -t home:2 -n todos
     tmux new-window -c "$HOME/z/src/dap/master" -t dev:1 -n master
     tmux new-window -c "$HOME/z/src/dap/v7.5" -t dev:2 -n v7.5
-    tmux new-window -c "$HOME/z/src/dap/v7.4" -t dev:2 -n v7.4
+    tmux new-window -c "$HOME/z/src/dap/v7.4" -t dev:3 -n v7.4
     tmux select-window -t dev:1
   fi
 fi
