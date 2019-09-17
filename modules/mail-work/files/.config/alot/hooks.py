@@ -3,16 +3,12 @@
 import logging
 import subprocess
 
-def searchByTag():
+async def searchByTag():
   file = open("/Users/mb/.config/alot/search.txt", "r")
   s = file.read()
   file.close()
-  ui.apply_commandline(s)
+  await ui.apply_commandline(s)
 
-def pre_global_refresh(**kwargs):
-  logging.info('Syncing mail with offlineimap')
-  ui.notify("fetchinig email..")  
-  #subprocess.call("offlineimap -o".split(),stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 
 def enc(userid):
   e = ui.current_buffer.envelope

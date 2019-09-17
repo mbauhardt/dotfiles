@@ -1,6 +1,6 @@
 #theme = mutt2
 
-initial_command = bufferlist; taglist; call hooks.searchByTag(); buffer 0
+initial_command = "bufferlist; taglist; call hooks.searchByTag() ; buffer 0"
 
 auto_remove_unread = False
 
