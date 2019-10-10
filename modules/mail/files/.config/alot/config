@@ -21,9 +21,9 @@ auto_remove_unread = False
 		signature = ~/.config/alot/signature
     gpg_key = 53192101
     sendmail_command = /usr/local/bin/msmtp --account mailbox -t
-    draft_box = maildir:///Users/marko/z/documents/mail/marko.bauhardt_at_mailbox.org/Drafts  
+    sent_box = maildir:///Users/marko/z/documents/mail/marko.bauhardt_at_mailbox.org/Sent Messages
       [[[abook]]]
         type = shellcommand
         command = 'notmuch-address-cache query'
-	regexp = '\[?{"name": "(?P<name>.*)", "address": "(?P<email>.+)", "name-addr": ".*"}[,\]]?'
+        regexp = '\[?{"name": "(?P<name>.*)", "address": "(?P<email>.+)", "name-addr": ".*"}[,\]]?'
         shellcommand_external_filtering = False

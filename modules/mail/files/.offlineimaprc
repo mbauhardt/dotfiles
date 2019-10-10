@@ -29,4 +29,4 @@ remotehost = imap.mailbox.org
 remoteuser = marko.bauhardt@mailbox.org
 remotepasseval = get_pass()
 auth_mechanisms = LOGIN
-folderfilter = lambda foldername: foldername in ['INBOX', 'Drafts']
+folderfilter = lambda foldername: foldername in ['INBOX', 'Sent Messages']
