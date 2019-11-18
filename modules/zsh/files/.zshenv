@@ -37,6 +37,7 @@ export GOPATH=$HOME/z/src/go
 
 # export path and fpath
 path=(
+  /opt/usr/local/{bin,sbin}
   /usr/local/{bin,sbin}
   $HOME/bin
   $GOPATH/bin

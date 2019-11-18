@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/Users/mb/virtualenvs/afew/bin/afew --new --tag -v
+

@@ -31,7 +31,7 @@ path=/Users/mb/z/documents/mail
 [user]
 name=Marko Bauhardt
 primary_email=mb@datameer.com
-
+other_email=marko.bauhardt@datameer.com;mbauhardt@datameer.com
 # Configuration for "notmuch new"
 #
 # The following options are supported here:
@@ -47,7 +47,7 @@ primary_email=mb@datameer.com
 #		in the mail store.
 #
 [new]
-tags=new;inbox;
+tags=new
 ignore=
 
 # Search configuration
