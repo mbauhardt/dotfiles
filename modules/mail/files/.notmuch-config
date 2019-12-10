@@ -47,7 +47,7 @@ primary_email=marko.bauhardt@mailbox.org
 #		in the mail store.
 #
 [new]
-tags=new;inbox;
+tags=new
 ignore=
 
 # Search configuration

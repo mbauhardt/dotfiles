@@ -31,6 +31,7 @@ export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 # needed for alot
 export LANG='en_US.UTF-8'
 export LC_ALL=en_US.UTF-8
+export MBLAZE=$HOME/.mblaze
 
 # dev
 export GOPATH=$HOME/z/src/go

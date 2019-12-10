@@ -11,6 +11,9 @@
 autoload -Uz tm     # list tmux sessions
 autoload -Uz nvm     # lazy load nvm
 autoload -Uz backup_personal_files     # backup my personal files
+autoload -Uz mm     # shortcut for mail overview based on notmuch tags
+autoload -Uz m     # shortcut for mail incl notmuch tags
+autoload -Uz mq     # query notmuch database
 
 
 #########################
@@ -134,6 +137,28 @@ alias gw='./gradlew'
 alias gwf='./gradlew validate findbugsMain'
 alias nvm_setup_datameer_version='nvm use --delete-prefix datameer'   # expect alias 'datameer' e.g.: nvm alias datameer node
 
+
+#########################
+#        MAIL           #
+#########################
+
+# show and navigation
+#alias m="mscan | tac"
+alias mt="mthread | m"
+alias mu="mseq -C .+1; m"
+alias md="mseq -C .-1; m"
+alias ml="mseq -C \$; m"
+alias mf="mseq -C 1; m"
+
+# general mail search queries
+alias m_unread="mq 'tag:unread'"
+alias m_sent="mq 'tag:sent and date:60d..'"
+alias m_inbox="mq 'tag:inbox and date:14d..'"
+alias m_me="mq 'tag:to-me and date:14d..'"
+alias m_flagged="mq 'tag:flagged'"
+
+# special search queries
+source $HOME/.zsh/aliases/mblaze
 
 #########################
 #       HISTORY         #

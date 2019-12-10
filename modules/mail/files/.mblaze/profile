@@ -1,0 +1,5 @@
+Local-Mailbox:marko.bauhardt@mailbox.org
+Sendmail:msmtp
+Sendmail-Args:--account mailbox -t
+Outbox:/Users/marko/z/documents/mail/marko.bauhardt_at_mailbox.org/Sent Messages
+
