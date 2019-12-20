@@ -1,0 +1,4 @@
+Local-Mailbox:mb@datameer.com
+Alternate-Mailboxes:marko.bauhardt@datameer.com,mbauhardt@datameer.com
+Sendmail:msmtp
+Sendmail-Args:--account datameer -t

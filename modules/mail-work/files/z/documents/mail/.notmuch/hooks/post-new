@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
 
-/Users/mb/virtualenvs/afew/bin/afew --new --tag -v
+notmuch-address-cache update --json
+afew --new --tag -v
 

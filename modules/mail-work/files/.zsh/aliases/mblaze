@@ -1,0 +1,24 @@
+# code
+alias mark_dap_commits_as_read="notmuch tag -unread -- tag:commits"
+alias mark_dap_cr_as_read="notmuch tag -unread -- tag:cr"
+alias mark_jira_notified_as_read="notmuch tag -unread -- tag:jira-notified and tag:unread"
+
+# lists
+alias m_team="notmuch search --output=files 'tag:lists/turtle-team and not tag:jira and not tag:confluence and not tag:ci and not tag:calendar and date:14d..' | mseq -S; mf"
+alias m_halle="notmuch search --output=files 'tag:lists/halle and not tag:calendar and date:14d..' | mseq -S; mf"
+alias m_dev="notmuch search --output=files 'tag:lists/dev and not tag:calendar and date:14d..' | mseq -S; mf"
+alias m_allhands="notmuch search --output=files 'tag:lists/allhands and not tag:calendar and date:14d..' | mseq -S; mf"
+
+# jira & co
+alias m_jira_mentioned="notmuch search --output=files '((tag:jira-mentioned and tag:to-me) or (tag:jira-mentioned and tag:lists/turtle-team)) and date:30d..' | mseq -S; mf"
+alias m_jira_notified="notmuch search --output=files '((tag:jira-notified and tag:to-me) or (tag:jira-notified and tag:lists/turtle-team)) and date:14d..' | mseq -S; mf"
+alias m_confluence_mentioned="notmuch search --output=files '((tag:confluence-mentioned and tag:to-me) or (tag:confluence-mentioned and tag:lists/turtle-team)) and date:30d..' | mseq -S; mf"
+alias m_confluence_notified="notmuch search --output=files '((tag:confluence-notified and tag:to-me) or (tag:confluence-notified and tag:lists/turtle-team)) and date:14d..' | mseq -S; mf"
+
+# code
+alias m_commits="notmuch search --output=files '(tag:commits) and date:3d..' | mseq -S; mf"
+alias m_cr="notmuch search --output=files 'tag:cr and date:14d..' | mseq -S; mf"
+alias m_ci="notmuch search --output=files 'tag:ci and date:14d..' | mseq -S; mf"
+
+# rest
+alias m_calendar="notmuch search --output=files 'tag:calendar and date:7d..' | mseq -S; mf"

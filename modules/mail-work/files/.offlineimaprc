@@ -8,7 +8,7 @@ pythonfile = ~/.offlineimap/passwd.py
 [Account Datameer]
 localrepository = Datameer-Local
 remoterepository = Datameer-Remote
-autorefresh = 2
+autorefresh = 20
 quick = 10
 synclabels = no
 labelsheader = X-Keywords

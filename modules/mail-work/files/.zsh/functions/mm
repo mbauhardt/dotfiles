@@ -1,0 +1,37 @@
+# inbox                                 halle                                           jira-ment                                               cr
+# me                                    allhands                                        jira-not                                                commits
+# team                                  dev                                             confl-ment                                      ci
+# cal                                                                                                           conf-not
+#
+# unread
+
+printf "\n"
+
+printf "inbox   (%s) \t\t halle     (%s) \t\t jira-mentioned         (%s) \t\t cr       (%s)\n" \
+"$(notmuch count tag:inbox and tag:unread)" \
+"$(notmuch count tag:lists/halle and not tag:calendar and tag:unread)" \
+"$(notmuch count '((tag:jira-mentioned and tag:to-me) or (tag:jira-mentioned and tag:lists/turtle-team)) and tag:unread')" \
+"$(notmuch count tag:cr and tag:unread)"
+
+printf "me      (%s) \t\t allhands  (%s) \t\t jira-notified          (%s) \t\t commits  (%s)\n" \
+"$(notmuch count tag:to-me and not tag:jira and not tag:confluence and not tag:calendar and not tag:ci and not tag:slack and not tag:lists and tag:unread)" \
+"$(notmuch count tag:lists/allhands and not tag:calendar and tag:unread)" \
+"$(notmuch count '((tag:jira-notified and tag:to-me) or (tag:jira-notified and tag:lists/turtle-team)) and tag:unread')" \
+"$(notmuch count tag:commits and tag:unread)"
+
+printf "team    (%s) \t\t dev       (%s) \t\t confluence-mentioned   (%s) \t\t ci       (%s)\n" \
+"$(notmuch count tag:lists/turtle-team and not tag:jira and not tag:confluence and not tag:ci and not tag:calendar and tag:unread)" \
+"$(notmuch count tag:lists/dev and not tag:calendar and tag:unread)" \
+"$(notmuch count '((tag:confluence-mentioned and tag:to-me) or (tag:confluence-mentioned and tag:lists/turtle-team)) and tag:unread')" \
+"$(notmuch count tag:ci and tag:unread)"
+
+printf "cal     (%s)                     \t\t confluence-notified    (%s) \n" \
+"$(notmuch count tag:calendar and tag:unread)" \
+"$(notmuch count '((tag:confluence-notified and tag:to-me) or (tag:confluence-notified and tag:lists/turtle-team)) and tag:unread')" \
+
+printf "\n"
+
+printf "unread   (%s)" \
+"$(notmuch count tag:unread)"
+
+printf "\n"
