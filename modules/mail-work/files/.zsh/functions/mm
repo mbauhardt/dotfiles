@@ -31,7 +31,11 @@ printf "cal     (%s)                     \t\t confluence-notified    (%s) \n" \
 
 printf "\n"
 
-printf "unread   (%s)" \
+printf "unread   (%s)\n" \
 "$(notmuch count tag:unread)"
+printf "spam     (%s) \n" \
+"$(notmuch count tag:spam and tag:unread)"
+printf "flagged  (%s) \n" \
+"$(notmuch count tag:flagged)"
 
 printf "\n"

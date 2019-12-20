@@ -156,6 +156,7 @@ alias m_sent="mq 'tag:sent and date:60d..'"
 alias m_inbox="mq 'tag:inbox and date:14d..'"
 alias m_me="mq 'tag:to-me and date:14d..'"
 alias m_flagged="mq 'tag:flagged'"
+alias m_spam="mq 'tag:spam and date:30d..'"
 
 # special search queries
 source $HOME/.zsh/aliases/mblaze
