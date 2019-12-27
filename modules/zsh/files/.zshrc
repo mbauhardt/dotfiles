@@ -226,11 +226,22 @@ BASE16_SHELL=$DOTFILESDIR/modules/zsh/submodules/base16-shell
 
 autoload -Uz promptinit && promptinit
 prompt pure
-PROMPT='%(?.%F{white}%* %% .%F{red}%? %F{white}%* %%%f '
+# day of month
+PROMPT='%D{%f}th%t '$PROMPT
+# jobs
+PROMPT='%(1j.[%j] .)% '$PROMPT
 
 function zle-line-init zle-keymap-select {
-    RPROMPT="%F{yellow}${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}%f"
-    zle reset-prompt
+	# Change the cursor style depending on keymap mode.
+	case $KEYMAP {
+		vicmd)
+			printf '\e[0 q' # Box.
+			;;
+
+		viins|main)
+			printf '\e[6 q' # Vertical bar.
+			;;
+	}
 }
 
 zle -N zle-line-init
