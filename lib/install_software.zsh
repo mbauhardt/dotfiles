@@ -1,3 +1,11 @@
+function _installDnf() {
+  local dnf=$@
+  sudo dnf info $dnf 1> /dev/null 2> /dev/null
+  [[ $? -eq 0 ]] &&  return 2
+  sudo dnf install $dnf 1>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/install.log 2>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/install_error.log
+  return $?
+}
+
 function _installFormula() {
   local formula=$@
   brew list $formula 1> /dev/null 2> /dev/null
@@ -39,6 +47,15 @@ for dot in "$dots[@]";do
   
   [[ ! -a ${DOTFILESDIR:-$HOME/dotfiles}/modules/$dot/install-software.zsh ]] && continue
   source ${DOTFILESDIR:-$HOME/dotfiles}/modules/$dot/install-software.zsh
+
+  # install via dnf
+  zstyle -a ":dotfiles:modules:${dot}:software" dnf rpms
+  for r in $rpms[@];do
+    printf "[%s] Install rpm '%s'." "${dot}" "${r}"
+    _installDnf $r
+    local ret=$?
+    ([[ $ret -eq 0 ]] && printf "[\033[0;32mOK\033[0m]\n") || ([[ $ret -eq 1 ]] && printf "[\033[0;31mERROR\033[0m]\n") || ([[ $ret -eq 2 ]] && printf "[\033[0;33mSKIP\033[0m]\n")
+  ;done
 
   # install via homebrew
   zstyle -a ":dotfiles:modules:${dot}:software" brew formulae
