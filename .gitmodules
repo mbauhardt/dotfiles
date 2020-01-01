@@ -13,3 +13,15 @@
 [submodule "modules/zsh/submodules/pure"]
 	path = modules/zsh/submodules/pure
 	url = git@github.com:sindresorhus/pure.git
+[submodule "submodules/zsh-autosuggestions"]
+	path = submodules/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git
+[submodule "submodules/zsh-syntax-highlighting"]
+	path = submodules/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
+[submodule "submodules/zsh-history-substring-search"]
+	path = submodules/zsh-history-substring-search
+	url = git@github.com:zsh-users/zsh-history-substring-search.git
+[submodule "submodules/pure"]
+	path = submodules/pure
+	url = git@github.com:sindresorhus/pure.git

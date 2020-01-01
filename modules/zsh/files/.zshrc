@@ -181,15 +181,15 @@ export MYSQL_HISTFILE=~/z/documents/histories/mysql_history
 #########################
 #      ZSH-USERS        #
 #########################
-source $DOTFILESDIR/modules/zsh/submodules/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $DOTFILESDIR/submodules/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
-source $DOTFILESDIR/modules/zsh/submodules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $DOTFILESDIR/submodules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main cursor line)
 ZSH_HIGHLIGHT_STYLES[line]='bold'
 ZSH_HIGHLIGHT_STYLES[cursor]='bg=blue'
 
-source $DOTFILESDIR/modules/zsh/submodules/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $DOTFILESDIR/submodules/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
