@@ -1,6 +1,12 @@
 # dotfiles
 My personal dotfiles
 
+## Convenient Folders
+
+    mkdir -p $HOME/z/{documents,src,share}
+    mkdir -p $HOME/z/documents/{etc,gnupg,histories/mail,passwords,pdf,vim,vimwiki}
+
+
 ## Installation
 
 export DOTFILESDIR if `dotfiles` are cloned into another directoty than `~/dotfiles`
