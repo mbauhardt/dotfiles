@@ -1,0 +1,9 @@
+[user]
+  name = Marko Bauhardt
+  email = marko.bauhardt@mailbox.org
+  editor = vi
+  signingkey = 53192101
+[commit]
+  gpgsign = true
+[gpg]
+  program = gpg
