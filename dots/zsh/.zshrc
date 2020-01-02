@@ -25,7 +25,7 @@ setopt auto_cd
 setopt complete_in_word
 #setopt correct
 setopt rm_star_wait
-eval `gdircolors`
+eval `dircolors`
 
 
 #########################
@@ -74,8 +74,8 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'     # ignore case
 #       EDITOR          #
 #########################
 
-export EDITOR='nvim'
-export VISUAL='nvim'
+export EDITOR='vi'
+export VISUAL='vi'
 export PAGER='less'
 
 alias e='$EDITOR'
@@ -90,7 +90,7 @@ setopt EXTENDEDGLOB #if the EXTENDEDGLOB option is set, some new features are ac
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias ls='gls --color=auto'
+alias ls='ls --color=auto'
 alias l='ls -lh'         # Lists human readable sizes
 alias ll='ls -lhA'       # Lists human readable sizes, hidden files
 alias ls_big='ls -Slh | head'
