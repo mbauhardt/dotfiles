@@ -1,8 +1,6 @@
 function _installDnf() {
   local dnf=$@
-  sudo dnf info $dnf 1> /dev/null 2> /dev/null
-  [[ $? -eq 0 ]] &&  return 2
-  sudo dnf install $dnf 1>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/install.log 2>> ${DOTFILESDIR:-$HOME/dotfiles}/logs/install_error.log
+  sudo dnf install $dnf
   return $?
 }
 

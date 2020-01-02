@@ -8,7 +8,7 @@ for dot in "$dots[@]";do
   # -v verbose
   # -R recursive
   # -t target
-  stow -v -R -t ${usr} -D ${app}
+  stow -v -R -d ${DOTFILESDIR:-$HOME/dotfiles}/dots -t $HOME -D $dot
 
 ;done
 
