@@ -1,5 +1,5 @@
 # example at home modules
-# zstyle ":dotfiles:load" dot 'zsh' 'gnupg' 'ssh'
+# zstyle ":dotfiles:load" dot 'zsh' 'gnupg' 'ssh' 'pass'
 
 # default empty definition
 zstyle ":dotfiles:load" dot
