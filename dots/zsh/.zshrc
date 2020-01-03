@@ -55,6 +55,18 @@ export KEYTIMEOUT=1    # delay after hit ESC
 #       COMPLETION      #
 #########################
 
+setopt EXTENDEDGLOB #if the EXTENDEDGLOB option is set, some new features are activated e.g. file(#qN.mh+24)
+autoload -Uz compinit
+compinit_dump="$HOME/.zcompdump"
+if [[ ! -r ${compinit_dump} || -n ${compinit_dump}(#qN.mh+24) ]]; then
+  echo 'Initialize compinit...'
+  rm -f "$compinit_dump"
+  compinit -d "$compinit_dump"
+  zcompile "$compinit_dump"
+else
+  compinit -C -d "$compinit_dump"
+fi;
+
 zmodload -i zsh/complist
 zstyle ':completion:*' verbose yes       # show comments for options if available
 zstyle ':completion:*' group-name ''     # group completion hits by category
@@ -85,7 +97,6 @@ alias e='$EDITOR'
 #       FILESYTEM       #
 #########################
 
-setopt EXTENDEDGLOB #if the EXTENDEDGLOB option is set, some new features are activated e.g. file(#qN.mh+24)
 
 alias ..='cd ..'
 alias ...='cd ../..'

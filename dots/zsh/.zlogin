@@ -21,21 +21,6 @@ if [[ ! -r ${fasd_cache} || -n ${fasd_cache}(#qN.mh+24) ]]; then
 fi;
 
 
-#################
-#   COMPLETION  #
-#################
-
-compinit_dump="$HOME/.zcompdump"
-autoload -Uz compinit
-if [[ ! -r ${compinit_dump} || -n ${compinit_dump}(#qN.mh+24) ]]; then
-  echo 'Initialize compinit...'
-  rm -f "$compinit_dump"
-  compinit -d "$compinit_dump"
-  zcompile "$compinit_dump"
-else
-  compinit -C -d "$compinit_dump"
-fi;
-
 
 #################
 #     TMUX      #

@@ -49,3 +49,4 @@ fpath=(
   $HOME/.zsh/functions
   $fpath
 )
+
