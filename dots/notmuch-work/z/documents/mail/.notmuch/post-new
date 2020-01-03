@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+notmuch-address-cache update --json
+afew --new --tag -v
+
