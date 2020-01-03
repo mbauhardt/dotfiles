@@ -4,7 +4,7 @@ My personal dotfiles
 ## Convenient Folders
 
     mkdir -p $HOME/z/{documents,src,share}
-    mkdir -p $HOME/z/documents/{etc,gnupg,histories/mail,passwords,pdf,vim,vimwiki}
+    mkdir -p $HOME/z/documents/{etc,gnupg,histories,mail,passwords,pdf,vim,vimwiki}
 
 
 ## Installation
