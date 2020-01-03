@@ -45,7 +45,7 @@ export DOTFILESDIR if `dotfiles` are cloned into another directoty than `~/dotfi
 
 copy the file `.dotfilesrc.template` to `~/.dotfilesrc` and define the set of modules you want to load 
 
-e.g. [Example](.dotfilesrc.template)
+Configure your the dotfiles you want to symlink via `.dotfilesrc` file. See [.dotfilesrc.template](.dotfilesrc.template)
 
 
 ## Usage
