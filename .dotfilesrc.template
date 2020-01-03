@@ -1,7 +1,7 @@
 # example at home modules
 
 # work
-# zstyle ":dotfiles:load" dot 'zsh' 'gnupg' 'ssh' 'pass' 'git' 'tmux' 'vim' 'notmuch-work'
+# zstyle ":dotfiles:load" dot 'zsh' 'gnupg' 'ssh' 'pass' 'git' 'tmux' 'vim' 'notmuch-work' 'offlineimap-work'
 
 # default empty definition
 zstyle ":dotfiles:load" dot
