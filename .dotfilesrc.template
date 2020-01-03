@@ -6,7 +6,7 @@
 # zstyle ":dotfiles:load" dot 'zsh' 'gnupg' 'ssh' 'pass' 'git' 'tmux' 'vim'
 
 # mail
-# zstyle ":dotfiles:load" dot 'notmuch-work' 'offlineimap-work' 'msmtp-work' 'mblaze-work'
+# zstyle ":dotfiles:load" dot 'offlineimap-work' 'msmtp-work' 'notmuch-work' 'afew-work' 'mblaze-work'
 
 # default empty definition
 zstyle ":dotfiles:load" dot
