@@ -216,6 +216,7 @@ HISTORY_SUBSTRING_SEARCH_FUZZY='f'
 #########################
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh
 
 fasd_cache="$HOME/.fasd-cache"
 [ -r ${fasd_cache} ] && source $fasd_cache
