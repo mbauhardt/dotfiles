@@ -73,4 +73,10 @@ To install software execute
     pip install --upgrade pip
     pip install afew
 
+    # mblaze
+    cd submodules/mblaze
+    make all
+    sudo make instal
+
+
 

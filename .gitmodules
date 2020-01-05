@@ -28,3 +28,6 @@
 [submodule "submodules/notmuch-address-cache"]
 	path = submodules/notmuch-address-cache
 	url = git@github.com:mbauhardt/notmuch-address-cache
+[submodule "submodules/mblaze"]
+	path = submodules/mblaze
+	url = git@github.com:leahneukirchen/mblaze.git
