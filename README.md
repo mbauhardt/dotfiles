@@ -62,3 +62,15 @@ To install software execute
 
     bin/dotfiles --install-software
 
+
+
+## Steps afterwards
+
+    # afew software to index mails
+    mkdir ~/venvs
+    python -m venv --system-site-packages ~/venvs/mail
+    source ~/venvs/mail/bin/activate
+    pip install --upgrade pip
+    pip install afew
+
+
