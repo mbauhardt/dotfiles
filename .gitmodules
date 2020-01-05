@@ -25,3 +25,6 @@
 [submodule "submodules/pure"]
 	path = submodules/pure
 	url = git@github.com:sindresorhus/pure.git
+[submodule "submodules/notmuch-address-cache"]
+	path = submodules/notmuch-address-cache
+	url = git@github.com:mbauhardt/notmuch-address-cache

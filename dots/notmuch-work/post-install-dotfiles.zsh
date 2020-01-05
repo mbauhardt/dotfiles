@@ -1,3 +1,3 @@
 print "Initialize Notmuch Address Cache"
-notmuch-address-cache rebuild --text
+$DOTFILESDIR/submodules/notmuch-address-cache/bin/notmuch-address-cache rebuild --text
 

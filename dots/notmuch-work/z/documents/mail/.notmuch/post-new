@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
 
-notmuch-address-cache update --json
+$DOTFILESDIR/submodules/notmuch-address-cache/bin/notmuch-address-cache update --text
 afew --new --tag -v
 
