@@ -1,13 +1,32 @@
-# example at home modules
-
-## work
-
-# basic
-# zstyle ":dotfiles:load" dot 'zsh' 'gnupg' 'ssh' 'pass' 'git' 'tmux' 'vim'
-
-# mail
-# zstyle ":dotfiles:load" dot 'offlineimap-work' 'msmtp-work' 'notmuch-work' 'afew-work' 'mblaze-work'
 
 # default empty definition
 zstyle ":dotfiles:load" dot
+
+
+
+
+# BASE
+
+# zstyle ":dotfiles:load" dot 'zsh' 'gnupg' 'ssh' 'pass' 'git' 'tmux' 'vim' 'buku'
+
+# zstyle ":dotfiles:load" dnf 'buku' 'task' 'tasksh' 'pass' 'gnupg2' 'yubikey-personalization-gui' 'pinentry' 'vim-enhanced' 'git' 'fzf' 'tmux' 'the_silver_searcher' 'nnn' 'pdfgrep' 'htop' 'coreutils' 'moreutils' 'findutils'
+
+# zstyle ":dotfiles:load" brew 'buku' 'task' 'tasksh' 'pass' 'gpg2' 'yubikey-personalization' 'pinentry-mac' 'vim' 'git' 'fzf' 'tmux' 'the_silver_searcher' 'nnn' 'pdfgrep' 'htop' 'coreutils' 'moreutils' 'findutils'
+
+
+
+
+
+## DEV
+
+# zstyle ":dotfiles:load" dnf 'awscli' 'mariadb' 'java-1.8.0-openjdk-src' 'java-1.8.0-openjdk-javadoc' 'java-1.8.0-openjdk-devel'
+# zstyle ":dotfiles:load" brew 'awscli' 'mariadb'
+
+
+
+
+# MAIL
+
+# zstyle ":dotfiles:load" dot 'offlineimap-work' 'msmtp-work' 'notmuch-work' 'afew-work' 'mblaze-work'
+
 
