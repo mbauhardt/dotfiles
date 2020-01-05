@@ -34,3 +34,6 @@
 [submodule "submodules/nvm"]
 	path = submodules/nvm
 	url = git@github.com:nvm-sh/nvm.git
+[submodule "submodules/mblaze-much"]
+	path = submodules/mblaze-much
+	url = git@github.com:dannyob/mblaze-much.git

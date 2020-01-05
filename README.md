@@ -78,5 +78,11 @@ To install software execute
     make all
     sudo make instal
 
+    # mblaze-much
+    cd submodules/mblaze-much
+    make vendor-mblaze
+    make binaries
+    sudo cp bin/mtags /usr/local/bin/
+
 
 
