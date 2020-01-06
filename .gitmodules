@@ -37,3 +37,6 @@
 [submodule "submodules/mblaze-much"]
 	path = submodules/mblaze-much
 	url = git@github.com:dannyob/mblaze-much.git
+[submodule "submodules/pass-keybase"]
+	path = submodules/pass-keybase
+	url = git@github.com:mbauhardt/pass-keybase.git
