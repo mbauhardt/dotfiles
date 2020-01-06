@@ -9,12 +9,12 @@ My personal dotfiles
 ## Steps before doing the Installations
 
     sudo dnf install zsh
-		sudo chsh -s $(which zsh)
-		sudo dnf install stow
-		sudo dnf install keybase
-		run_keybase
-		sudo dnf install git
-		sudo dnf install gnupg2
+    sudo chsh -s $(which zsh)
+    sudo dnf install stow
+    sudo dnf install keybase
+    run_keybase
+    sudo dnf install git
+    sudo dnf install gnupg2
 
 ## Installation
 
