@@ -6,6 +6,15 @@ My personal dotfiles
     mkdir -p $HOME/z/{documents,src,share}
     mkdir -p $HOME/z/documents/{etc,gnupg,histories,mail,passwords,pdf,vim,vimwiki}
 
+## Steps before doing the Installations
+
+    sudo dnf install zsh
+		sudo chsh -s $(which zsh)
+		sudo dnf install stow
+		sudo dnf install keybase
+		run_keybase
+		sudo dnf install git
+		sudo dnf install gnupg2
 
 ## Installation
 
