@@ -98,4 +98,16 @@ To install software execute
     sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
     sudo dnf install brave-browser
 
+    # sleep mode 
+    vim /etc/default/grub
+    GRUB_CMDLINE_LINUX_DEFAULT="mem_sleep_default=deep"
+    grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+
+    # power management !!! UNPPLUG LAPTOP FROM POWER !!!
+    dnf install powertop tlp tuned-utils thermald
+    systemctl start powertop
+    systemctl enable powertop
+    powertop --auto-tune
+    systemctl enable tlp
+    shutdown 0 -rf
 
