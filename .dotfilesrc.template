@@ -27,7 +27,7 @@ zstyle ":dotfiles:load" dot
 
 # MAIL
 
-# zstyle ":dotfiles:load" dot 'offlineimap-work' 'msmtp-work' 'notmuch-work' 'afew-work' 'mblaze-work'
-# zstyle ":dotfiles:load" dnf 'msmtp' 'w3m' 'urlview' 'notmuch' 'notmuch-devel' 'python3-notmuch' 'python-setuptools-wheel'
+# zstyle ":dotfiles:load" dot 'offlineimap-work' 'msmtp-work' 'notmuch-work' 'afew-work' 'mblaze-work' 'isync-work'
+# zstyle ":dotfiles:load" dnf 'isync' 'msmtp' 'w3m' 'urlview' 'notmuch' 'notmuch-devel' 'python3-notmuch' 'python-setuptools-wheel'
 
 

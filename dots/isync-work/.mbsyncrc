@@ -1,0 +1,41 @@
+SyncState * # Save the synchronization state files in the relevant directory
+Create Slave
+
+IMAPAccount datameer
+Host imap.gmail.com
+User mb@datameer.com
+PassCmd "pass Users/mb/Library/Keychains/datameer.keychain/Apps/isync"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-bundle.crt
+PipelineDepth 50
+
+IMAPStore datameer-remote
+Account datameer
+
+MaildirStore datameer-local
+Subfolders Verbatim
+Path ~/z/documents/mail/ # The trailing "/" is important
+Inbox ~/z/documents/mail/inbox
+
+Channel datameer-default
+Master :datameer-remote:
+Slave :datameer-local:
+Patterns !*
+
+Channel datameer-archive
+Master :datameer-remote:"[Gmail]/All Mail"
+Slave :datameer-local:archive
+
+Channel datameer-drafts
+Master :datameer-remote:"[Gmail]/Drafts"
+Slave :datameer-local:drafts
+
+Channel datameer-trash
+Master :datameer-remote:"[Gmail]/Trash"
+Slave :datameer-local:trash
+
+group datameer
+Channel datameer-default
+Channel datameer-archive
+Channel datameer-trash
+
