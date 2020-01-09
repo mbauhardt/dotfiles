@@ -22,9 +22,9 @@ Master :datameer-remote:
 Slave :datameer-local:
 Patterns !*
 
-Channel datameer-archive
-Master :datameer-remote:"[Gmail]/All Mail"
-Slave :datameer-local:archive
+Channel datameer-inbox
+Master :datameer-remote:"INBOX"
+Slave :datameer-local:inbox
 
 Channel datameer-drafts
 Master :datameer-remote:"[Gmail]/Drafts"
@@ -34,8 +34,19 @@ Channel datameer-trash
 Master :datameer-remote:"[Gmail]/Trash"
 Slave :datameer-local:trash
 
+Channel datameer-spam
+Master :datameer-remote:"[Gmail]/Spam"
+Slave :datameer-local:spam
+
+Channel datameer-sent
+Master :datameer-remote:"[Gmail]/Sent Mail"
+Slave :datameer-local:sent
+
 group datameer
 Channel datameer-default
-Channel datameer-archive
+Channel datameer-inbox
+Channel datameer-drafts
 Channel datameer-trash
+Channel datameer-spam
+Channel datameer-sent
 

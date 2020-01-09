@@ -34,8 +34,10 @@ printf "\n"
 printf "unread   (%s)\n" \
 "$(notmuch count tag:unread)"
 printf "spam     (%s) \n" \
-"$(notmuch count tag:spam and tag:unread)"
+"$(notmuch count \(tag:spam or folder:spam\) and tag:unread)"
 printf "flagged  (%s) \n" \
 "$(notmuch count tag:flagged)"
+printf "all      (%s) \n" \
+"$(notmuch count '*')"
 
 printf "\n"
