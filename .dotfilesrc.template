@@ -9,7 +9,7 @@ zstyle ":dotfiles:load" dot
 
 # zstyle ":dotfiles:load" dot 'zsh' 'gnupg' 'ssh' 'pass' 'git' 'tmux' 'vim' 'buku'
 
-# zstyle ":dotfiles:load" dnf 'buku' 'task' 'tasksh' 'pass' 'gnupg2' 'yubikey-personalization-gui' 'pinentry' 'vim-enhanced' 'git' 'fzf' 'tmux' 'the_silver_searcher' 'nnn' 'pdfgrep' 'htop' 'coreutils' 'moreutils' 'findutils' 'cifs-utils' 'magic-wormhole'
+# zstyle ":dotfiles:load" dnf 'buku' 'task' 'tasksh' 'pass' 'gnupg2' 'yubikey-personalization-gui' 'pinentry' 'vim-enhanced' 'git' 'fzf' 'tmux' 'the_silver_searcher' 'nnn' 'pdfgrep' 'htop' 'coreutils' 'moreutils' 'findutils' 'cifs-utils' 'magic-wormhole' 'arandr'
 
 # zstyle ":dotfiles:load" brew 'buku' 'task' 'tasksh' 'pass' 'gpg2' 'yubikey-personalization' 'pinentry-mac' 'vim' 'git' 'fzf' 'tmux' 'the_silver_searcher' 'nnn' 'pdfgrep' 'htop' 'coreutils' 'moreutils' 'findutils'
 
