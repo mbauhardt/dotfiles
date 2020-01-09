@@ -111,3 +111,9 @@ To install software execute
     systemctl enable tlp
     shutdown 0 -rf
 
+
+Install other 3rd party software like
+* Slack
+* jetbrains-toolbox
+
+
