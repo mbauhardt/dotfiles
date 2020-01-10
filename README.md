@@ -59,18 +59,10 @@ Configure your the dotfiles you want to symlink via `.dotfilesrc` file. See [.do
 
 ## Usage
 
-To install dotfiles execute
 
     bin/dotfiles --install-dotfiles
-
-To remove all dotfiles
-
     bin/dotfiles --clean-dotfiles
-
-To install software execute
-
     bin/dotfiles --install-software
-
 
 
 ## Steps afterwards
@@ -85,7 +77,7 @@ To install software execute
     # mblaze
     cd submodules/mblaze
     make all
-    sudo make instal
+    sudo make install
 
     # mblaze-much
     cd submodules/mblaze-much
@@ -97,6 +89,16 @@ To install software execute
     sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
     sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
     sudo dnf install brave-browser
+
+    # nvidia
+    sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+    sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+    sudo dnf install akmod-nvidia
+    sudo dnf remove xorg-x11-drv-nouveau
+    # reboot and check intell is used per default
+    xrandr --listproviders
+    glxinfo | grep vendor 
+    __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia glxinfo | grep vendor
 
     # sleep mode 
     vim /etc/default/grub
