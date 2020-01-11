@@ -85,6 +85,14 @@ Configure your the dotfiles you want to symlink via `.dotfilesrc` file. See [.do
     make binaries
     sudo cp bin/mtags /usr/local/bin/
 
+    # gmail calendar
+    mkdir ~/venvs
+    python -m venv --system-site-packages ~/venvs/calendar
+    source ~/venvs/calendar/bin/activate
+    pip install --upgrade pip
+    pip install gcalcli
+    pip install vobject
+
     # brave browser
     sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
     sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
