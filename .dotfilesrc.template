@@ -20,7 +20,7 @@ zstyle ":dotfiles:load" dnf
 
 ## DEV
 
-# zstyle ":dotfiles:load" dnf 'awscli' 'mariadb' 'java-1.8.0-openjdk-src' 'java-1.8.0-openjdk-javadoc' 'java-1.8.0-openjdk-devel'
+# zstyle ":dotfiles:load" dnf 'awscli' 'mariadb' 'mariadb-server' 'java-1.8.0-openjdk-src' 'java-1.8.0-openjdk-javadoc' 'java-1.8.0-openjdk-devel'
 # zstyle ":dotfiles:load" brew 'awscli' 'mariadb'
 
 
