@@ -98,6 +98,14 @@ Configure your the dotfiles you want to symlink via `.dotfilesrc` file. See [.do
     sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
     sudo dnf install brave-browser
 
+    # suckless tools
+    cd submodules/dwm
+    sudo make clean install
+    cd submodules/dmenu
+    sudo make clean install
+    cd submodules/st
+    sudo make clean install
+
     # nvidia
     sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
     sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm

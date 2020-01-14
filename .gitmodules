@@ -40,3 +40,12 @@
 [submodule "submodules/pass-keybase"]
 	path = submodules/pass-keybase
 	url = git@github.com:mbauhardt/pass-keybase.git
+[submodule "submodules/st"]
+	path = submodules/st
+	url = git@github.com:mbauhardt/st.git
+[submodule "submodules/dwm"]
+	path = submodules/dwm
+	url = git@github.com:mbauhardt/dwm.git
+[submodule "submodules/dmenu"]
+	path = submodules/dmenu
+	url = git@github.com:mbauhardt/dmenu.git
