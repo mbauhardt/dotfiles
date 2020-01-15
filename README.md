@@ -67,6 +67,10 @@ Configure your the dotfiles you want to symlink via `.dotfilesrc` file. See [.do
 
 ## Steps afterwards
 
+    # remove colored emojis
+    sudo dnf remove google-noto-emoji-color-fonts
+    sudo dnf install google-noto-emoji-fonts
+
     # afew software to index mails
     mkdir ~/venvs
     python -m venv --system-site-packages ~/venvs/mail
