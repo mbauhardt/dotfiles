@@ -49,3 +49,6 @@
 [submodule "submodules/dmenu"]
 	path = submodules/dmenu
 	url = git@github.com:mbauhardt/dmenu.git
+[submodule "submodules/slstatus"]
+	path = submodules/slstatus
+	url = git@github.com:mbauhardt/slstatus.git

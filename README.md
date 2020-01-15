@@ -104,11 +104,13 @@ Configure your the dotfiles you want to symlink via `.dotfilesrc` file. See [.do
 
     # suckless tools
     cd submodules/dwm
-    sudo make clean install
+    make clean && make && sudo make install
     cd submodules/dmenu
-    sudo make clean install
+    make clean && make && sudo make install
     cd submodules/st
-    sudo make clean install
+    make clean && make && sudo make install
+    cd submodules/slstatus
+    make clean && make && sudo make install
 
     # nvidia
     sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
