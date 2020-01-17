@@ -144,9 +144,8 @@ alias t='task'
 #########################
 
 alias scala="scala -Dscala.shell.histfile=$HOME/z/documents/histories/scala_history"
-alias hive_1_1="HADOOP_HOME=\"/opt/hadoop-2.6.0\" HADOOP_USER_CLASSPATH_FIRST=true HADOOP_CLIENT_OPTS=\"-Duser.home=$HOME/z/documents/histories\" bin/hive"
-alias beeline_1_1="HADOOP_HOME=\"/opt/hadoop-2.6.0\" HADOOP_USER_CLASSPATH_FIRST=true HADOOP_CLIENT_OPTS=\"-Duser.home=$HOME/z/documents/histories\" bin/beeline"
-alias ktutil=/usr/local/Cellar/krb5/1.16.1/bin/ktutil
+alias hive_1_1="HADOOP_HOME=\"/home/mb/hadoop/hadoop-2.6.0\" HADOOP_USER_CLASSPATH_FIRST=true HADOOP_CLIENT_OPTS=\"-Duser.home=$HOME/z/documents/histories\" bin/hive"
+alias beeline_1_1="HADOOP_HOME=\"/home/mb/hadoop/hadoop-2.6.0\" HADOOP_USER_CLASSPATH_FIRST=true HADOOP_CLIENT_OPTS=\"-Duser.home=$HOME/z/documents/histories\" bin/beeline"
 alias gw='./gradlew'
 alias gwf='./gradlew validate findbugsMain'
 alias nvm_setup_datameer_version='nvm use --delete-prefix datameer'   # expect alias 'datameer' e.g.: nvm alias datameer node
@@ -222,18 +221,6 @@ HISTORY_SUBSTRING_SEARCH_FUZZY='f'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh
 
-fasd_cache="$HOME/.fasd-cache"
-[ -r ${fasd_cache} ] && source $fasd_cache
-
-
-#########################
-#      BASE 16 SHELL    #
-#########################
-
-# FIXME: base16 colors slows down the statup. think about to use colors via iTerm 
-# or switch to suckless terminal where I can compile the color into
-BASE16_SHELL=$DOTFILESDIR/modules/zsh/submodules/base16-shell
-[ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ] && eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 
 #########################
@@ -262,6 +249,4 @@ function zle-line-init zle-keymap-select {
 
 zle -N zle-line-init
 zle -N zle-keymap-select
-
-[ -z "$NNNLVL" ] && nnn
 
