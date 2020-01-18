@@ -2,18 +2,29 @@ if [[ -z "$TMUX" ]]; then
   tmux has-session 2>/dev/null
   if [[ "$?" -eq 1 ]]; then
     echo "Attach new tmux sessions..."
-    tmux new-session -d -s dev -c "$HOME/z/src/dap/master" -n topics
-    tmux new-session -d -s etc
-    tmux new-session -d -s home -n vim
-    tmux new-window -t home:1 -n mail
-    tmux new-window -t home:2 -n todos
-    tmux new-window -c "$HOME/z/src/dap/master" -t dev:1 -n master
-    tmux new-window -c "$HOME/z/src/dap/v10.1" -t dev:2 -n v10.1
-    tmux new-window -c "$HOME/z/src/dap/v10.0" -t dev:3 -n v10.0
-    tmux new-window -c "$HOME/z/src/dap/v7.5" -t dev:4 -n v7.5
-    tmux new-window -c "$HOME/z/src/dap/v7.4" -t dev:5 -n v7.4
-    tmux select-window -t dev:0
+    tmux new-session -d -s shell -n filebrowser
+    tmux new-session -d -s datameer -c "$HOME/z/src/dap/master" -n topics
+    tmux new-session -d -s groupware -n mail
+
+    echo "create new windows"
+    tmux new-window -t shell:1 -n shell
+    tmux new-window -t groupware:1 -n calendar
+    tmux new-window -t groupware:2 -n todos
+    tmux new-window -c "$HOME/z/src/dap/master" -t datameer:1 -n master
+    tmux new-window -c "$HOME/z/src/dap/v10.1" -t datameer:2 -n v10.1
+    tmux new-window -c "$HOME/z/src/dap/v10.0" -t datameer:3 -n v10.0
+    tmux new-window -c "$HOME/z/src/dap/v7.5" -t datameer:4 -n v7.5
+    tmux new-window -c "$HOME/z/src/dap/v7.4" -t datameer:5 -n v7.4
+
+    echo "select windows"
+    tmux select-window -t shell:0
+    tmux select-window -t datameer:0
+    tmux select-window -t groupware:0
+
+    echo "attach session"
+    tmux attach-session -t "shell"
   fi
+else
+  session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --exit-0) && tmux switch -t "$session" || echo "No sessions found."
 fi
-session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --exit-0) &&  tmux attach-session -t "$session" || echo "No sessions found."
 
