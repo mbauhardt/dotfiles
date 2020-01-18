@@ -3,7 +3,14 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT=MToolkit
 wmname LG3D
 
+# dwm status bar
 slstatus &
+
+# needed for transparency
+xcompmgr &
+
+# change desktop background regulary
+systemctl --user start wallpaper.timer
 
 # start window manager
 exec dwm

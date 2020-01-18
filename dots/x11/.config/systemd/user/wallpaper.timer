@@ -1,0 +1,7 @@
+[Unit]
+Description=Change wallpapers every hour
+
+[Timer]
+OnActiveSec=5sec
+OnUnitActiveSec=59min
+
