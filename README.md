@@ -6,7 +6,7 @@ My personal dotfiles
     mkdir -p $HOME/z/{documents,src,share}
     mkdir -p $HOME/z/documents/{etc,gnupg,histories,mail,passwords,pdf,vim,vimwiki}
 
-## Steps before doing the Installations
+## Linux Steps before doing the Installation
 
     sudo dnf install zsh
     sudo chsh -s $(which zsh)
@@ -16,49 +16,27 @@ My personal dotfiles
     sudo dnf install git
     sudo dnf install gnupg2
 
-## Installation
 
-export DOTFILESDIR if `dotfiles` are cloned into another directoty than `~/dotfiles`
-
-    export DOTFILESDIR=${ZDOTDIR:-$HOME}/z/src/dotfiles/master
-
-checkout dotfiles project
-
-    git clone --recursive git@github.com:mbauhardt/dotfiles.git "${DOTFILESDIR:-$HOME}/z/src/dotfiles/master"
-
-## Setup
-Install brew
+## OSX Steps before doing the Installation (deprecated)
 
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-This project is using homebrew to install software. SO it could make sense to define HOMEBREW_CASK_OPTS params like
-
     export HOMEBREW_CASK_OPTS="--appdir=/opt"
-
-Special Homebrew Taps e.g. Versions
-
     brew tap caskroom/cask
     brew tap caskroom/versions
-
-Install keybase via brew and provision your device
-
     brew cask install keybase
-
-set zsh as default shell
-
     chsh -s /bin/zsh
 
-export DOTFILESDIR if `dotfiles` are cloned into another directoty than `~/dotfiles`
+
+## Installation
 
     export DOTFILESDIR=${ZDOTDIR:-$HOME}/z/src/dotfiles/master
-
-copy the file `.dotfilesrc.template` to `~/.dotfilesrc` and define the set of modules you want to load 
+    git clone --recursive git@github.com:mbauhardt/dotfiles.git "${DOTFILESDIR:-$HOME}/z/src/dotfiles/master"
+    cp ${DOTFILESDIR:-$HOME}/z/src/dotfiles/master/.dotfilesrc.template ~/.dotfilesrc
 
 Configure your the dotfiles you want to symlink via `.dotfilesrc` file. See [.dotfilesrc.template](.dotfilesrc.template)
 
 
 ## Usage
-
 
     bin/dotfiles --install-dotfiles
     bin/dotfiles --clean-dotfiles
