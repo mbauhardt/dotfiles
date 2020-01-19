@@ -149,6 +149,7 @@ alias beeline_1_1="HADOOP_HOME=\"/home/mb/hadoop/hadoop-2.6.0\" HADOOP_USER_CLAS
 alias gw='./gradlew'
 alias gwf='./gradlew validate findbugsMain'
 alias nvm_setup_datameer_version='nvm use --delete-prefix datameer'   # expect alias 'datameer' e.g.: nvm alias datameer node
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0
 
 
 #########################
