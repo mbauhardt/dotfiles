@@ -7,7 +7,7 @@ zstyle ":dotfiles:load" dnf
 
 # BASE
 
-# zstyle ":dotfiles:load" dot 'zsh' 'gnupg' 'ssh' 'pass' 'git' 'tmux' 'vim' 'buku'
+# zstyle ":dotfiles:load" dot 'zsh' 'gnupg' 'ssh' 'pass' 'git' 'tmux' 'vim' 'buku' 'task'
 # zstyle ":dotfiles:load" dnf 'buku' 'task' 'tasksh' 'pass' 'gnupg2' 'pinentry' 'vim-enhanced' 'git' 'fzf' 'tmux' 'the_silver_searcher' 'nnn' 'pdfgrep' 'htop' 'coreutils' 'moreutils' 'findutils' 'magic-wormhole' 'arandr' 'google-noto-emoji-fonts'
 # zstyle ":dotfiles:load" brew 'buku' 'task' 'tasksh' 'pass' 'gpg2' 'yubikey-personalization' 'pinentry-mac' 'vim' 'git' 'fzf' 'tmux' 'the_silver_searcher' 'nnn' 'pdfgrep' 'htop' 'coreutils' 'moreutils' 'findutils'
 
