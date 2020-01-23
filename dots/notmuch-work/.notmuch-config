@@ -47,7 +47,7 @@ other_email=marko.bauhardt@datameer.com;mbauhardt@datameer.com
 #		in the mail store.
 #
 [new]
-tags=new
+tags=unread;inbox
 ignore=
 
 # Search configuration

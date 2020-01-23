@@ -89,8 +89,8 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'     # ignore case
 #       EDITOR          #
 #########################
 
-export EDITOR='vi'
-export VISUAL='vi'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 alias e='$EDITOR'
@@ -167,10 +167,11 @@ alias mf="mseq -C 1; m"
 # general mail search queries
 alias m_unread="mq 'tag:unread'"
 alias m_sent="mq 'tag:sent and date:60d..'"
-alias m_inbox="mq 'tag:inbox and not folder:spam and date:31d..'"
-alias m_me="mq 'tag:to-me and not folder:spam and date:14d..'"
+alias m_inbox="mq 'tag:inbox and date:31d..'"
+#alias m_me="mq 'tag:to-me and date:14d..'"
 alias m_flagged="mq 'tag:flagged'"
-alias m_spam="mq '(tag:spam or folder:spam) and date:31d..'"
+alias m_spam="mq 'tag:spam and date:31d..'"
+alias m_trash="mq 'tag:deleted and date:31d..'"
 alias m_all="mq 'date:30d..'"
 
 # special search queries
