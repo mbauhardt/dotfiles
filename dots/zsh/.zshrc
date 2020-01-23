@@ -224,6 +224,15 @@ HISTORY_SUBSTRING_SEARCH_FUZZY='f'
 [ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh
 
 
+#########################
+#      GNUPG / SSH      #
+#########################
+
+GPG_TTY=$(tty)
+export GPG_TTY
+unset SSH_AGENT_PID
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+
 
 #########################
 #       PROMPT          #

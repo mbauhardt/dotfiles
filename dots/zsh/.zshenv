@@ -15,9 +15,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/opt"
 #     GPG/SSH       #
 #####################
 
-unset SSH_AGENT_PID
 export GNUPGHOME=$HOME/z/documents/gnupg
-export SSH_AUTH_SOCK="/run/user/$(id -u)/gnupg/S.gpg-agent.ssh"
 
 
 #####################
