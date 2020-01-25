@@ -90,6 +90,19 @@ Configure your the dotfiles you want to symlink via `.dotfilesrc` file. See [.do
     cd submodules/slstatus
     make clean && make && sudo make install
 
+
+    # docker
+    vim /etc/default/grub
+    #Append value of GRUB_CMDLINE_LINUX with systemd.unified_cgroup_hierarchy=0
+    sudo grub2-mkconfig > /boot/efi/EFI/fedora/grub.cfg
+    sudo reboot
+    sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+    sudo dnf install docker-ce
+    sudo systemctl enable --now docker
+    sudo usermod -aG docker mb
+    sudo reboot
+
+
     # nvidia
     sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
     sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
