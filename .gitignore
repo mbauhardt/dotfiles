@@ -9,4 +9,5 @@ seq.old
 xapian
 *.gz
 **/afew/config
+**/hooks/post-new
 

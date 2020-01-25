@@ -26,26 +26,31 @@ Channel datameer-inbox
 Master :datameer-remote:"INBOX"
 Slave :datameer-local:inbox
 Sync All
+Expunge Both
 
 Channel datameer-drafts
 Master :datameer-remote:"[Gmail]/Drafts"
 Slave :datameer-local:drafts
 Sync All
+Expunge Both
 
 Channel datameer-trash
 Master :datameer-remote:"[Gmail]/Trash"
 Slave :datameer-local:trash
 Sync All
+Expunge Both
 
 Channel datameer-spam
 Master :datameer-remote:"[Gmail]/Spam"
 Slave :datameer-local:spam
 Sync All
+Expunge Both
 
 Channel datameer-sent
 Master :datameer-remote:"[Gmail]/Sent Mail"
 Slave :datameer-local:sent
 Sync All
+Expunge Both
 
 group datameer
 Channel datameer-default
