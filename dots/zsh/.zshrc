@@ -240,8 +240,6 @@ export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
 autoload -Uz promptinit && promptinit
 prompt pure
-# day of month
-PROMPT='%D{%f}th%t '$PROMPT
 # jobs
 PROMPT='%(1j.[%j] .)% '$PROMPT
 
