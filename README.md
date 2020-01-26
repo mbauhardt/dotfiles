@@ -126,6 +126,9 @@ Configure your the dotfiles you want to symlink via `.dotfilesrc` file. See [.do
     systemctl enable tlp
     shutdown 0 -rf
 
+    # Natural Scrolling
+    sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
+    # add the line `Option "NaturalScrolling" "True"` within the touchpad section
 
 Install other 3rd party software like
 * Slack
