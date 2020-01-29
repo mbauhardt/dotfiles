@@ -126,9 +126,14 @@ Configure your the dotfiles you want to symlink via `.dotfilesrc` file. See [.do
     systemctl enable tlp
     shutdown 0 -rf
 
-    # Natural Scrolling
+    # Touchpad
     sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
     # add the line `Option "NaturalScrolling" "True"` within the touchpad section
+    # add the line `Option "ClickMethod" "clickfinger"` within the touchpad section
+
+    # Resize lvm volume
+    sudo lvs
+    sudo lvextend --resizefs -L 100G /dev/mapper/fedora_fedorabox-root
 
 Install other 3rd party software like
 * Slack
