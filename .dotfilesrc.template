@@ -34,5 +34,5 @@ zstyle ":dotfiles:load" dnf
 
 # GUI
 # zstyle ":dotfiles:load" dot 'x11'
-# zstyle ":dotfiles:load" dnf 'arandr' 'yubikey-personalization-gui' 'wmname' 'feh' 'pavucontrol'
+# zstyle ":dotfiles:load" dnf 'arandr' 'yubikey-personalization-gui' 'wmname' 'feh' 'pavucontrol' 'flameshot'
 
