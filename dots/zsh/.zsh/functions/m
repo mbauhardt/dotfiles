@@ -1,6 +1,7 @@
 mscan > $MBLAZE/scan.m
 mtags | sed 's/^/ - /' > $MBLAZE/tags.m
 
-pr -m -t -w 200 $MBLAZE/scan.m $MBLAZE/tags.m | tac
+#pr -m -t -w 200 $MBLAZE/scan.m $MBLAZE/tags.m | tac
+pr -m -t -w 200 $MBLAZE/scan.m $MBLAZE/tags.m
 rm $MBLAZE/scan.m $MBLAZE/tags.m
 

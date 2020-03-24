@@ -4,7 +4,7 @@ Create Slave
 IMAPAccount datameer
 Host imap.gmail.com
 User mb@datameer.com
-PassCmd "pass Users/mb/Library/Keychains/datameer.keychain/Apps/isync"
+PassCmd "pass keybase decrypt Users/mb/Library/Keychains/datameer.keychain/Apps/isync"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-bundle.crt
 PipelineDepth 50
@@ -38,7 +38,7 @@ Channel datameer-trash
 Master :datameer-remote:"[Gmail]/Trash"
 Slave :datameer-local:trash
 Sync All
-Expunge Both
+#Expunge Both
 
 Channel datameer-spam
 Master :datameer-remote:"[Gmail]/Spam"
