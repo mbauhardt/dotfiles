@@ -4,6 +4,6 @@
   editor = vi
   signingkey = 53192101
 [commit]
-  gpgsign = true
+  gpgsign = false
 [gpg]
   program = gpg
