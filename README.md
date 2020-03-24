@@ -90,6 +90,9 @@ Configure your the dotfiles you want to symlink via `.dotfilesrc` file. See [.do
     cd submodules/slstatus
     make clean && make && sudo make install
 
+    # qmk
+    sudo usermod -aG dialout mb
+
 
     # docker
     vim /etc/default/grub
@@ -102,6 +105,43 @@ Configure your the dotfiles you want to symlink via `.dotfilesrc` file. See [.do
     sudo usermod -aG docker mb
     sudo reboot
 
+    # minikube
+    curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-1.6.2.rpm
+    sudo rpm -ivh minikube-1.6.2.rpm
+    egrep -q 'vmx|svm' /proc/cpuinfo && echo yes || echo no # should print out yes
+    sudo dnf group install --with-optional virtualization
+    sudo usermod -aG libvirt mb
+    sudo systemctl start libvirtd
+    sudo systemctl enable libvirtd
+    lsmod | grep kvm  #should display something starting with `kvm`
+    virt-host-validate  # validate libvirt
+    curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+    cp kubectl ~/bin # ~/bin has to be in your PATH
+    chmod +x ~/bin/kubectl
+
+    # bintray repo for sbt
+    curl https://bintray.com/sbt/rpm/rpm > bintray-sbt-rpm.repo
+    sudo mv bintray-sbt-rpm.repo /etc/yum.repos.d/
+    sudo dnf install sbt
+
+    # gcloud
+    sudo tee -a /etc/yum.repos.d/google-cloud-sdk.repo << EOM
+    [google-cloud-sdk]
+    name=Google Cloud SDK
+    baseurl=https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
+    enabled=1
+    gpgcheck=1
+    repo_gpgcheck=1
+    gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
+           https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+    EOM
+    sudo dnf install google-cloud-sdk
+
+    # Visual Studio
+    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    sudo sh -c 'echo -e "[code]\nname=Visual Studio
+    Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+    sudo dnf install code
 
     # nvidia
     sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm

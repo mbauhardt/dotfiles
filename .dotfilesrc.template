@@ -20,7 +20,7 @@ zstyle ":dotfiles:load" dnf
 
 ## DEV
 
-# zstyle ":dotfiles:load" dnf 'awscli' 'mariadb' 'mariadb-server' 'java-1.8.0-openjdk-src' 'java-1.8.0-openjdk-javadoc' 'java-1.8.0-openjdk-devel' 'libX11-devel' 'libXft-devel' 'libXinerama-devel' 'krb5-workstation'
+# zstyle ":dotfiles:load" dnf 'awscli' 'mariadb' 'mariadb-server' 'java-1.8.0-openjdk-src' 'java-1.8.0-openjdk-javadoc' 'java-1.8.0-openjdk-devel' 'libX11-devel' 'libXft-devel' 'libXinerama-devel' 'krb5-workstation' 'scala' 'golang' 'avr-gcc' 'avr-libc' 'avrdude' 'groovy'
 # zstyle ":dotfiles:load" brew 'awscli' 'mariadb'
 
 
