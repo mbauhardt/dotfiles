@@ -1,1 +1,0 @@
-notmuch search --output=files "$@" | mseq -S; mseq -C 1; m;

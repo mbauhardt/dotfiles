@@ -1,2 +1,0 @@
-chmod 700 $GNUPGHOME
-

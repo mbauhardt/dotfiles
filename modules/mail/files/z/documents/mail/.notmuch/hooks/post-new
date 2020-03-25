@@ -1,6 +1,0 @@
-#!/bin/sh
-set -e
-
-notmuch-address-cache update --json
-afew --tag --new -v
-
