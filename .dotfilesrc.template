@@ -1,38 +1,36 @@
 
 # default empty definition
 zstyle ":dotfiles:load" dot
-zstyle ":dotfiles:load" dnf
+zstyle ":dotfiles:install" app
 
 
 
 # BASE
 
 # zstyle ":dotfiles:load" dot 'zsh' 'gnupg' 'ssh' 'pass' 'git' 'tmux' 'vim' 'buku' 'task'
-# zstyle ":dotfiles:load" dnf 'buku' 'task' 'tasksh' 'pass' 'gnupg2' 'pinentry' 'vim-enhanced' 'git' 'fzf' 'tmux' 'the_silver_searcher' 'nnn' 'pdfgrep' 'htop' 'coreutils' 'moreutils' 'findutils' 'magic-wormhole' 'arandr' 'google-noto-emoji-fonts'
-# zstyle ":dotfiles:load" brew 'buku' 'task' 'tasksh' 'pass' 'gpg2' 'yubikey-personalization' 'pinentry-mac' 'vim' 'git' 'fzf' 'tmux' 'the_silver_searcher' 'nnn' 'pdfgrep' 'htop' 'coreutils' 'moreutils' 'findutils'
+# zstyle ":dotfiles:install" app 'buku' 'task' 'tasksh' 'pass' 'gnupg2' 'pinentry' 'vim-enhanced' 'git' 'fzf' 'tmux' 'the_silver_searcher' 'nnn' 'pdfgrep' 'htop' 'coreutils' 'moreutils' 'findutils' 'magic-wormhole' 'arandr' 'google-noto-emoji-fonts'
 
 
 
 # NETWORK
-# zstyle ":dotfiles:load" dnf 'nm-connection-editor' 'cifs-utils' 'xl2tpd' 'NetworkManager-l2tp' 'NetworkManager-l2tp-gnome' 'strongswan'
+# zstyle ":dotfiles:install" app 'nm-connection-editor' 'cifs-utils' 'xl2tpd' 'NetworkManager-l2tp' 'NetworkManager-l2tp-gnome' 'strongswan'
 
 
 
 ## DEV
 
-# zstyle ":dotfiles:load" dnf 'awscli' 'mariadb' 'mariadb-server' 'java-1.8.0-openjdk-src' 'java-1.8.0-openjdk-javadoc' 'java-1.8.0-openjdk-devel' 'libX11-devel' 'libXft-devel' 'libXinerama-devel' 'krb5-workstation' 'scala' 'golang' 'avr-gcc' 'avr-libc' 'avrdude' 'groovy'
-# zstyle ":dotfiles:load" brew 'awscli' 'mariadb'
+# zstyle ":dotfiles:install" app 'awscli' 'mariadb' 'mariadb-server' 'java-1.8.0-openjdk-src' 'java-1.8.0-openjdk-javadoc' 'java-1.8.0-openjdk-devel' 'libX11-devel' 'libXft-devel' 'libXinerama-devel' 'krb5-workstation' 'scala' 'golang' 'avr-gcc' 'avr-libc' 'avrdude' 'groovy'
 
 
 
 # MAIL & CALENDAR
 
 # zstyle ":dotfiles:load" dot 'offlineimap-work' 'msmtp-work' 'notmuch-work' 'afew-work' 'mblaze-work' 'isync-work'
-# zstyle ":dotfiles:load" dnf 'isync' 'msmtp' 'w3m' 'urlview' 'notmuch' 'notmuch-devel' 'python3-notmuch' 'python-setuptools-wheel' 'par'
+# zstyle ":dotfiles:install" app 'isync' 'msmtp' 'w3m' 'urlview' 'notmuch' 'notmuch-devel' 'python3-notmuch' 'python-setuptools-wheel' 'par'
 
 
 
 # GUI
 # zstyle ":dotfiles:load" dot 'x11'
-# zstyle ":dotfiles:load" dnf 'arandr' 'yubikey-personalization-gui' 'wmname' 'feh' 'pavucontrol' 'flameshot'
+# zstyle ":dotfiles:install" app 'arandr' 'yubikey-personalization-gui' 'wmname' 'feh' 'pavucontrol' 'flameshot'
 
