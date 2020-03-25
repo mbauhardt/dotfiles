@@ -1,0 +1,62 @@
+SyncState * # Save the synchronization state files in the relevant directory
+Create Slave
+
+IMAPAccount mailbox
+Host imap.mailbox.org
+User marko.bauhardt@mailbox.org
+PassCmd "pass keybase decrypt Users/marko/Library/Keychains/marko.keychain/Apps/isync
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-bundle.crt
+PipelineDepth 50
+
+IMAPStore mailbox-remote
+Account mailbox
+
+MaildirStore mailbox-local
+Subfolders Verbatim
+Path ~/z/documents/mail/ # The trailing "/" is important
+Inbox ~/z/documents/mail/inbox
+
+Channel mailbox-default
+Master :mailbox-remote:
+Slave :mailbox-local:
+Patterns !*
+
+Channel mailbox-inbox
+Master :mailbox-remote:"INBOX"
+Slave :mailbox-local:inbox
+Sync All
+Expunge Both
+
+Channel mailbox-drafts
+Master :mailbox-remote:"Drafts"
+Slave :mailbox-local:drafts
+Sync All
+Expunge Both
+
+Channel mailbox-trash
+Master :mailbox-remote:"Papierkorb"
+Slave :mailbox-local:trash
+Sync All
+#Expunge Both
+
+Channel mailbox-spam
+Master :mailbox-remote:"Spam"
+Slave :mailbox-local:spam
+Sync All
+Expunge Both
+
+Channel mailbox-sent
+Master :mailbox-remote:"Sent Messages"
+Slave :mailbox-local:sent
+Sync All
+Expunge Both
+
+group mailbox
+Channel mailbox-default
+Channel mailbox-inbox
+Channel mailbox-drafts
+Channel mailbox-trash
+Channel mailbox-spam
+Channel mailbox-sent
+

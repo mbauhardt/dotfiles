@@ -1,0 +1,7 @@
+text/plain: mflow
+text/html: w3m -dump -I UTF-8 -T text/html -cols 200
+application/pdf: pdftotext - - | par
+application: file -b -
+image: file -b -
+pgp-encrypted: mgpg
+

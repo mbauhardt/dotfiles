@@ -1,0 +1,20 @@
+[default]
+highlight_event_days = True
+timedelta = 7d
+default_calendar = familie
+
+[calendars]
+
+[[familie]]
+path = ~/z/documents/calendars/user/calendars/calendar
+type = calendar
+color = yellow
+
+[locale]
+timeformat = %H:%M
+#dateformat = %Y-%m-%d
+dateformat = %d.%m.
+longdateformat = %Y-%m-%d
+datetimeformat = %d.%m. %H:%M
+longdatetimeformat = %Y-%m-%d %H:%M
+

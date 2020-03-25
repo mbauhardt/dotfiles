@@ -1,0 +1,9 @@
+# special search queries for non-working mails
+alias m_kids="notmuch search --output=files 'tag:kids and date:14d..' | mseq -S; mf"
+alias m_social="notmuch search --output=files 'tag:social and date:14d..' | mseq -S; mf"
+alias m_food="notmuch search --output=files 'tag:food and date:14d..' | mseq -S; mf"
+alias m_invoices="notmuch search --output=files 'tag:invoices and date:14d..' | mseq -S; mf"
+alias m_shopping="notmuch search --output=files 'tag:shopping and date:14d..' | mseq -S; mf"
+alias m_lists="notmuch search --output=files 'tag:lists and date:14d..' | mseq -S; mf"
+alias m_spam="notmuch search --output=files 'tag:spam and date:30d..' | mseq -S; mf"
+

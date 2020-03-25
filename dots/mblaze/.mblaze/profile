@@ -1,0 +1,3 @@
+Local-Mailbox:marko.bauhardt@mailbox.org
+Sendmail:msmtp
+Sendmail-Args:--account mailbox -t

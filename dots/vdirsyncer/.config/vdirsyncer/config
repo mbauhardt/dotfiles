@@ -1,0 +1,18 @@
+[general]
+status_path = "~/.local/share/vdirsyncer/status/"
+
+[pair familie_to_local]
+a = "familie_remote"
+b = "familie_local"
+conflict_resolution = "a wins"
+collections = null
+
+[storage familie_local]
+type = "filesystem"
+path = "~/z/documents/calendars/user/calendars/calendar"
+fileext = ".ics"
+
+[storage familie_remote]
+type = "caldav"
+url = "http://192.168.200.254:8080/user/calendars/calendar"
+
