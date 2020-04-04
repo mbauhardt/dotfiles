@@ -11,6 +11,10 @@ zstyle ":dotfiles:install" app
 # zstyle ":dotfiles:install" app 'buku' 'task' 'tasksh' 'pass' 'gnupg2' 'pinentry' 'vim-enhanced' 'git' 'fzf' 'tmux' 'the_silver_searcher' 'nnn' 'pdfgrep' 'htop' 'coreutils' 'moreutils' 'findutils' 'magic-wormhole' 'arandr' 'google-noto-emoji-fonts'
 
 
+# BASE II
+# zstyle ":dotfiles:install" app 'make' 'gcc' 'libX11-devel' 'libXft-devel' 'libXinerama-devel'
+
+
 
 # NETWORK
 # zstyle ":dotfiles:install" app 'nm-connection-editor' 'cifs-utils' 'xl2tpd' 'NetworkManager-l2tp' 'NetworkManager-l2tp-gnome' 'strongswan'
