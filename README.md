@@ -17,16 +17,6 @@ My personal dotfiles
     sudo dnf install gnupg2
 
 
-## OSX Steps before doing the Installation (deprecated)
-
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    export HOMEBREW_CASK_OPTS="--appdir=/opt"
-    brew tap caskroom/cask
-    brew tap caskroom/versions
-    brew cask install keybase
-    chsh -s /bin/zsh
-
-
 ## Installation
 
     export DOTFILESDIR=${ZDOTDIR:-$HOME}/z/src/dotfiles/master
@@ -79,6 +69,14 @@ Configure your the dotfiles you want to symlink via `.dotfilesrc` file. See [.do
     sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
     sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
     sudo dnf install brave-browser
+
+    # clipboard
+    cd submodules/clipnotify
+    sudo cp clipnotify /usr/local/bin
+    cd submodules/clipmenu
+    sudo make install
+    systemctl --user enable --now clipmenud
+
 
     # suckless tools
     cd submodules/dwm
