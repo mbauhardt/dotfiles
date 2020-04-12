@@ -4,37 +4,73 @@ zstyle ":dotfiles:load" dot
 zstyle ":dotfiles:install" app
 
 
+#### DOTFILES ######
 
 # BASE
+# zstyle ":dotfiles:load" dot 'zsh' 'ssh' 'git' 'tmux' 'vim'
 
-# zstyle ":dotfiles:load" dot 'zsh' 'gnupg' 'ssh' 'pass' 'git' 'tmux' 'vim' 'buku' 'task'
-# zstyle ":dotfiles:install" app 'buku' 'task' 'tasksh' 'pass' 'gnupg2' 'pinentry' 'vim-enhanced' 'git' 'fzf' 'tmux' 'the_silver_searcher' 'nnn' 'pdfgrep' 'htop' 'coreutils' 'moreutils' 'findutils' 'magic-wormhole' 'arandr' 'google-noto-emoji-fonts'
+# GNUPG
+# zstyle ":dotfiles:load" dot 'gnupg'
 
+# TOOLS
+# zstyle ":dotfiles:load" dot 'pass' 'buku' 'task'
+
+# MAIL
+# zstyle ":dotfiles:load" dot 'msmtp-work' 'notmuch-work' 'mblaze-work' 'isync-work'
+# zstyle ":dotfiles:load" dot 'isync' 'msmtp' 'mblaze' 'notmuch'
+
+# X11
+# zstyle ":dotfiles:load" dot 'x11'
+
+
+
+
+
+###### VOID LINUX APPS #######
+
+# BASE
+# zstyle ":dotfiles:install" app 'zsh' 'git' 'vim' 'tmux' 'fzf'
 
 # BASE II
-# zstyle ":dotfiles:install" app 'make' 'gcc' 'libX11-devel' 'libXft-devel' 'libXinerama-devel'
+# zstyle ":dotfiles:install" app 'make' 'gcc' 'pkg-config' 'coreutils' 'moreutils' 'findutils'
+
+# GNUPG
+# zstyle ":dotfiles:install" app 'gnupg2' 'gnupg2-scdaemon' 'libpcsclite' 'pcsc-ccid' 'pcsc-tools' 'pcsclite' 'pinentry' 'pinentry-qt'
+
+# TOOLS
+# zstyle ":dotfiles:install" app 'buku' 'task' 'tasksh' 'pass' 'the_silver_searcher' 'nnn' 'htop' 'magic-wormhole'
+
+# MAIL
+# zstyle ":dotfiles:install" app 'isync' 'msmtp' 'mblaze' 'w3m' 'notmuch' 'libnotmuch' 'libnotmuch-devel' 'notmuch-python3' 'par' 'pdfgrep'
+
+# NETWORK
+# zstyle ":dotfiles:install" app 'cifs-utils'
+
+# X11
+# zstyle ":dotfiles:install" app 'xorg-minimal' 'xorg-fonts' 'xf86-video-intel' 'libX11-devel' 'libXft-devel' 'libXinerama-devel' 'clipmenu' 'clipnotify' 'libXfixes-devel' 'xsel' 'dmenu' 'wmname' 'neofetch'
+
+# X11 2
+# zstyle ":dotfiles:install" app 'feh' 'arandr' 'pavucontrol' 'flameshot' 'ykpers-gui'
+
+# DEV
+# zstyle ":dotfiles:install" app 'aws-cli' 'mariadb' 'mariadb-client' 'openjdk8' 'openjdk8-src' 'openjdk8-doc' 'go' 'avr-gcc' 'avr-libc' 'avrdude'
 
 
+
+##### FEDORA APPS #######
 
 # NETWORK
 # zstyle ":dotfiles:install" app 'nm-connection-editor' 'cifs-utils' 'xl2tpd' 'NetworkManager-l2tp' 'NetworkManager-l2tp-gnome' 'strongswan'
 
 
-
 ## DEV
-
 # zstyle ":dotfiles:install" app 'awscli' 'mariadb' 'mariadb-server' 'java-1.8.0-openjdk-src' 'java-1.8.0-openjdk-javadoc' 'java-1.8.0-openjdk-devel' 'libX11-devel' 'libXft-devel' 'libXinerama-devel' 'krb5-workstation' 'scala' 'golang' 'avr-gcc' 'avr-libc' 'avrdude' 'groovy' 'libXfixes-devel' 'xsel'
 
 
-
 # MAIL & CALENDAR
-
-# zstyle ":dotfiles:load" dot 'offlineimap-work' 'msmtp-work' 'notmuch-work' 'afew-work' 'mblaze-work' 'isync-work'
 # zstyle ":dotfiles:install" app 'isync' 'msmtp' 'w3m' 'urlview' 'notmuch' 'notmuch-devel' 'python3-notmuch' 'python-setuptools-wheel' 'par'
 
 
-
 # GUI
-# zstyle ":dotfiles:load" dot 'x11'
 # zstyle ":dotfiles:install" app 'arandr' 'yubikey-personalization-gui' 'wmname' 'feh' 'pavucontrol' 'flameshot'
 
