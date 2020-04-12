@@ -5,4 +5,4 @@
 
 # login, interactive:  .zshenv -> .zprofile -> .zshrc -> .zlogin
 
-screenfetch
+screenfetch || neofetch
