@@ -19,6 +19,8 @@ alias m_confluence_notified="notmuch search --output=files '((tag:confluence-not
 # code
 alias m_commits="notmuch search --output=files 'tag:commits and date:3d..' | mseq -S; mf"
 #alias m_cr="notmuch search --output=files 'tag:cr and date:14d..' | mseq -S; mf"
+alias m_cr_me="notmuch search --output=files 'tag:cr and tag:to-me and date:31d..' | mseq -S; mf"
+alias m_cr_req="notmuch search --output=files 'tag:cr-req and date:31d..' | mseq -S; mf"
 alias m_ci="notmuch search --output=files 'tag:ci and date:31d..' | mseq -S; mf"
 
 # rest
