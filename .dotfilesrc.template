@@ -32,7 +32,7 @@ zstyle ":dotfiles:install" app
 # zstyle ":dotfiles:install" app 'zsh' 'git' 'vim' 'tmux' 'fzf'
 
 # BASE II
-# zstyle ":dotfiles:install" app 'make' 'gcc' 'pkg-config' 'coreutils' 'moreutils' 'findutils'
+# zstyle ":dotfiles:install" app 'make' 'gcc' 'pkg-config' 'coreutils' 'moreutils' 'findutils' 'ncdu'
 
 # GNUPG
 # zstyle ":dotfiles:install" app 'gnupg2' 'gnupg2-scdaemon' 'libpcsclite' 'pcsc-ccid' 'pcsc-tools' 'pcsclite' 'pinentry' 'pinentry-qt'
@@ -50,7 +50,7 @@ zstyle ":dotfiles:install" app
 # zstyle ":dotfiles:install" app 'xorg-minimal' 'xorg-fonts' 'xf86-video-intel' 'libX11-devel' 'libXft-devel' 'libXinerama-devel' 'clipmenu' 'clipnotify' 'libXfixes-devel' 'xsel' 'dmenu' 'wmname' 'neofetch'
 
 # X11 2
-# zstyle ":dotfiles:install" app 'feh' 'arandr' 'pavucontrol' 'flameshot' 'ykpers-gui'
+# zstyle ":dotfiles:install" app 'feh' 'arandr' 'pavucontrol' 'flameshot' 'ykpers-gui' 'maim'
 
 # DEV
 # zstyle ":dotfiles:install" app 'aws-cli' 'mariadb' 'mariadb-client' 'openjdk8' 'openjdk8-src' 'openjdk8-doc' 'go' 'avr-gcc' 'avr-libc' 'avrdude'
@@ -72,5 +72,5 @@ zstyle ":dotfiles:install" app
 
 
 # GUI
-# zstyle ":dotfiles:install" app 'arandr' 'yubikey-personalization-gui' 'wmname' 'feh' 'pavucontrol' 'flameshot'
+# zstyle ":dotfiles:install" app 'arandr' 'yubikey-personalization-gui' 'wmname' 'feh' 'pavucontrol' 'flameshot' 'maim'
 
