@@ -4,9 +4,9 @@ Create Slave
 IMAPAccount mailbox
 Host imap.mailbox.org
 User marko.bauhardt@mailbox.org
-PassCmd "pass keybase decrypt Users/marko/Library/Keychains/marko.keychain/Apps/isync
+PassCmd "pass keybase decrypt Users/marko/Library/Keychains/marko.keychain/Apps/offlineimap"
 SSLType IMAPS
-CertificateFile /etc/ssl/certs/ca-bundle.crt
+CertificateFile /etc/ssl/certs/ca-certificates.crt
 PipelineDepth 50
 
 IMAPStore mailbox-remote
