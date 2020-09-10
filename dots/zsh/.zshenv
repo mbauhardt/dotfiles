@@ -24,6 +24,7 @@ export GNUPGHOME=$HOME/z/documents/gnupg
 
 export PASSWORD_STORE_DIR=~/z/documents/passwords
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+export BORG_PASSCOMMAND="pass show Users/mb/Library/Keychains/datameer.keychain/Notes/borg"
 
 
 # needed for alot

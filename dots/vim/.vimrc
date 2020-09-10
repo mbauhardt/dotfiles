@@ -26,10 +26,11 @@ set showbreak=\\ " [bonus]
 set tabstop=2
 set softtabstop=4
 set shiftwidth=8
-set number
 set backspace=indent,eol,start
+set number relativenumber
 
-set rtp+=/usr/local/opt/fzf " search files via fzf
+set rtp+=/usr/bin/fzf " search files via fzf
 
 nnoremap <silent> <leader>f :FZF<cr>
 
+inoremap <expr> <c-x><c-k> fzf#vim#complete('cat ~/my.contacts')
