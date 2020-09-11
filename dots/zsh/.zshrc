@@ -9,7 +9,6 @@
 #########################
 
 autoload -Uz tm     # list tmux sessions
-autoload -Uz nvm     # lazy load nvm
 autoload -Uz gw     # lazy gradlew call
 autoload -Uz backup_personal_files     # backup my personal files
 autoload -Uz mm     # shortcut for mail overview based on notmuch tags
@@ -148,7 +147,6 @@ alias scala="scala -Dscala.shell.histfile=$HOME/z/documents/histories/scala_hist
 alias hive_1_1="HADOOP_HOME=\"/home/mb/hadoop/hadoop-2.6.0\" HADOOP_USER_CLASSPATH_FIRST=true HADOOP_CLIENT_OPTS=\"-Duser.home=$HOME/z/documents/histories\" bin/hive"
 alias beeline_1_1="HADOOP_HOME=\"/home/mb/hadoop/hadoop-2.6.0\" HADOOP_USER_CLASSPATH_FIRST=true HADOOP_CLIENT_OPTS=\"-Duser.home=$HOME/z/documents/histories\" bin/beeline"
 alias gwf='./gradlew validate findbugsMain'
-alias nvm_setup_datameer_version='nvm use --delete-prefix datameer'   # expect alias 'datameer' e.g.: nvm alias datameer node
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0
 export JAVA_HOME=/usr/lib/jvm/java-11
 

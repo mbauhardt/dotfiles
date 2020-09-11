@@ -16,9 +16,6 @@
 [submodule "submodules/mblaze"]
 	path = submodules/mblaze
 	url = git@github.com:leahneukirchen/mblaze.git
-[submodule "submodules/nvm"]
-	path = submodules/nvm
-	url = git@github.com:nvm-sh/nvm.git
 [submodule "submodules/mblaze-much"]
 	path = submodules/mblaze-much
 	url = git@github.com:dannyob/mblaze-much.git
@@ -43,3 +40,6 @@
 [submodule "submodules/clipmenu"]
 	path = submodules/clipmenu
 	url = git@github.com:cdown/clipmenu.git
+[submodule "submodules/n"]
+	path = submodules/n
+	url = git@github.com:tj/n.git
