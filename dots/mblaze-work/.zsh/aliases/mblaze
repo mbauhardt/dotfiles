@@ -25,6 +25,6 @@ alias m_ci="notmuch search --output=files 'tag:ci and date:31d..' | mseq -S; mf"
 
 # rest
 alias m_cal="notmuch search --output=files 'tag:calendar and date:14d..' | mseq -S; mf"
-alias m_me="notmuch search --output=files 'tag:to-me and not tag:atlassian and not tag:calendar and date:14d..' | mseq -S; mf"
+alias m_me="notmuch search --output=files 'tag:to-me and not tag:atlassian and not tag:calendar and not tag:github and date:14d..' | mseq -S; mf"
 
 autoload -Uz m_cr     # query notmuch database
