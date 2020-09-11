@@ -29,7 +29,7 @@ zstyle ":dotfiles:install" app
 ###### VOID LINUX APPS #######
 
 # BASE
-# zstyle ":dotfiles:install" app 'zsh' 'git' 'vim' 'tmux' 'fzf'
+# zstyle ":dotfiles:install" app 'zsh' 'git' 'vim' 'tmux' 'fzf' 'mosh'
 
 # BASE II
 # zstyle ":dotfiles:install" app 'make' 'gcc' 'pkg-config' 'coreutils' 'moreutils' 'findutils' 'ncdu'
