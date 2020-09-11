@@ -47,7 +47,7 @@ zstyle ":dotfiles:install" app
 # zstyle ":dotfiles:install" app 'cifs-utils'
 
 # X11
-# zstyle ":dotfiles:install" app 'xorg-minimal' 'xorg-fonts' 'xf86-video-intel' 'libX11-devel' 'libXft-devel' 'libXinerama-devel' 'clipmenu' 'clipnotify' 'libXfixes-devel' 'xsel' 'dmenu' 'wmname' 'neofetch'
+# zstyle ":dotfiles:install" app 'xorg-minimal' 'xorg-fonts' 'xf86-video-intel' 'libX11-devel' 'libXft-devel' 'libXinerama-devel' 'clipmenu' 'clipnotify' 'libXfixes-devel' 'xsel' 'dmenu' 'wmname' 'neofetch' 'xurls'
 
 # X11 2
 # zstyle ":dotfiles:install" app 'feh' 'arandr' 'pavucontrol' 'flameshot' 'ykpers-gui' 'maim'
