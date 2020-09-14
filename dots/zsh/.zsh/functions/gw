@@ -1,8 +1,0 @@
-# Remove this function, subsequent calls will execute './gradlew' directly
-unfunction "$0"
-# setup nvm
-nvm use --delete-prefix datameer
-# add alias
-alias gw='./gradlew'
-# execute `./gradlew` directly
-./gradlew "$@"
