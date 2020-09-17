@@ -29,8 +29,21 @@ set shiftwidth=8
 set backspace=indent,eol,start
 set number relativenumber
 
-set rtp+=/usr/bin/fzf " search files via fzf
 
-nnoremap <silent> <leader>f :FZF<cr>
+call plug#begin('~/.vim/plugged')
 
-inoremap <expr> <c-x><c-k> fzf#vim#complete('cat ~/my.contacts')
+Plug 'junegunn/fzf.vim'
+Plug 'morhetz/gruvbox'
+Plug 'frazrepo/vim-rainbow'
+
+call plug#end()
+
+" rainbow
+let g:rainbow_active = 1
+
+" gruvbox
+set background=dark
+
+" my contacts with help of notmuch-address-cache and fzf
+inoremap <expr> <c-x><c-k> fzf#vim#complete('/home/mb/z/src/dotfiles/master/submodules/notmuch-address-cache/bin/notmuch-address-cache query')
+
