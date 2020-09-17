@@ -43,3 +43,6 @@
 [submodule "submodules/n"]
 	path = submodules/n
 	url = git@github.com:tj/n.git
+[submodule "submodules/vim-plug"]
+	path = submodules/vim-plug
+	url = git@github.com:junegunn/vim-plug.git
