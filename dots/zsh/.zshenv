@@ -31,10 +31,11 @@ export BORG_PASSCOMMAND="pass show Users/mb/Library/Keychains/datameer.keychain/
 export LANG='en_US.UTF-8'
 export LC_ALL=en_US.UTF-8
 export MBLAZE=$HOME/.mblaze
-export BROWSER=brave-browser
+export BROWSER=firefox
 
 # dev
 export GOPATH=$HOME/z/src/go
+export CARGO_HOME=$HOME/.cargo
 
 # XDG
 : ${XDG_CONFIG_HOME:="$HOME/.config"}
@@ -49,6 +50,7 @@ path=(
   /usr/local/{bin,sbin}
   $HOME/bin
   $GOPATH/bin
+  $CARGO_HOME/bin
   $path
 )
 
