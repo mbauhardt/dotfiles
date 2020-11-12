@@ -162,6 +162,19 @@ Configure your the dotfiles you want to symlink via `.dotfilesrc` file. See [.do
     # add the line `Option "NaturalScrolling" "True"` within the touchpad section
     # add the line `Option "ClickMethod" "clickfinger"` within the touchpad section
 
+    # atreus keyboard
+		sudo vim /etc/X11/xorg.conf.d/10-keyboard.conf
+		#Section "InputClass"
+    #    Identifier             "Atreus"
+    #    MatchIsKeyboard        "on"
+    #    MatchDevicePath        "/dev/input/event*"
+    #    MatchProduct           "Atreus"
+    #    MatchVendor            "Technomancy"
+    #    Option                 "XkbModel" "Atreus"
+    #    Option                 "XkbLayout" "us"
+    #EndSection
+
+
     # Resize lvm volume
     sudo lvs
     sudo lvextend --resizefs -L 100G /dev/mapper/fedora_fedorabox-root
