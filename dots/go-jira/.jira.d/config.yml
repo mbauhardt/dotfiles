@@ -1,0 +1,35 @@
+endpoint: https://datameer.atlassian.net
+user: mb@datameer.com
+password-source: pass
+password-name: Users/mb/Library/Keychains/datameer.keychain/Websites/datameer.atlassian.net
+
+custom-commands:
+  - name: codereview
+    help: display issues which are in code review
+    script: |-
+      {{jira}} list --template mylist --query "sprint in openSprints() and status = 'Code Review'"
+
+  - name: mywork
+    help: display issues where i'm working on
+    script: |-
+      {{jira}} list --template mylist --query "sprint in openSprints() and assignee = currentUser() and type != epic"
+
+  - name: myprogress
+    help: display my issues which are in progress
+    script: |-
+      {{jira}} list --query "assignee = currentUser() and status = 'In Progress'"
+
+  - name: mine
+    help: display issues assigned to me
+    script: |-
+      {{jira}} list --template table --query "resolution = unresolved and assignee=currentuser() ORDER BY priority, created"
+
+  - name: sprint
+    help: display issues for active sprint
+    script: |-
+      {{jira}} list --template mylist --query "Sprint = 1687 and status not in (closed, open) order by status"
+
+  - name: sprint-all
+    help: display all issues for active sprint
+    script: |-
+      {{jira}} list --template mylist --query "Sprint =  1687 order by status"

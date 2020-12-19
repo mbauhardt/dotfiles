@@ -1,6 +1,6 @@
 if [ -z $@ ]
 then
-  notmuch search --output=files "tag:cr and date:14d.." | mseq -S; mseq -C 1; m
+  notmuch search --output=files "tag:cr and date:3d.." | mseq -S; mseq -C 1; m
 else
   notmuch search --output=files "tag:cr and subject:'$@' and date:14d.." | mseq -S; mseq -C 1; m
 fi

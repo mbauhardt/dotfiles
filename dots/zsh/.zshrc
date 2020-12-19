@@ -13,6 +13,7 @@ autoload -Uz backup_personal_files     # backup my personal files
 autoload -Uz mm     # shortcut for mail overview based on notmuch tags
 autoload -Uz m     # shortcut for mail incl notmuch tags
 autoload -Uz mq     # query notmuch database
+autoload -Uz jira-sprint-overview     # colored sprint overview
 
 
 #########################

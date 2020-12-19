@@ -12,7 +12,7 @@ alias m_lists="notmuch search --output=files 'tag:lists and not tag:calendar and
 
 # jira & co
 alias m_jira_mentioned="notmuch search --output=files '((tag:jira-mentioned and tag:to-me) or (tag:jira-mentioned and tag:turtle-team)) and date:31d..' | mseq -S; mf"
-alias m_jira_notified="notmuch search --output=files '((tag:jira-notified and tag:to-me) or (tag:jira-notified and tag:turtle-team)) and date:14d..' | mseq -S; mf"
+alias m_jira_notified="notmuch search --output=files '((tag:jira-notified and tag:to-me) or (tag:jira-notified and tag:turtle-team)) and date:3d..' | mseq -S; mf"
 alias m_confluence_mentioned="notmuch search --output=files '((tag:confluence-mentioned and tag:to-me) or (tag:confluence-mentioned and tag:turtle-team)) and date:31d..' | mseq -S; mf"
 alias m_confluence_notified="notmuch search --output=files '((tag:confluence-notified and tag:to-me) or (tag:confluence-notified and tag:turtle-team)) and date:31d..' | mseq -S; mf"
 
