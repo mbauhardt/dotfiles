@@ -11,21 +11,33 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=~/z/documents/task
+data.location=~/.task
 
-# Color theme (uncomment one to use)
-#include /usr/share/task/light-16.theme
-#include /usr/share/task/light-256.theme
-#include /usr/share/task/dark-16.theme
-#include /usr/share/task/dark-256.theme
-#include /usr/share/task/dark-red-256.theme
-#include /usr/share/task/dark-green-256.theme
-#include /usr/share/task/dark-blue-256.theme
-#include /usr/share/task/dark-violets-256.theme
-#include /usr/share/task/dark-yellow-green.theme
-#include /usr/share/task/dark-gray-256.theme
-#include /usr/share/task/dark-gray-blue-256.theme
-#include /usr/share/task/solarized-dark-256.theme
-#include /usr/share/task/solarized-light-256.theme
-#include /usr/share/task/no-color.theme
+default.project=Inbox
+
+dateformat.report='a, D b'
+
+report.today.description=My Today List
+report.today.columns=id,scheduled,due,project,description
+report.today.labels=ID,Scheduled,Due,Project,Description
+report.today.sort=due+,scheduled+
+report.today.filter=status:pending and (due.before:eod or schedule.before:eod)
+
+report.upcoming.description=My Upcoming List
+report.upcoming.columns=id,scheduled,due,project,description
+report.upcoming.labels=ID,Scheduled,Due,Project,Description
+report.upcoming.sort=due+,scheduled+
+report.upcoming.filter=status:pending and (due.after:eod or schedule.after:eod)
+
+report.anytime.description=My Anytime List
+report.anytime.columns=id,scheduled,due,project,description
+report.anytime.labels=ID,Scheduled,Due,Project,Description
+report.anytime.sort=urgency-
+report.anytime.filter=status:pending and -DUE and -SCHEDULED
+
+report.inbox.description=My Inbox
+report.inbox.columns=id,description
+report.inbox.labels=ID,Description
+report.inbox.sort=entry-
+report.inbox.filter=status:pending and project:Inbox
 
