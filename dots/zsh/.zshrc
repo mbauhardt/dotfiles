@@ -34,13 +34,13 @@ eval `dircolors`
 
 #setopt auto_name_dirs
 hash -d MY_DOTS=$DOTFILESDIR
-hash -d DAP_MASTER=$HOME/z/src/dap/master
-hash -d DAP_V74=$HOME/z/src/dap/v7.4
-hash -d DAP_V72=$HOME/z/src/dap/v7.2
-hash -d HADOOP=/opt/hadoop-2.6.0
-hash -d HIVE_11=/opt/hive-1.1.0
-hash -d HIVE_12=/opt/hive-1.2.1
-hash -d PASSWORDS=$HOME/z/documents/passwords
+hash -d DAP_MASTER=$HOME/usr/src/dap/master
+hash -d DAP_V74=$HOME/usr/src/dap/v7.4
+hash -d DAP_V72=$HOME/usr/src/dap/v7.2
+hash -d HADOOP=$HOME/usr/local/hadoop/hadoop-2.6.0
+hash -d HIVE_11=$HOME/usr/local/hadoop/hive-1.1.0
+hash -d HIVE_12=$HOME/usr/local/hadoop/hive-1.2.1
+hash -d PASSWORDS=$HOME/.password-store
 
 
 #########################
@@ -148,8 +148,9 @@ alias scala="scala -Dscala.shell.histfile=$HOME/z/documents/histories/scala_hist
 alias hive_1_1="HADOOP_HOME=\"/home/mb/hadoop/hadoop-2.6.0\" HADOOP_USER_CLASSPATH_FIRST=true HADOOP_CLIENT_OPTS=\"-Duser.home=$HOME/z/documents/histories\" bin/hive"
 alias beeline_1_1="HADOOP_HOME=\"/home/mb/hadoop/hadoop-2.6.0\" HADOOP_USER_CLASSPATH_FIRST=true HADOOP_CLIENT_OPTS=\"-Duser.home=$HOME/z/documents/histories\" bin/beeline"
 alias gwf='./gradlew validate findbugsMain'
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0
+#export JAVA_HOME=/usr/lib/jvm/java-1.8.0
 #export JAVA_HOME=/usr/lib/jvm/java-11
+export N_PREFIX=$HOME/usr/local
 
 
 #########################
@@ -181,7 +182,7 @@ source $HOME/.zsh/aliases/mblaze
 #       HISTORY         #
 #########################
 
-HISTFILE=$HOME/z/documents/histories/z_history
+HISTFILE=$HOME/.zhistory
 SAVEHIST=10000
 HISTSIZE=12000
 setopt inc_append_history

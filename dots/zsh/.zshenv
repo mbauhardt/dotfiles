@@ -7,7 +7,7 @@
 #      DOTFILES      #
 ######################
 
-export DOTFILESDIR=${ZDOTDIR:-$HOME}/z/src/dotfiles/master
+export DOTFILESDIR=${ZDOTDIR:-$HOME}/etc/dotfiles
 export HOMEBREW_CASK_OPTS="--appdir=/opt"
 
 
@@ -15,14 +15,14 @@ export HOMEBREW_CASK_OPTS="--appdir=/opt"
 #     GPG/SSH       #
 #####################
 
-export GNUPGHOME=$HOME/z/documents/gnupg
+export GNUPGHOME=$HOME/.gnupg
 
 
 #####################
 #     PASSWORDS     #
 #####################
 
-export PASSWORD_STORE_DIR=~/z/documents/passwords
+export PASSWORD_STORE_DIR=~/.password-store
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export BORG_PASSCOMMAND="pass show Users/mb/Library/Keychains/datameer.keychain/Notes/borg"
 
@@ -31,10 +31,10 @@ export BORG_PASSCOMMAND="pass show Users/mb/Library/Keychains/datameer.keychain/
 export LANG='en_US.UTF-8'
 export LC_ALL=en_US.UTF-8
 export MBLAZE=$HOME/.mblaze
-export BROWSER=chromium-browser
+export BROWSER=chromium
 
 # dev
-export GOPATH=$HOME/z/src/go
+export GOPATH=$HOME/usr/src/go
 export CARGO_HOME=$HOME/.cargo
 
 # XDG
@@ -46,9 +46,8 @@ export XDG_CONFIG_HOME XDG_CACHE_HOME XDG_DATA_HOME XDG_RUNTIME_DIR
 
 # export path and fpath
 path=(
-  /opt/usr/local/{bin,sbin}
+  $HOME/usr/local/{bin,sbin}
   /usr/local/{bin,sbin}
-  $HOME/bin
   $GOPATH/bin
   $CARGO_HOME/bin
   $path
