@@ -4,9 +4,9 @@ Create Slave
 IMAPAccount datameer
 Host imap.gmail.com
 User mb@datameer.com
-PassCmd "pass keybase decrypt Users/mb/Library/Keychains/datameer.keychain/Apps/isync"
+PassCmd "pass Users/mb/Library/Keychains/datameer.keychain/Apps/isync"
 SSLType IMAPS
-CertificateFile /etc/ssl/certs/ca-bundle.crt
+CertificateFile /etc/ssl/certs.pem
 PipelineDepth 50
 
 IMAPStore datameer-remote
@@ -14,8 +14,8 @@ Account datameer
 
 MaildirStore datameer-local
 Subfolders Verbatim
-Path ~/z/documents/mail/ # The trailing "/" is important
-Inbox ~/z/documents/mail/inbox
+Path ~/var/mail/datameer.com/ # The trailing "/" is important
+Inbox ~/var/mail/datameer.com/inbox
 
 Channel datameer-default
 Master :datameer-remote:

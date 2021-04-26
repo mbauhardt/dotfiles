@@ -11,7 +11,7 @@
 # configured here named ".notmuch".
 #
 [database]
-path=/home/mb/z/documents/mail
+path=/home/mb/var/mail/datameer.com
 
 # User configuration
 #

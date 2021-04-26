@@ -1,3 +1,4 @@
+mixed/alternative: text/html:text/plain
 text/plain: mflow
 text/html: w3m -dump -I UTF-8 -T text/html -cols 200
 application/pdf: pdftotext - - | par
