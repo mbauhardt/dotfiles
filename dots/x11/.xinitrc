@@ -9,8 +9,8 @@ slstatus &
 # needed for transparency
 xcompmgr &
 
-# change desktop background regulary
-systemctl --user start wallpaper.timer
+# initial setting background picture, sv/snooze will change it scheduled
+feh --bg-scale --randomize --recursive /home/mb/Pictures
 
 # start window manager
 exec dwm
