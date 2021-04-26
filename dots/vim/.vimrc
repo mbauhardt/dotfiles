@@ -9,7 +9,7 @@ filetype plugin on
 " @ max input line entries
 " f1 save file markings
 " n viminfo filename
-set viminfo=<200,'200,/100,:100,@100,f1,n~/z/documents/vim/viminfo
+set viminfo=<200,'200,/100,:100,@100,f1,n~/.viminfo
 syntax on
 set ruler		" position of curser
 set showcmd		" show the key press in normal mode
@@ -45,5 +45,5 @@ let g:rainbow_active = 1
 set background=dark
 
 " my contacts with help of notmuch-address-cache and fzf
-inoremap <expr> <c-x><c-k> fzf#vim#complete('/home/mb/z/src/dotfiles/master/submodules/notmuch-address-cache/bin/notmuch-address-cache query')
+inoremap <expr> <c-x><c-k> fzf#vim#complete('/home/mb/etc/dotfiles/submodules/notmuch-address-cache/bin/notmuch-address-cache query')
 
