@@ -1,1 +1,0 @@
-../../../../../../submodules/pass-keybase/keybase.bash
