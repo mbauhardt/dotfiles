@@ -1,9 +1,9 @@
 [user]
   name = Marko Bauhardt
-  email = marko.bauhardt@mailbox.org
+  email = mb@datameer.com
   editor = vim
-  signingkey = 53192101
+  signingkey = BC090688312C49B841F3272ED38A64FA85D3EE49
 [commit]
-  gpgsign = false
+  gpgsign = true
 [gpg]
   program = gpg2

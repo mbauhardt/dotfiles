@@ -31,7 +31,7 @@ export BORG_PASSCOMMAND="pass show Users/mb/Library/Keychains/datameer.keychain/
 export LANG='en_US.UTF-8'
 export LC_ALL=en_US.UTF-8
 export MBLAZE=$HOME/.mblaze
-export BROWSER=chromium
+export BROWSER=firefox
 
 # dev
 export GOPATH=$HOME/usr/src/go
