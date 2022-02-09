@@ -12,6 +12,9 @@ xcompmgr &
 # initial setting background picture, sv/snooze will change it scheduled
 feh --bg-scale --randomize --recursive /home/mb/Pictures
 
+# launch dbus
+export $(dbus-launch)
+
 # start window manager
 exec dwm
 

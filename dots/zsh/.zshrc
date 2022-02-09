@@ -121,6 +121,7 @@ alias g='git'
 alias gst='git status'
 alias gws='git status --short'
 alias gco='git checkout'
+alias gs='git switch'
 alias gia='git add'
 alias gb='git branch'
 alias gc='git commit --verbose'
@@ -222,7 +223,7 @@ HISTORY_SUBSTRING_SEARCH_FUZZY='f'
 #########################
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f /usr/share/fzf/shell/key-bindings.zsh ] && source /usr/share/fzf/shell/key-bindings.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/doc/fzf/key-bindings.zsh ] && source /usr/share/doc/fzf/key-bindings.zsh
 
 
@@ -242,6 +243,12 @@ export GPG_TTY
 unset SSH_AGENT_PID
 export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 
+#########################
+#     SUSPEND           #
+#########################
+
+alias szzz="sleep 2; sudo zzz"
+alias sslock="slock szzz"
 
 #########################
 #       PROMPT          #
@@ -251,6 +258,7 @@ autoload -Uz promptinit && promptinit
 prompt pure
 # jobs
 PROMPT='%(1j.[%j] .)% '$PROMPT
+[[ -n $NNNLVL ]] && PROMPT=n$(echo -e '\xC2\xB3')$PROMPT
 
 function zle-line-init zle-keymap-select {
 	# Change the cursor style depending on keymap mode.
@@ -268,3 +276,5 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
+
+source /home/mb/.config/broot/launcher/bash/br
