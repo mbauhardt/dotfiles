@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+$DOTFILESDIR/submodules/notmuch-address-cache/bin/notmuch-address-cache update --text
+
+echo 'Tagging mails ...'
+notmuch tag --batch --input=$HOME/var/mail/datameer.com/.notmuch/hooks/mail-tags
+
