@@ -23,11 +23,15 @@ set textwidth=72	" This explicitly sets the width of text to 72 characters
 set list
 set listchars=tab:▸\ ,trail:·,extends:←,precedes:→,nbsp:~
 set showbreak=\\ " [bonus]
+set expandtab
 set tabstop=2
-set softtabstop=4
-set shiftwidth=8
+set softtabstop=2
+set shiftwidth=2
 set backspace=indent,eol,start
-set number relativenumber
+set paste
+set number
+set clipboard=unnamedplus
+" set number relativenumber
 
 
 call plug#begin('~/.vim/plugged')
@@ -35,6 +39,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'frazrepo/vim-rainbow'
+Plug 'dag/vim-fish'
 
 call plug#end()
 
