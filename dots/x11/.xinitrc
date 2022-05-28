@@ -12,6 +12,10 @@ xcompmgr &
 # initial setting background picture, sv/snooze will change it scheduled
 feh --bg-scale --randomize --recursive /home/mb/Pictures
 
+# screen handling
+xset s 180 120
+xss-lock -n screen-dim -- screen-lock &
+
 # launch dbus
 export $(dbus-launch)
 
