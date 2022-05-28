@@ -14,6 +14,8 @@ autoload -Uz mm     # shortcut for mail overview based on notmuch tags
 autoload -Uz m     # shortcut for mail incl notmuch tags
 autoload -Uz mq     # query notmuch database
 autoload -Uz jira-sprint-overview     # colored sprint overview
+autoload -Uz fzf-git-branch
+autoload -Uz fzf-git-checkout
 
 
 #########################
@@ -47,7 +49,7 @@ hash -d PASSWORDS=$HOME/.password-store
 #         ZLE           #
 #########################
 
-bindkey -v    # vim mode
+bindkey -v    # vis mode
 export KEYTIMEOUT=1    # delay after hit ESC
 
 
@@ -89,8 +91,8 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'     # ignore case
 #       EDITOR          #
 #########################
 
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='vis'
+export VISUAL='vis'
 export PAGER='less'
 
 alias e='$EDITOR'
@@ -101,6 +103,7 @@ alias e='$EDITOR'
 #########################
 
 
+alias rm='echo "This is not the command you are looking for."; false'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -152,6 +155,8 @@ alias gwf='./gradlew validate findbugsMain'
 #export JAVA_HOME=/usr/lib/jvm/java-1.8.0
 #export JAVA_HOME=/usr/lib/jvm/java-11
 export N_PREFIX=$HOME/usr/local
+export AWS_REGION=us-east-1
+
 
 
 #########################
@@ -278,3 +283,4 @@ zle -N zle-keymap-select
 
 
 source /home/mb/.config/broot/launcher/bash/br
+. /home/mb/.local/src/github.com/Datameer-Inc/dot-files/df-functions.sh

@@ -2,21 +2,18 @@ if [[ -z "$TMUX" ]]; then
   tmux has-session 2>/dev/null
   if [[ "$?" -eq 1 ]]; then
     echo "Attach new tmux sessions..."
+    tmux new-session -d -s logs -n svlogtail
     tmux new-session -d -s shell -n filebrowser
     tmux new-session -d -s datameer -c "$HOME/z/src/dap/master" -n topics
     tmux new-session -d -s groupware -n mail
 
     echo "create new windows"
     tmux new-window -t shell:1 -n shell
-    tmux new-window -t groupware:1 -n calendar
-    tmux new-window -t groupware:2 -n todos
-    tmux new-window -c "$HOME/z/src/dap/master" -t datameer:1 -n master
-    tmux new-window -c "$HOME/z/src/dap/v10.1" -t datameer:2 -n v10.1
-    tmux new-window -c "$HOME/z/src/dap/v10.0" -t datameer:3 -n v10.0
-    tmux new-window -c "$HOME/z/src/dap/v7.5" -t datameer:4 -n v7.5
-    tmux new-window -c "$HOME/z/src/dap/v7.4" -t datameer:5 -n v7.4
+    tmux new-window -c "$HOME/usr/src/europa/main-working-set/europa" -t datameer:1 -n dev
+    tmux new-window -c "$HOME/usr/src/dap/master" -t datameer:2 -n master
 
     echo "select windows"
+    tmux select-window -t logs:0
     tmux select-window -t shell:0
     tmux select-window -t datameer:0
     tmux select-window -t groupware:0
