@@ -31,8 +31,10 @@ export GNUPGHOME=$HOME/.gnupg
 #     PASSWORDS     #
 #####################
 
-export PASSWORD_STORE_DIR=~/.password-store
+export PASSWORD_STORE_DIR=$XDG_DATA_HOME/pass/password-store
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+export PASSWORD_STORE_KEY="BC090688312C49B841F3272ED38A64FA85D3EE49"
+export PASSWORD_STORE_EXTENSIONS_DIR=$XDG_DATA_HOME/pass/extensions
 export BORG_PASSCOMMAND="pass show Users/mb/Library/Keychains/datameer.keychain/Notes/borg"
 
 
