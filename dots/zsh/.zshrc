@@ -200,6 +200,15 @@ setopt share_history
 
 export MYSQL_HISTFILE=~/z/documents/histories/mysql_history
 
+#########################
+#       FZF & FASD      #
+#########################
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f /usr/share/doc/fzf/key-bindings.zsh ] && source /usr/share/doc/fzf/key-bindings.zsh
+source ~/.local/src/github.com/Aloxaf/fzf-tab/fzf-tab.plugin.zsh
+
 
 #########################
 #      ZSH-USERS        #
@@ -223,13 +232,6 @@ HISTORY_SUBSTRING_SEARCH_GLOBBING_FLAGS='i'
 HISTORY_SUBSTRING_SEARCH_FUZZY='f'
 
 
-#########################
-#       FZF & FASD      #
-#########################
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
-[ -f /usr/share/doc/fzf/key-bindings.zsh ] && source /usr/share/doc/fzf/key-bindings.zsh
 
 
 #########################
@@ -284,3 +286,4 @@ zle -N zle-keymap-select
 
 source /home/mb/.config/broot/launcher/bash/br
 . /home/mb/.local/src/github.com/Datameer-Inc/dot-files/df-functions.sh
+
