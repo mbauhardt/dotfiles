@@ -24,7 +24,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/opt"
 #     GPG/SSH       #
 #####################
 
-export GNUPGHOME=$HOME/.gnupg
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 
 
 #####################
@@ -47,7 +47,7 @@ export MAILSEQ=$XDG_DATA_HOME/mblaze/seq
 export BROWSER=chromium
 
 # dev
-export GOPATH=$HOME/usr/src/go
+export GOPATH=$HOME/.local/src/localhost/go
 export CARGO_HOME=$HOME/.cargo
 
 
