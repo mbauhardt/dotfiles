@@ -1,4 +1,3 @@
-set dots 'msmtp' 'isync'
 echo "Delete all symblic links from the given modules: '$dots'"
 echo "Do you want to continue? (y/n)"
 read con

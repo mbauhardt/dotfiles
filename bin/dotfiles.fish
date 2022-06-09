@@ -1,9 +1,9 @@
 #!/usr/pkg/bin/fish
 
-set -q DOT_CONFIG_DIR || set DOT_CONFIG_DIR $XDG_CONFIG_DIR/dotfiles
+set -q DOT_CONFIG_DIR || set DOT_CONFIG_DIR $XDG_CONFIG_HOME/dotfiles
 set -q DOT_FILES_DIR || set DOT_FILES_DIR $HOME/.local/src/github.com/mbauhardt/dotfiles
-if test -f "$DOT_CONFIG_DIR/.dotfilesrc"
-  source "$DOT_CONFIG_DIR/.dotfilesrc"
+if test -f "$DOT_CONFIG_DIR/config"
+  source "$DOT_CONFIG_DIR/config"
 end
 
 function _help 
