@@ -59,7 +59,7 @@ export KEYTIMEOUT=1    # delay after hit ESC
 
 setopt EXTENDEDGLOB #if the EXTENDEDGLOB option is set, some new features are activated e.g. file(#qN.mh+24)
 autoload -Uz compinit
-compinit_dump="$HOME/.zcompdump"
+compinit_dump="$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
 # - '#q' is an explicit glob qualifier that makes globbing work within zsh's [[ ]] construct.
 # - 'N' makes the glob pattern evaluate to nothing when it doesn't match (rather than throw a globbing error)
 # 'mh+24' matches files (or directories or whatever) that are older than 24 hours.
@@ -73,6 +73,7 @@ else
 fi;
 
 zmodload -i zsh/complist
+zstyle ':completion:*' cache-path $XDG_CACHE_HOME/zsh/zcompcache
 zstyle ':completion:*' verbose yes       # show comments for options if available
 zstyle ':completion:*' group-name ''     # group completion hits by category
 zstyle ':completion:*:descriptions' format '%S%d%s'     # show description of category in reverse video color
@@ -188,7 +189,7 @@ source $HOME/.zsh/aliases/mblaze
 #       HISTORY         #
 #########################
 
-HISTFILE=$HOME/.zhistory
+HISTFILE="$XDG_STATE_HOME"/zsh/history
 SAVEHIST=10000
 HISTSIZE=12000
 setopt inc_append_history
