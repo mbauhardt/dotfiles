@@ -1,0 +1,42 @@
+_sprint=$(jira sprint)
+
+echo ''
+echo  'Final QA'
+echo $_sprint | grep --color 'Final QA'
+
+echo ''
+echo  'Merge Done'
+echo $_sprint | grep --color 'Merge Done'
+
+echo ''
+echo 'Ready to Merge'
+echo $_sprint | grep --color 'Ready to Merge'
+
+echo ''
+echo 'In PO Review'
+echo $_sprint | grep --color 'PO Review'
+
+echo ''
+echo 'In QA Review'
+echo $_sprint | grep --color 'In QA Review'
+
+echo ''
+echo 'Handover'
+echo $_sprint | grep --color 'Handover'
+
+echo ''
+echo 'Resolved'
+echo $_sprint | grep --color 'Resolved'
+
+echo ''
+echo 'Code Review'
+echo $_sprint | grep --color 'Code Review'
+
+echo ''
+echo 'In Progress'
+echo $_sprint | grep --color 'In Progress'
+
+echo ''
+echo 'Open'
+echo $_sprint | grep --color 'Open'
+

@@ -16,7 +16,7 @@ export XDG_CONFIG_HOME XDG_CACHE_HOME XDG_DATA_HOME XDG_RUNTIME_DIR
 #      DOTFILES      #
 ######################
 
-export DOTFILESDIR=${ZDOTDIR:-$HOME}/etc/dotfiles
+export DOTFILESDIR="$HOME"/etc/dotfiles
 export HOMEBREW_CASK_OPTS="--appdir=/opt"
 
 
@@ -62,7 +62,7 @@ path=(
 )
 
 fpath=(
-  $HOME/.zsh/functions
+  $XDG_CONFIG_HOME/zsh/functions
   $fpath
 )
 
