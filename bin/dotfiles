@@ -1,8 +1,8 @@
 #!/bin/zsh -f
 
 
-if [[ -s "${ZDOTDIR:-$HOME}/.dotfilesrc" ]]; then
-  source "${ZDOTDIR:-$HOME}/.dotfilesrc"
+if [[ -s "$XDG_CONFIG_HOME/dotfiles/config" ]]; then
+  source "$XDG_CONFIG_HOME/dotfiles/config"
 fi
 
 function _help() {

@@ -183,7 +183,7 @@ alias m_trash="mq 'tag:deleted and date:31d..'"
 alias m_all="mq 'date:30d..'"
 
 # special search queries
-#source $HOME/.zsh/aliases/mblaze
+source $HOME/.config/zsh/aliases/mblaze
 
 #########################
 #       HISTORY         #
