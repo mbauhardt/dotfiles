@@ -1,0 +1,17 @@
+pcm.snd_card {
+        type hw
+        card "PCH"
+        device 0
+}
+
+ctl.snd_card {
+        type hw
+        card "PCH"
+        device 0
+}
+
+
+pcm.!default {
+    type plug
+    slave.pcm "snd_card"
+}
