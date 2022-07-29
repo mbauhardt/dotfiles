@@ -4,7 +4,7 @@ Create Slave
 IMAPAccount datameer
 Host imap.gmail.com
 User mb@datameer.com
-PassCmd "pass Users/mb/Library/Keychains/datameer.keychain/Apps/isync"
+PassCmd "pass Apps/isync"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs.pem
 PipelineDepth 50
