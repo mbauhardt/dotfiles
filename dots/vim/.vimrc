@@ -32,6 +32,7 @@ set paste
 set number
 set clipboard=unnamedplus
 " set number relativenumber
+set scrolloff=3
 
 
 call plug#begin('~/.vim/plugged')
