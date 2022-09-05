@@ -1,0 +1,20 @@
+# mless(1) keybindings
+# When using less <590:
+# compile with lesskey -o .mless mlesskey and install as ~/.mless
+# When using less >=590: copy this file to ~/.mlesskey
+Q quit \1
+:cq quit \1
+[ prev-file
+] next-file
+{ noaction E1\n
+} quit $
+$ quit $
+S noaction E//scan\n
+` noaction E\#\n
+H quit H
+N quit N
+R quit R
+k quit k
+d quit d
+t quit t
+\^ quit \^
