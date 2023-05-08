@@ -92,8 +92,8 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'     # ignore case
 #       EDITOR          #
 #########################
 
-export EDITOR='vis'
-export VISUAL='vis'
+export EDITOR='kak'
+export VISUAL='kak'
 export PAGER='less'
 
 alias e='$EDITOR'
@@ -208,7 +208,7 @@ export MYSQL_HISTFILE=~/z/documents/histories/mysql_history
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/doc/fzf/key-bindings.zsh ] && source /usr/share/doc/fzf/key-bindings.zsh
-source ~/.local/src/github.com/Aloxaf/fzf-tab/fzf-tab.plugin.zsh
+#source ~/.local/src/github.com/Aloxaf/fzf-tab/fzf-tab.plugin.zsh
 
 
 #########################
@@ -287,4 +287,19 @@ zle -N zle-keymap-select
 
 source /home/mb/.config/broot/launcher/bash/br
 . /home/mb/.local/src/github.com/Datameer-Inc/dot-files/df-functions.sh
+export FZF_DEFAULT_OPTS='
+          --color fg:#646a76
+          --color bg+:#7797b7,fg+:#2c2f30,hl:#D8DEE9,hl+:#26292a,gutter:#3a404c
+          --color pointer:#373d49,info:#606672
+          --border
+          --color border:#646a76
+          --height 13'
+
+export FZF_DEFAULT_OPTS='
+          --color fg:249
+          --color bg+:31,fg+:237,hl:185,hl+:#ebcb8b,gutter:#0087af
+          --color pointer:#373d49,info:#606672
+          --border
+          --color border:#d8dee9
+          --height 30%'
 

@@ -46,6 +46,12 @@ export MBLAZE=$XDG_CONFIG_HOME/mblaze
 export MAILCUR=$XDG_DATA_HOME/mblaze/cur
 export MAILSEQ=$XDG_DATA_HOME/mblaze/seq
 export BROWSER=chromium
+export BROWSER=otter-browser
+export BROWSER=firefox
+
+
+# X11
+export XDG_SESSION_TYPE=x11
 
 # dev
 export GOPATH=$HOME/.local/src/localhost/go

@@ -12,7 +12,12 @@ xcompmgr &
 # initial setting background picture, sv/snooze will change it scheduled
 feh --bg-scale --randomize --recursive /home/mb/Pictures
 
+# sound server
+pipewire &
+pipewire-pulse &
+
 # screen handling
+xset dpms 0 0 0
 xset s 180 120
 xss-lock -n screen-dim -- screen-lock &
 
@@ -21,4 +26,3 @@ export $(dbus-launch)
 
 # start window manager
 exec dwm
-
