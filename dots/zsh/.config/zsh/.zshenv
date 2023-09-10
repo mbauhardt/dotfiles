@@ -65,6 +65,7 @@ path=(
   /usr/local/{bin,sbin}
   $GOPATH/bin
   $CARGO_HOME/bin
+  $HOME/.config/emacs/bin
   $path
 )
 
