@@ -14,7 +14,10 @@ feh --bg-scale --randomize --recursive /home/mb/Pictures
 
 # sound server
 pipewire &
+sleep 1
 pipewire-pulse &
+sleep 1
+wireplumber &
 
 # screen handling
 xset dpms 0 0 0
@@ -22,7 +25,10 @@ xset s 180 120
 xss-lock -n screen-dim -- screen-lock &
 
 # launch dbus
-export $(dbus-launch)
+#export $(dbus-launch)
+
+#emacs --daemon
 
 # start window manager
-exec dwm
+exec dbus-run-session -- dwm
+#exec stumpwm
