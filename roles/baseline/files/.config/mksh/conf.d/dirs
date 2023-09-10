@@ -1,0 +1,21 @@
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias ls_big='ls -Slh | head'
+alias ls_small='ls -Slhr | head'
+alias ls_new='ls -tlh | head'
+alias ls_old='ls -tlh | tail'
+
+
+CDPATH=~/.local/src/github.com/Datameer-Inc
+
+export CDPATH
+
+function pushdsilent {
+  pushd $1 > /dev/null
+}
+
+# alias cd="pushdsilent"
+
+autoload __fzy_pushd__
+bind -m '^[r'='^U__fzy_pushd__^J'

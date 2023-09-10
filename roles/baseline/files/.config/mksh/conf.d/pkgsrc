@@ -1,0 +1,16 @@
+export OS_BASE=`readlink -f $HOME`/OS
+export OS_HOME=${OS_BASE}/OS-`uname -s`
+
+export PATH
+PATH="${OS_HOME}/pkg/sbin:${OS_HOME}/pkg/bin:${HOME}/.local/bin:${PATH}"
+export MANPATH
+MANPATH="${OS_HOME}/pkg/man:${MANPATH}"
+
+BOOTSTRAP_WORK=${OS_BASE}/pkgsrc/bootstrap/work
+export LOCALBASE=$OS_HOME/pkg
+export PKG_DBDIR=$LOCALBASE/pkgdb
+export SYSCONFBASE=$LOCALBASE/etc
+export VARBASE=$LOCALBASE/var
+export WRKOBJDIR=$LOCALBASE/usr/work
+export DISTDIR=$LOCALBASE/usr/distfiles
+

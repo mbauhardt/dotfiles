@@ -1,0 +1,18 @@
+alias g='git'
+alias gst='git status'
+alias gws='git status --short'
+alias gco='git checkout'
+alias gs='git switch'
+alias gia='git add'
+alias gb='git branch'
+alias gc='git commit --verbose'
+alias gf='git fetch'
+alias gp='git pull'
+alias gpr='git pull --rebase'
+alias gr='git rebase'
+alias gP='git push'
+alias glol="git log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+autoload __fzy_git_branch__
+autoload __fzy_git_checkout__
+ 

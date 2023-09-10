@@ -5,3 +5,10 @@
 - name: Print message
   ansible.builtin.debug:
     msg: Hello world
+
+- name: Link baseline files
+  ansible.builtin.shell: stow -v -R -t $HOME .
+  args:
+    chdir: "{{ ansible_env.HOME }}/.dotfiles/roles/baseline/files"
+  register: result
+  changed_when: 'result.stderr is search("LINK: ")'

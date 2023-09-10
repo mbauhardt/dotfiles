@@ -1,0 +1,4 @@
+BOOKMARKS=/home/mb/.local/share/sbm/bookmarks
+USERTAGS=/home/mb/.local/share/sbm/usertags
+
+export BOOKMARKS USERTAGS

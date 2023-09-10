@@ -1,2 +1,6 @@
 ---
 # tasks file for roles/prerequisits
+- name: Clone dotfiles
+  ansible.builtin.git:
+    repo: "{{ __stow_dotfiles_gitrepo }}"
+    dest: "{{ ansible_env.HOME }}/.dotfiles"

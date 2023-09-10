@@ -1,0 +1,6 @@
+function __fzf_cd__ {
+  local cmd opts dir
+  cmd="${FZF_ALT_C_COMMAND:-"command fdfind -H -td -d4"}"
+  opts="--height ${FZF_TMUX_HEIGHT:-40%} --bind=ctrl-z:ignore --reverse ${FZF_DEFAULT_OPTS-} ${FZF_ALT_C_OPTS-} +m"
+  dir=$(eval "$cmd" | FZF_DEFAULT_OPTS="$opts" fzf) && printf 'builtin cd -- %s' "$dir"
+}

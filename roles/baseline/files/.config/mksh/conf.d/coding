@@ -1,0 +1,8 @@
+alias gw="./gradlew"
+
+N_PREFIX=$HOME/usr/local
+AWS_REGION=us-east-2
+GOPATH=$HOME/go
+CARGO_HOME=$HOME/.cargo
+
+export GOPATH CARGO_HOME N_PREFIX AWS_REGION

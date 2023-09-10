@@ -1,0 +1,3 @@
+function __fzy_edit__ {
+  e $(fdfind --type f --hidden --exclude '.git' --max-depth 5 | fzy -l 25)
+}

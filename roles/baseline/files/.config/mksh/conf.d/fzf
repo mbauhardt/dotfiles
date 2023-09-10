@@ -1,0 +1,7 @@
+autoload __fzy_history__
+autoload __fzy_cd__
+autoload __fzy_edit__
+bind -m '^r'=^u__fzy_history__^[^e
+bind -m '^[c'='^u__fzy_cd__^[^e^m'
+bind -m '^t'='^u__fzy_edit__^[^e^m'
+

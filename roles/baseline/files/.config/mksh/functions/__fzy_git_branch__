@@ -1,0 +1,8 @@
+function __fzy_git_branch__ {
+  git rev-parse HEAD > /dev/null 2>&1 || return
+
+  git branch --all --sort=-committerdate \
+    | grep -v HEAD \
+    | fzy \
+    | sed "s/.* //"
+}

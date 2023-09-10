@@ -1,0 +1,4 @@
+function __fzy_pushd__ {
+  local i=$(dirs -v -l | fzy | awk '{print $1}')
+  pushdsilent +$i
+}

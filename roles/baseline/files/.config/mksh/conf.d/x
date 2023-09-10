@@ -1,0 +1,3 @@
+BROWSER=chromium
+
+export BROWSER

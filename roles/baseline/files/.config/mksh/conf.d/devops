@@ -1,0 +1,32 @@
+alias k=kubectl
+setenv AWS_PROFILE dtmr-identity
+
+function cloud_authenticate {
+  leapp session list 2>&1 > /dev/null
+  if [ $? != 0 ]; then
+      print "Is your Leapp-App running?"
+      false
+      return
+  fi
+  leapp session current -p $AWS_PROFILE 2>&1 > /dev/null
+  if [ $? != 0 ]; then
+      print "No Leapp Session running, starting new one"
+      leapp session start
+  fi
+  LEAPP_SESSION_ID=$(leapp session current -p $AWS_PROFILE | jq '.id')
+  printf "Session [%s] successfully started." $LEAPP_SESSION_ID
+  setenv LEAPP_SESSION_ID $LEAPP_SESSION_ID
+}
+
+function kubeon {
+  cloud_authenticate
+  if [ ! -z $LEAPP_SESSION_ID ]; then
+    fd -tf 'kubecfg.*' ~/.kube/ | fzy | xargs -i ln -s {} ~/.kube/config
+  fi
+}
+
+function kubeoff {
+  leapp session stop
+  unset LEAPP_SESSION_ID
+  rm ~/.kube/config
+}

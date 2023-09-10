@@ -1,2 +1,3 @@
 ---
 # defaults file for roles/prerequisits
+__stow_dotfiles_gitrepo: "{{ stow_dotfiles_gitrepo | default('https://github.com/mbauhardt/dotfiles.git') }}"
