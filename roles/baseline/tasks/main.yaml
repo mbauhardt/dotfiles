@@ -3,7 +3,7 @@
   include_vars: "os_{{ ansible_facts['distribution'] }}.yml"
 
 - name: Link baseline files
-  ansible.builtin.shell: echo {{ pkg_bin_path }} #stow -v -R -t $HOME .
+  ansible.builtin.shell: {{ pkg_bin_path }}/stow -v -R -t $HOME .
   args:
     chdir: "{{ ansible_env.HOME }}/.dotfiles/roles/baseline/files"
   register: result
