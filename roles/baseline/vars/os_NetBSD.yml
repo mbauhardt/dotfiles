@@ -1,2 +1,2 @@
 ---
-pkg_bin_path: OS/OS-NetBSD/pkg/bin
+pkg_bin_path: '{{ ansible_env.HOME }}/OS/OS-NetBSD/pkg/bin'
