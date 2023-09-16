@@ -1,0 +1,9 @@
+[user]
+  name = Marko Bauhardt
+  email = mb@datameer.com
+  editor = vim
+  signingkey = BC090688312C49B841F3272ED38A64FA85D3EE49
+[commit]
+  gpgsign = true
+[gpg]
+  program = gpg2
