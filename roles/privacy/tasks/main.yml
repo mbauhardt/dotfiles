@@ -1,2 +1,6 @@
 ---
 # tasks file for roles/privacy
+- name: Link files from privacy role
+  ansible.builtin.import_tasks:
+    file: stow.yml
+  tags: gnupg

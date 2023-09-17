@@ -1,10 +1,4 @@
 ---
-- name: Set OS distribution dependant variables
-  include_vars: "os_{{ ansible_facts['distribution'] }}.yml"
-
-- name: Link baseline files
-  ansible.builtin.shell: '{{ pkg_bin_path }}/stow -v -R -t $HOME .'
-  args:
-    chdir: "{{ ansible_env.HOME }}/.dotfiles/roles/baseline/files"
-  register: result
-  changed_when: 'result.stderr is search("LINK: ")'
+- name: Link files from baseline role
+  ansible.builtin.import_tasks:
+    file: stow.yml

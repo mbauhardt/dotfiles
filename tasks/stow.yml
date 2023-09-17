@@ -1,0 +1,7 @@
+---
+- name: Link files
+  ansible.builtin.shell: '{{ pkg_bin_path }}/stow -v -R -t $HOME .'
+  args:
+    chdir: "{{ ansible_env.HOME }}/.dotfiles/roles/{{ role_name }}/files"
+  register: result
+  changed_when: 'result.stderr is search("LINK: ")'
