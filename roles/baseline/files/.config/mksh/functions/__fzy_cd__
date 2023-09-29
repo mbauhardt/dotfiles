@@ -1,3 +1,3 @@
 function __fzy_cd__ {
-  cd $(fdfind --type d --hidden --exclude '.git' --max-depth 5 | fzy -l 25)
+  cd $(fd --type d -L --hidden --exclude '.git' --max-depth 5 | fzy -l 50)
 }

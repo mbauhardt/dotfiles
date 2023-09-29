@@ -1,4 +1,4 @@
 function __fzy_history__ {
-  history 1 | sort -k2 | uniq -f1 | sort -k1nr | sed 's/[[:space:]]/\t/' | fzy -l 25 | sed 's/^[0-9\t]*//'
+  history 1 | sort -k2 | uniq -f1 | sort -k1nr | fzy -l 45  | sed 's/^[[:digit:]]\+[[:blank:]]//'
   #history -nr 1 | awk '!seen[$0]++' | fzy | sed 's/^[[:space:]]*//'
 }

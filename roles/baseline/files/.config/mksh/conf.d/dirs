@@ -7,9 +7,8 @@ alias ls_new='ls -tlh | head'
 alias ls_old='ls -tlh | tail'
 
 
-CDPATH=~/.local/src/github.com/Datameer-Inc
-
-export CDPATH
+# CDPATH=~/.local/src/github.com/Datameer-Inc
+# export CDPATH
 
 function pushdsilent {
   pushd $1 > /dev/null
