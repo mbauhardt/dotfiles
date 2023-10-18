@@ -177,7 +177,68 @@
   (embark-collect-mode . consult-preview-at-point-mode))
 
 
+					; =========  Projects and Workspaces  ===========
+(use-package tabspaces
+  :hook (after-init . tabspaces-mode) ;; use this only if you want the minor-mode loaded at startup. 
+  :commands (tabspaces-switch-or-create-workspace
+             tabspaces-open-or-create-project-and-workspace)
+  :custom
+  (tabspaces-use-filtered-buffers-as-default t)
+  (tabspaces-default-tab "Default")
+  (tabspaces-remove-to-default t)
+  (tabspaces-include-buffers '("*scratch*"))
+  (tabspaces-initialize-project-with-todo t)
+  (tabspaces-todo-file-name "project-todo.org")
+  ;; sessions
+  (tabspaces-session t)
+  (tabspaces-session-auto-restore t))
 
+
+					; ======= Prefix Key ========
+
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
+(use-package general)
+(require 'general)
+
+(general-create-definer my-leader-def
+  ;; :prefix my-leader
+  :prefix "SPC")
+
+;; ** Global Keybindings
+(my-leader-def
+  :keymaps 'normal
+  ;; workspaces
+  "<tab>." 'tabspaces-switch-or-create-workspace
+  "<tab>k" 'tabspaces-kill-buffers-close-workspace
+  ;; projects
+  "pp" 'tabspaces-open-or-create-project-and-workspace
+  "p." 'project-dired
+  "pd" 'project-find-dir
+  "SPC" 'project-find-file
+  ;; buffer
+  "bb" 'consult-project-buffer
+  "bk" 'kill-current-buffer
+  ;; search
+  "." 'find-file
+  "*" 'consult-ripgrep
+  "l" 'consult-line
+  ;; goto
+  "gl" 'consult-goto-line
+  "go" 'consult-outline
+  ;; windows
+  "wu" 'winner-undo
+  "wn" 'evil-window-down
+  "wp" 'evil-window-up
+  "wb" 'evil-window-left
+  "wf" 'evil-window-right)
+
+					; ======== Lang =========
+
+(use-package yaml-mode)
+(use-package highlight-indentation
+  :config
+  (highlight-indentation-current-column-mode t))
 
 
 					; ========= HISTORY =============
