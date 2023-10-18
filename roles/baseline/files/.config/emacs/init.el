@@ -194,6 +194,10 @@
   (tabspaces-session-auto-restore t))
 
 
+					; ======= git ==========
+
+(use-package magit)
+
 					; ======= Prefix Key ========
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
@@ -231,14 +235,11 @@
   "wn" 'evil-window-down
   "wp" 'evil-window-up
   "wb" 'evil-window-left
-  "wf" 'evil-window-right)
+  "wf" 'evil-window-right
+  ;; git
+  "gg" 'magit-status)
 
 
-					; ======= git ==========
-
-(use-package magit
-  :bind (("C-x g" . magit-status)
-         ("C-x C-g" . magit-status)))
 
 					; ======== Lang =========
 
