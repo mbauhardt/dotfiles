@@ -233,6 +233,13 @@
   "wb" 'evil-window-left
   "wf" 'evil-window-right)
 
+
+					; ======= git ==========
+
+(use-package magit
+  :bind (("C-x g" . magit-status)
+         ("C-x C-g" . magit-status)))
+
 					; ======== Lang =========
 
 (use-package yaml-mode)
