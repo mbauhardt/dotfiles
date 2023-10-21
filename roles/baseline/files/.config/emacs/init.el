@@ -194,6 +194,65 @@
   (tabspaces-session-auto-restore t))
 
 
+					; ======= Mail ========
+
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e")
+(require 'mu4e)
+
+(setq user-full-name "Marko Bauhardt"
+      user-mail-address "mb@datameer.com")
+
+;; use mu4e for e-mail in emacs
+(setq mail-user-agent 'mu4e-user-agent)
+
+;; path to our Maildir directory
+(setq mu4e-maildir "~/var/mail/datameer.com")
+
+(setq mu4e-sent-folder "/datameer.com/sent"
+      mu4e-drafts-folder "/datameer.com/drafts"
+      mu4e-trash-folder "/datameer.com/trash"
+      smtpmail-smtp-user "mb@datameer.com"
+      mu4e-compose-signature "---\nMarko Bauhardt")
+
+(add-to-list 'mu4e-bookmarks
+'(:name  "Jira"
+    :query "maildir:\"/datameer.com/inbox\" flag:unread subject:\"JIRA\""
+    :key   ?j))
+(add-to-list 'mu4e-bookmarks
+'(:name  "Code Review - Europa"
+    :query "maildir:\"/datameer.com/inbox\" flag:unread subject:\"datameer inc europa\""
+    :key   ?e))
+(add-to-list 'mu4e-bookmarks
+'(:name  "Code Review - DAP"
+    :query "maildir:\"/datameer.com/inbox\" flag:unread subject:\"datameer inc dap\""
+    :key   ?d))
+(add-to-list 'mu4e-bookmarks
+'(:name  "Code Review - Cloud Infrastructure"
+    :query "maildir:\"/datameer.com/inbox\" flag:unread subject:\"datameer inc cloud infrastructure\""
+    :key   ?r))
+(add-to-list 'mu4e-bookmarks
+'(:name  "Component Update - Cloud Infrastructure"
+    :query "maildir:\"/datameer.com/inbox\" flag:unread subject:\"datameer inc cloud infrastructure component\""
+    :key   ?c))
+(add-to-list 'mu4e-bookmarks
+'(:name  "Code Review - Helm"
+    :query "maildir:\"/datameer.com/inbox\" flag:unread subject:\"datameer inc helm int\""
+    :key   ?h))
+(add-to-list 'mu4e-bookmarks
+'(:name  "Upgrade Artifact - Helm"
+    :query "maildir:\"/datameer.com/inbox\" flag:unread subject:\"datameer inc helm int Uprade Artifact\""
+    :key   ?a))
+
+(setq sendmail-program "/usr/bin/msmtp"
+  send-mail-function 'smtpmail-send-it
+  message-sendmail-f-is-evil t
+  message-sendmail-extra-arguments '("")
+  message-send-mail-function 'message-send-mail-with-sendmail)
+
+
+
+
+
 					; ======= git ==========
 
 (use-package magit)
