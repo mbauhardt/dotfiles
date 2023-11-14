@@ -302,11 +302,17 @@
 
 					; ======== Lang =========
 
+
 (use-package yaml-mode)
 (use-package highlight-indentation
   :config
   (highlight-indentation-current-column-mode t))
+(use-package terraform-mode)
 
+
+(use-package flycheck)
+(global-flycheck-mode)
+(setq flycheck-check-syntax-automatically '(mode-enabled save))
 
 					; ========= HISTORY =============
 
