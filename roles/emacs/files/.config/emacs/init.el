@@ -36,11 +36,7 @@
 ;(setq user-emacs-directory "~/.cache/emacs")
 
 (use-package no-littering)
-
-;; no-littering doesn't set this by default so we must place
-;; auto save files in the same path as it uses for sessions
-(setq auto-save-file-name-transforms
-      `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
+(no-littering-theme-backups)
 
 
 
@@ -306,14 +302,29 @@
 (use-package yaml-mode)
 (use-package highlight-indentation
   :config
+  (highlight-indentation-mode t)
   (highlight-indentation-current-column-mode t))
+(set-face-background 'highlight-indentation-face "#eceff4")
+(set-face-background 'highlight-indentation-current-column-face "#b48ead")
+
+
 (use-package terraform-mode)
 
 
 (use-package flycheck)
 (global-flycheck-mode)
-(setq flycheck-check-syntax-automatically '(mode-enabled save))
 
+(use-package ledger-mode)
+
+(defun aj-toggle-fold ()
+  "Toggle fold all lines larger than indentation on current line"
+  (interactive)
+  (let ((col 1))
+    (save-excursion
+      (back-to-indentation)
+      (setq col (+ 1 (current-column)))
+      (set-selective-display
+       (if selective-display nil (or col 1))))))
 					; ========= HISTORY =============
 
 
@@ -354,7 +365,7 @@
 ;; Set up the visible bell
 (setq visible-bell nil)
 
-(column-number-mode)
+(column-number-mode t)
 (global-display-line-numbers-mode t)
 
 
