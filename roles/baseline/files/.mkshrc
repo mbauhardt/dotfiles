@@ -58,7 +58,8 @@ smores() (
 )
 
 # customise your favourite editor here; the first one found is used
-for EDITOR in "${EDITOR:-}" emacs vis vis-editor jupp jstar mcedit ed vi; do
+EDITOR="emacsclient -t --alternate-editor=\"\""
+for EDITOR in "${EDITOR:-}" vis vis-editor jupp jstar mcedit ed vi; do
 	EDITOR=$(\\builtin whence -p "$EDITOR") || EDITOR=
 	[[ -n $EDITOR && -x $EDITOR ]] && break
 	EDITOR=
