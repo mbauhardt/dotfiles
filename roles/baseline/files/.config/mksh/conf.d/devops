@@ -21,7 +21,7 @@ function cloud_authenticate {
 function kubeon {
   cloud_authenticate
   if [ ! -z $LEAPP_SESSION_ID ]; then
-    fd -tf 'kubecfg.*' ~/.kube/ | fzy | xargs -i ln -s {} ~/.kube/config
+    fd -tf 'kubecfg.*' ~/.kube/ | fzy | xargs -I '{}' ln -s {} ~/.kube/config
   fi
 }
 
