@@ -11,3 +11,4 @@ xapian
 **/afew/config
 **/hooks/mail-tags
 
+roles/emacs/files/.config/emacs/elpa
