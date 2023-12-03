@@ -1,0 +1,5 @@
+---
+- name: Link files from pkgsrc role
+  ansible.builtin.import_tasks:
+    file: stow.yml
+  tags: pkgsrc
