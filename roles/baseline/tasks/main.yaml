@@ -2,3 +2,4 @@
 - name: Link files from baseline role
   ansible.builtin.import_tasks:
     file: stow.yml
+  tags: baseline
