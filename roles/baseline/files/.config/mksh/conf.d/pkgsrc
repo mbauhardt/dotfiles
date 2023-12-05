@@ -1,12 +1,14 @@
+export PKGSRC_VERSION=2023Q3
 export OS_BASE=`readlink -f $HOME`/OS
-export OS_HOME=${OS_BASE}/OS-`uname -s`
+export PKGSRC_HOME=${OS_BASE}/pkgsrc-${PKGSRC_VERSION}
+export OS_HOME=${OS_BASE}/OS-`uname -s`-${PKGSRC_VERSION}
 
-export PATH
 PATH="${OS_HOME}/pkg/sbin:${OS_HOME}/pkg/bin:${HOME}/.local/bin:${PATH}"
-export MANPATH
 MANPATH="${OS_HOME}/pkg/man:${MANPATH}"
+export PATH
+export MANPATH
 
-BOOTSTRAP_WORK=${OS_BASE}/pkgsrc/bootstrap/work
+export BOOTSTRAP_WORK=$$PKGSRC_HOME/bootstrap/work
 export LOCALBASE=$OS_HOME/pkg
 export PKG_DBDIR=$LOCALBASE/pkgdb
 export SYSCONFBASE=$LOCALBASE/etc
