@@ -8,7 +8,7 @@ MANPATH="${OS_HOME}/pkg/man:${MANPATH}"
 export PATH
 export MANPATH
 
-export BOOTSTRAP_WORK=$$PKGSRC_HOME/bootstrap/work
+export BOOTSTRAP_WORK=$PKGSRC_HOME/bootstrap/work
 export LOCALBASE=$OS_HOME/pkg
 export PKG_DBDIR=$LOCALBASE/pkgdb
 export SYSCONFBASE=$LOCALBASE/etc
