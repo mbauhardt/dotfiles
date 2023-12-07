@@ -1,6 +1,6 @@
 ---
 - name: Link files
-  ansible.builtin.shell: '{{ pkg_bin_path }}/stow -v -R -t $HOME .'
+  ansible.builtin.shell: '{{ pkg_bin_path }}/stow --no-folding -v -R -t $HOME .'
   args:
     chdir: "{{ ansible_env.HOME }}/.dotfiles/roles/{{ role_name }}/files"
   register: result
